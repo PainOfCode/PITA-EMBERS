@@ -1,0 +1,25 @@
+<div class="nav_abstand">
+
+    <div class="base_background">
+
+        <div class="support_ticket">
+            <ul class="support_ul">
+                <li class="support_li">
+                    {{#link-to 'support.ticket.new'}}
+                        New ticket
+                    {{/link-to}}
+                </li>
+                <li class="support_li">
+                    {{#link-to 'support.ticket.lists'}}
+                        List current tickets
+                    {{/link-to}}
+                </li>
+            </ul>
+        </div>
+
+        <div class="support_inhalt">
+            {{outlet}}
+        </div>
+
+    </div>
+</div>

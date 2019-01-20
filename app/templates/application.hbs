@@ -1,5 +1,36 @@
-{{!-- The following component displays Ember's default welcome message. --}}
-{{welcome-page}}
-{{!-- Feel free to remove this! --}}
+<div>
 
-{{outlet}}
+    <div>
+
+       <div>
+
+           <ul class="nav">
+
+             <li class="pita nav">
+
+                 {{#link-to "index" class="pita"}}
+                      PITA
+                  {{/link-to}}
+             </li>
+
+             <li class="nav"> 
+                {{#link-to "about" }}
+                  About us
+                {{/link-to}}
+             </li>
+             <li class="nav">
+                 {{#link-to "support"}}
+                   Support
+                  {{/link-to}}
+             </li>
+
+            </ul>
+        
+        </div>
+
+    </div>
+
+    <div class="body">
+      {{outlet}}
+    </div>
+</div>
