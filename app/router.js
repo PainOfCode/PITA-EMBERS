@@ -15,6 +15,9 @@ Router.map(function() {
     });
   });
   this.route('home');
+  this.route('patches');
+  this.route('membership');
+  this.route('forum');
 });
 
 export default Router;
