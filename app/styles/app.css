@@ -6,7 +6,7 @@ ul.nav{
     margin-top: 2.5rem;
     width: 7rem;
     background-color: #f1f1f1;
-    height: 30%;
+    height: 60%;
     position: fixed;
     overflow: auto;
     transition: 2s;
@@ -35,7 +35,7 @@ li.pita a{
 }
 
 body{
-    background-color: rgba(4, 52, 66, 0.822);
+    background-color: rgba(42, 205, 255, 0.822);
     --background-image: url("https://wallpapercave.com/wp/8UgQsyE.jpg");
 }
 
@@ -80,29 +80,63 @@ ul.support_ul{
     margin-top: -0.5rem;
     padding-top: 0.6rem;
     margin-left: -0.25rem;
-    width: 11%;
-    border-radius: 25px;
+    width: 10%;
     background-color: #2962cabd;
-    height: 85%;
+    height: 82.5%;
     position: fixed;
     overflow: auto;
-    border-width: 2px;
-    border-style: solid;
+    border-left-width: 7px;
+    border-bottom-width: 7px;
+    border-top-width: 11px;
+    border-style: groove;
     border-color: #000;
+    border-right-width: 2px;
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+}
+
+li.support_li a{
+    transition-duration: 0.25s;
 }
 
 li.support_li{
+    margin-top: 10px;
     display: block;
     padding: 8px 1.3rem;
-    transition-duration: 2s;
+    border-style: groove;
+    border-color: black;
+    border-left-width: 0px;
+    border-right-width: 0px;
+    border-top-width: 1.5px;
+    border-bottom-width: 1.5px;
+    transition-duration: 0.25s;
     
 }
 
-li.support_li:hover{
-    
-    border-width: 0.5px;
-    border-style: solid;
-    border-color: rgba(70, 191, 207, 0.699);
-    color: #ffffff;
-    background: rgba(70, 191, 207, 0.699);
+li.support_li:hover, li.support_li:hover a{
+    /* color: #ffffff; */
+    background: black;
+    color: white;
+}
+
+
+p.overview{
+    text-shadow: 1.5px 1.5px rgba(34, 34, 34, 0.281);
+    text-decoration: underline;
+    position: absolute;
+    margin-top: 1%;
+    margin-left: 14.5%;
+    font-size: 30px;
+}
+
+div.support_inhalt{
+    position: fixed;
+    margin-top: 4.5%;
+    margin-left: 13.5%;
+    border-width: 1.5px;
+    border-style: groove;
+    border-color: rgba(34, 34, 34, 0.281);
+    height: 67.5%;
+    width: 68.5%;
+    border-radius: 10px;
 }
