@@ -12,7 +12,6 @@ ul.nav{
     position: fixed;
     overflow: auto;
     transition: 2s;
-    box-shadow: 5px 5px rgba(0, 0, 0, 0.281);
 }
 
 li.nav a{
@@ -24,10 +23,8 @@ li.nav a{
     border-right-width: 0;
     display: block;
     color: #d26363;
-    text-shadow: 1.25px 1.25px black;
     padding: 8px 16px;
     text-decoration: none;
-    font-family: Georgia, 'Times New Roman', Times, serif;
     font-weight: bold;
 }
 
@@ -42,7 +39,6 @@ li.pita a{
     font-size: 30px;
     background-color: #0e2a38;
     font-weight: bolder;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
 body{
@@ -60,7 +56,6 @@ div.base_background{
     background-color: white;
     height: 85%;
     width: 85%;
-    box-shadow: 15px 15px rgba(0, 0, 0, 0.281);
     border-radius: 20px;
 }
 
@@ -111,7 +106,6 @@ li.support_li a{
     display: block;
     color: #d26363;
     font-weight: bolder;
-    text-shadow: 1.25px 1.25px black;
     padding: 8px 1.3rem;
     border-style: groove;
     border-color: black;
@@ -119,7 +113,6 @@ li.support_li a{
     border-right-width: 0px;
     border-top-width: 1.5px;
     border-bottom-width: 1.5px;
-    font-family: Georgia, 'Times New Roman', Times, serif;
     font-weight: bold;
     
 }
@@ -132,19 +125,17 @@ li.support_li:hover, li.support_li:hover a{
 
 p.overview::before{
     content: "Support/Overview";
-    text-shadow: 1.5px 1.5px rgba(0, 0, 0, 0.281);
     text-decoration: underline;
     position: absolute;
     margin-top: 1.5%;
     margin-left: 14.5%;
     font-size: 25px;
-    font-family: Georgia, 'Times New Roman', Times, serif;
     font-weight: bold;
 }
 
 div.support_inhalt{
     position: fixed;
-    margin-top: 4.5%;
+    margin-top: 2.5%;
     margin-left: 13.5%;
     border-width: 1.5px;
     border-style: groove;
