@@ -5,12 +5,12 @@
         <div class="support_ticket">
             <ul class="support_ul">
                 <li class="support_li">
-                    {{#link-to 'support.ticket.new'}}
+                    {{#link-to "support.new"}}
                         New ticket
                     {{/link-to}}
                 </li>
                 <li class="support_li">
-                    {{#link-to 'support.ticket.lists'}}
+                    {{#link-to "support.listAll"}}
                         List current tickets
                     {{/link-to}}
                 </li>
@@ -18,7 +18,7 @@
         </div>
 
         <div>
-            <p class="overview">Support/Overview</p>
+            <p class="overview"></p>
         </div>
         <div class="support_inhalt">
             {{outlet}}

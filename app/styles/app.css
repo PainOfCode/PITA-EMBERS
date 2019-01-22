@@ -6,7 +6,7 @@ ul.nav{
     margin: 0;
     padding: 0;
     margin-top: 2.5rem;
-    width: 7%;
+    width: fit-content;
     background-color: #304753;
     height: fit-content;
     position: fixed;
@@ -79,15 +79,16 @@ div.support_ticket a{
 
 
 ul.support_ul{
+    max-width: 10.5%;
     list-style-type: none;
     margin: 0;
     padding: 0;
     margin-top: -0.5rem;
     padding-top: 0.6rem;
     margin-left: -0.25rem;
-    width: 10%;
+    width:fit-content;
     background-color: #304753;
-    height: 83.25%;
+    height: 48.85em;
     position: fixed;
     overflow: auto;
     border-left-width: 7px;
@@ -102,6 +103,8 @@ ul.support_ul{
 
 
 li.support_li a{
+    font-size: 1.5em;
+    word-wrap: break-word;
     margin-top: 10px;
     display: block;
     color: #d26363;
@@ -113,7 +116,6 @@ li.support_li a{
     border-right-width: 0px;
     border-top-width: 1.5px;
     border-bottom-width: 1.5px;
-    font-weight: bold;
     
 }
 
@@ -127,7 +129,6 @@ p.overview::before{
     content: "Support/Overview";
     text-decoration: underline;
     position: absolute;
-    margin-top: 1.5%;
     margin-left: 14.5%;
     font-size: 25px;
     font-weight: bold;
@@ -135,12 +136,39 @@ p.overview::before{
 
 div.support_inhalt{
     position: fixed;
-    margin-top: 2.5%;
+    margin-top: 3.5%;
     margin-left: 13.5%;
-    border-width: 1.5px;
+    border-width: 2px;
     border-style: groove;
-    border-color: rgba(0, 0, 0, 0.281);
+    border-color: #404040;
     height: 67.5%;
     width: 68.5%;
     border-radius: 10px;
+}
+
+div.ovw_head{
+overflow-y:auto;
+height: 100%;
+width: 100%;
+display: block;
+position: relative;
+background-color: #bfbfbf;
+border-radius: inherit;
+max-block-size: 100% 300%;
+}
+
+article.ticket_list{
+    position: sticky;
+    border-style: solid;
+    border-color:black;
+    border-right-width: 0;
+    border-left-width: 0;
+    border-bottom-width: 1.5px;
+    border-top-width: 0px;
+    
+    padding-bottom: 1.25em;
+}
+
+div.ticket_list_details{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
