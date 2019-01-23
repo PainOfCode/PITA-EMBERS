@@ -53,7 +53,7 @@ div.base_background{
     position: fixed;
     overflow: auto;
     margin-top: 2.5rem;
-    background-color: white;
+    background-color: #f3e5e6;
     height: 85%;
     width: 85%;
     border-radius: 20px;
@@ -140,7 +140,7 @@ div.support_inhalt{
     margin-left: 13.5%;
     border-width: 2px;
     border-style: groove;
-    border-color: #404040;
+    border-color: black;
     height: 67.5%;
     width: 68.5%;
     border-radius: 10px;
@@ -152,12 +152,17 @@ height: 100%;
 width: 100%;
 display: block;
 position: relative;
-background-color: #bfbfbf;
+background-color: white;
 border-radius: inherit;
 max-block-size: 100% 300%;
 }
 
-article.ticket_list{
+::-webkit-scrollbar{
+    width: 0px;
+    background: transparent;
+}
+
+div.ticket_link_ovw{
     position: sticky;
     border-style: solid;
     border-color:black;
@@ -165,10 +170,36 @@ article.ticket_list{
     border-left-width: 0;
     border-bottom-width: 1.5px;
     border-top-width: 0px;
-    
     padding-bottom: 1.25em;
+}
+
+div.ticket_link_ovw a{
+    text-decoration: none;
+    color: 	black;
+}
+div.ticket_link_ovw:hover{
+    transition-duration: 0.25s;
+    background-color: #b6d9c2;
 }
 
 div.ticket_list_details{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1em;
+    padding-top: 0.25em;
+    margin-left: 1em;
+    font-weight: bolder;
 }
+
+div.ticket_list_details .subject{
+    margin-left: 1em;
+    font-size: 0.95em;
+    margin-top: -0.75em;
+    font-weight: bold;
+}
+div.ticket_list_details .content{
+    margin-left: 2em;
+    margin-top: 0.5em;
+    font-size: 0.85em;
+    font-weight: normal;
+}
+
