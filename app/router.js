@@ -18,6 +18,8 @@ Router.map(function() {
   this.route('patches');
   this.route('membership');
   this.route('forum');
+  this.route('login');
+  this.route('createaccount');
 });
 
 export default Router;

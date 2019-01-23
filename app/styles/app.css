@@ -5,7 +5,7 @@ ul.nav{
     list-style-type: none;
     margin: 0;
     padding: 0;
-    margin-top: 2.5rem;
+    margin-top: 6.75rem;
     width: fit-content;
     background-color: #304753;
     height: fit-content;
@@ -43,7 +43,6 @@ li.pita a{
 
 body{
     background-color: #d2a8aa;
-    
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
@@ -54,7 +53,7 @@ div.nav_abstand{
 div.base_background{
     position: fixed;
     overflow: auto;
-    margin-top: 2.5rem;
+    margin-top: 5.5rem;
     background-color: #f3e5e6;
     height: 85%;
     width: 85%;
@@ -215,4 +214,41 @@ div.ticket_list_details .content{
     border-bottom-left-radius: 25px;
     padding-left: 2em;
 
+}
+
+div.login_top, div.login_top a{
+    position: fixed;
+    border-color: black;
+    margin-top: -1em;
+    margin-left:-1em;
+    margin-bottom: 4em;
+    border-top-width: 0px;
+    border-left-width: 0px;
+    border-bottom-width: 4px;
+    border-right-width: 4px;
+    border-bottom-right-radius: 25px;
+    border-style: groove;
+    padding-right: 1em;
+    background-color: #304753;
+}
+.login_register{
+    list-style: none;
+    width: fit-content;
+    padding-right: 1em; 
+    padding-bottom: 2em;
+}
+
+li.login_li{
+    border-color: #ff6f69;
+    border-style: solid;
+    border-radius: 25px;
+    border-width: 1.5px;
+    font-weight: bold;
+    font-size: 1.25em;
+    margin-left: 1em;
+    padding-top: 0.15em;
+    padding-bottom: 0.35em;
+    padding-left: 0.45em;
+    padding-right: 0.45em;
+    float: left;
 }

@@ -1,7 +1,27 @@
 <div>
 
     <div>
-
+        <div class="login_top">
+            {{#if this.login_bool}}
+            <ul class="login_register">
+                <li class="login_li"> 
+                Welcome, Text-user
+                </li>
+                <li class="login_li">
+                    Log out
+                </li>
+            </ul>
+            {{else}}
+             <ul class="login_register">
+                 <li class="login_li">
+                    Register
+                 </li>
+                 <li class="login_li">
+                    Log in
+                 </li>
+             </ul>
+            {{/if}}
+        </div>
        <div>
 
            <ul class="nav">
