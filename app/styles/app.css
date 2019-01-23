@@ -43,6 +43,8 @@ li.pita a{
 
 body{
     background-color: #d2a8aa;
+    
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 div.nav_abstand{
@@ -183,7 +185,6 @@ div.ticket_link_ovw:hover{
 }
 
 div.ticket_list_details{
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 1em;
     padding-top: 0.25em;
     margin-left: 1em;
@@ -203,3 +204,15 @@ div.ticket_list_details .content{
     font-weight: normal;
 }
 
+.ticket_filter_subject{
+    z-index: 3;
+    position: fixed;
+    margin-left: 83.84em;
+    border-color: black;
+    border-right-width: 0px;
+    border-top-width: 0px;
+    border-top-right-radius: 25px;
+    border-bottom-left-radius: 25px;
+    padding-left: 2em;
+
+}
