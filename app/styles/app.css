@@ -53,16 +53,17 @@ body{
 }
 
 div.nav_abstand{
-    padding-left:10rem;
+    padding-left:0em;
 }
 
 div.base_background{
     position: fixed;
     overflow: auto;
-    margin-top: 5.5rem;
+    margin: 6em 0em 0em 5em;
+    padding: 0;
     background-color: #f3e5e6;
     height: 85%;
-    width: 85%;
+    width: 90%;
     border-radius: 20px;
 }
 
@@ -85,31 +86,25 @@ div.support_ticket a{
 
 
 ul.support_ul{
-    max-width: 10.5%;
     list-style-type: none;
-    margin: 0;
-    padding: 0;
-    margin-top: -0.5rem;
-    padding-top: 0.6rem;
-    margin-left: -0.25rem;
     width:fit-content;
     background-color: #304753;
     height: 51.85em;
     position: fixed;
     overflow: auto;
-    
+    margin: -3.75em 0em 0em -2.75em;
+    padding-top: 2.25em;
 }
 
 
 li.support_li a{
     font-size: 1.5em;
     word-wrap: break-word;
-    margin-top: 10px;
+    margin: 0.25em 0.25em 0em 1em;
     display: block;
     color: #d26363;
     font-weight: bolder;
-    padding: 8px 1.3rem;
-    
+    padding-top: 0.25em;
     
 }
 
@@ -141,7 +136,7 @@ div.ovw_head{
     height: 100%;
     width: 100%;
     display: block;
-    margin: 0;
+    margin: 0em 0em 0em 2em;
     position: sticky;
     background-color: #304753;
     border-radius: inherit;
@@ -260,5 +255,5 @@ div.new_ticket_heading{
 }
 
 form.new_ticket_form{
-    margin-left: 1.5em;
+    margin: 0em 0em 0em 2em;
 }
