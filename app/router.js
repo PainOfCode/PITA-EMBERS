@@ -17,7 +17,9 @@ Router.map(function() {
   this.route('home');
   this.route('patches');
   this.route('membership');
-  this.route('forum');
+  this.route('forum', function() {
+    this.route('posts', {path: '/:titleURL'});
+  });
   this.route('login');
   this.route('createaccount');
 });

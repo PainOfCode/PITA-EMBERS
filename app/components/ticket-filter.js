@@ -12,6 +12,7 @@ export default Component.extend({
 
     actions:{
         handleFilterEntry(){
+            var dataRef = firebase.database().ref('tickets');
             let filterInputValue = this.value;
             let filterAction = this.filter;
             filterAction(filterInputValue).then((filterResults) => {
