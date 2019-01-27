@@ -16,7 +16,19 @@
   </head>
   <body>
     {{content-for "body"}}
-
+    <script src="https://www.gstatic.com/firebasejs/5.8.1/firebase.js"></script>
+  <script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyB1r5K0mOW189bcngexCwPH8RMDiLFuy80",
+    authDomain: "pita-45a6f.firebaseapp.com",
+    databaseURL: "https://pita-45a6f.firebaseio.com",
+    projectId: "pita-45a6f",
+    storageBucket: "pita-45a6f.appspot.com",
+    messagingSenderId: "772245822398"
+  };
+  firebase.initializeApp(config);
+</script>
     <script src="{{rootURL}}assets/vendor.js"></script>
     <script src="{{rootURL}}assets/praktika.js"></script>
 

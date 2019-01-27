@@ -1,1 +1,27 @@
-{{outlet}}
+<div class="new_ticket_heading">
+    Create a new ticket:
+</div>
+
+<form class="new_ticket_form">
+    <div>
+        <label class="new_ticket_label">Title</label>
+        {{input class="new_ticket" type="text" rqeuired=true value=title placeholder="Add title"}}
+    </div>
+    <div>
+        <label class="new_ticket_label">Subject</label>
+        
+        {{input class="new_ticket" type="text" rqeuired=true value=subject placeholder="Add subject"}}
+    </div>    
+    <div>
+        <label class="new_ticket_label">Occured date</label>
+        
+        {{pikaday-input class="new_ticket" placeholder="Date" type="date" value=date format="YYYY-MM-DD"}}
+    </div>
+    <div>
+        <label class="new_ticket_label">Description</label>
+        
+        {{input class="new_ticket desc" type="text" rqeuired=true value=content placeholder="Add Description"}}
+    </div>
+    <button {{action 'newTicket'}} class="new_ticket_btn">Submit ticket</button>
+
+</form>

@@ -6,7 +6,7 @@ export default Component.extend({
 
     init(){
         this._super(...arguments);
-        this.filter('').then((results)=> this.set('results', results));
+        this.filter('').then((allResults)=> this.set('results', allResults.results));
 
     },
 
@@ -14,7 +14,11 @@ export default Component.extend({
         handleFilterEntry(){
             let filterInputValue = this.value;
             let filterAction = this.filter;
-            filterAction(filterInputValue).then((filterResults) => this.set('results', filterResults));
+            filterAction(filterInputValue).then((filterResults) => {
+                if (filterResults.query === this.value) {
+                    this.set('results', filterResults.results);
+                }
+            });
         }
     }
 });

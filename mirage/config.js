@@ -5,7 +5,7 @@ export default function() {
         type: 'ticket',
         id: 'first',
         attributes:{
-          date: '-',
+          date: '',
           subject: 'Bug-report',
           content: 'I found this one bug...',
           title: 'Please fix'
@@ -13,7 +13,7 @@ export default function() {
         type: 'ticket',
         id: 'second',
         attributes:{
-          date: "22.01.2019",
+          date: '',
           subject: 'Feature-request',
           content: 'I have this one feature in mind that...',
           title: 'Please add this feature'
@@ -22,7 +22,7 @@ export default function() {
         type: 'ticket',
         id: 'third',
         attributes:{
-          date: "22.01.2019",
+          date: '',
           subject: 'Unban',
           content: 'Im not toxic anymore, pls...',
           title: 'I changed, I promise'
@@ -31,7 +31,7 @@ export default function() {
         type: 'ticket',
         id: 'forth',
         attributes:{
-          date: "22.01.2019",
+          date: '',
           subject: 'Forum',
           content: 'There is this one user that...',
           title: 'HELP ME'
@@ -40,7 +40,7 @@ export default function() {
         type: 'ticket',
         id: 'fifth',
         attributes:{
-          date: "22.01.2019",
+          date: '',
           subject: 'Technical',
           content: 'It keeps on crashing out of nowhere...',
           title: 'What can I do?'

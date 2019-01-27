@@ -4,6 +4,21 @@ module.exports = function(environment) {
   let ENV = {
     modulePrefix: 'praktika',
     environment,
+    locationType: 'auto',
+    // ...
+    torii: {
+      sessionServiceName: 'session'
+    },
+    
+    firebase: {
+      apiKey: 'AIzaSyB1r5K0mOW189bcngexCwPH8RMDiLFuy80',
+      authDomain: 'pita-45a6f.firebaseapp.com',
+      databaseURL: 'https://pita-45a6f.firebaseio.com',
+      storageBucket: 'pita-45a6f.appspot.com',
+      projectId: 'pita-45a6f',
+      storageBucket: 'pita-45a6f.appspot.com',
+      messagingSenderId: '772245822398'
+    },
     rootURL: '/',
     locationType: 'auto',
     EmberENV: {
