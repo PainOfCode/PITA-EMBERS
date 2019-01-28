@@ -2,13 +2,14 @@
 <div class="ovw_head">
     <div class="ticket_list_ovw">
 
-    {{#ticket-filter
-        filter=(action "filterBySubject") as |filteredTickets|}}
+    {{#ticket-filter model=model filter=(action "filterBySubject") as |filteredTickets|}}
+      {{log filteredTickets}}
         {{#each filteredTickets as |ticketUnit|}}
             {{ticket-listing ticket=ticketUnit}}
         {{/each}}
     {{/ticket-filter}}
+
     {{outlet}}
-        
+
     </div>
 </div>

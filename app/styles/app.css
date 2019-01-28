@@ -1,6 +1,5 @@
 ul.nav{
     text-align: center;
-    font-size: 20px;
     list-style-type: none;
     width: 100%;
     margin-top: -0.65em;
@@ -13,7 +12,7 @@ ul.nav{
     transition: 2s;
     border-width: 2px;
     border-style: solid;
-    
+    font-size: 125%;
 }
 
 li.nav a{
@@ -40,9 +39,9 @@ li.nav a:hover{
 li.pita a{
     padding-left: 0.25em;
     padding-right: 0.25em;
-    letter-spacing: 6px;
+    letter-spacing: 10%;
     position: relative;
-    font-size: 30px;
+    font-size: 175%;
     background-color: #0e2a38;
     font-weight: bolder;
 }
@@ -89,7 +88,7 @@ ul.support_ul{
     list-style-type: none;
     width:fit-content;
     background-color: #304753;
-    height: 51.85em;
+    height: 100%;
     position: fixed;
     overflow: auto;
     margin: -3.75em 0em 0em -2.75em;
@@ -98,14 +97,14 @@ ul.support_ul{
 
 
 li.support_li a{
-    font-size: 1.5em;
+    font-size: 150%;
     word-wrap: break-word;
     margin: 0.25em 0.25em 0em 1em;
     display: block;
     color: #d26363;
     font-weight: bolder;
     padding-top: 0.25em;
-    
+
 }
 
 li.support_li:hover, li.support_li:hover a{
@@ -205,7 +204,7 @@ div.login_top, div.login_top a{
 .login_register{
     list-style: none;
     width: fit-content;
-    padding-right: 1em; 
+    padding-right: 1em;
     padding-bottom: 2em;
 }
 
