@@ -4,7 +4,7 @@
     <div class="ticket_list_details">
         <h3>Ticket: {{this.ticket.title}}</h3>
         <div class="ticket_list_details subject">
-            <span>From: {{date-formatter this.ticket.date}}</span><br>
+            <span>From: {{moment-format this.ticket.date 'MMMM D, YYYY h:mm A'}}</span><br>
             <span>Subject: {{ticket-definer this.ticket.subject}} - {{this.ticket.subject}}</span>
         </div>
         <div class="ticket_list_details content">
