@@ -2,10 +2,10 @@ ul.nav{
     text-align: center;
     list-style-type: none;
     width: 100%;
-    margin: -0.65em 0em 0em -0.75em;
-    padding: 0.15em 0em 0.5em 0em;
+    margin: -0.75% 0% 1.5% -1.5%;
+    padding: 0.15% 0% 0.5% 2.5%;
     background-color: #304753;
-    height: fit-content;
+    height: 6%;
     position: fixed;
     transition: 2s;
     border-width: 2px;
@@ -15,9 +15,8 @@ ul.nav{
 
 li.nav a{
     float: left;
-    margin-right: 1em;
-    padding-bottom: 1em;
-    margin-bottom: -0.75em;
+    margin-left: 2%;
+    padding-bottom: 0.5%;
     border-style: groove;
     border-color: black;
     border-top-width: 0px;
@@ -35,13 +34,12 @@ li.nav a:hover{
 }
 
 li.pita a{
-    padding-left: 0.25em;
-    padding-right: 0.25em;
-    letter-spacing: 10%;
+    margin: 0% 0.5% 0% 0.5%;
     position: relative;
     font-size: 175%;
     background-color: #0e2a38;
     font-weight: bolder;
+    padding: 0% 0.75% 1% 0.75%;
 }
 
 body{
@@ -197,18 +195,19 @@ div.login_top, div.login_top a{
     margin-left:-1em;
     border-bottom-right-radius: 25px;
     padding-right: 1em;
+    padding-bottom: 0.5%;
     background-color: #304753;
 }
 .login_register{
     list-style: none;
     width: fit-content;
-    padding-right: 1em;
-    padding-bottom: 2em;
 }
 
 li.login_li a, li.login_li{
     text-align: center;
-    margin-right: 1.5em;
+    width: 20%;
+    padding: 0% 5% 0% 0%;
+    margin: 0% 0% 0% -16%;
     float: right;
 }
 
