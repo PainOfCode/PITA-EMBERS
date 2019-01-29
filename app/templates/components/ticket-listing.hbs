@@ -1,14 +1,16 @@
 
-<div class="ticket_link_ovw"> {{#link-to "support.overview" }}
+<div class="ticket_link_ovw">
+{{#link-to "support.ticket" ticket.id}}
 <article class="ticket_list">
     <div class="ticket_list_details">
-        <h3>Ticket: {{this.ticket.title}}</h3>
+        <h3>Ticket: {{ticket.title}}</h3>
+        <h5>ID: {{ticket.id}}</h5>
         <div class="ticket_list_details subject">
-            <span>From: {{moment-format this.ticket.date 'MMMM D, YYYY h:mm A'}}</span><br>
-            <span>Subject: {{ticket-definer this.ticket.subject}} - {{this.ticket.subject}}</span>
+            <span>From: {{moment-format ticket.date 'MMMM D, YYYY h:mm A'}}</span><br>
+            <span>Subject: {{ticket-definer ticket.subject}} - {{ticket.subject}}</span>
         </div>
         <div class="ticket_list_details content">
-            <span>Content: {{this.ticket.content}}</span>
+            <span>Content: {{ticket.content}}</span>
         </div>
     </div>
 </article>

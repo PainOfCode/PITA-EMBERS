@@ -5,7 +5,7 @@ export default Controller.extend({
       filterBySubject(param){
           if (param !==''){
             return this.get('model').filter(function(result){
-              return result.get('subject').indexOf(param) >= 0;
+              return result.get('subject').toLowerCase().indexOf(param.toLowerCase()) >= 0;
             })
           }
           else{

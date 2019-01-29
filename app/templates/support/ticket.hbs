@@ -1,1 +1,30 @@
-{{outlet}}
+<div>
+
+  <form class="new_ticket_form">
+      <div>
+          <label class="new_ticket_label">Title</label>
+          {{input class="new_ticket" type="text" required=true value=model.title}}
+      </div>
+      <div>
+          <label class="new_ticket_label">Subject</label>
+
+          {{input class="new_ticket" type="text" required=true value=model.subject placeholder="Add subject"}}
+      </div>
+      <div>
+          <label class="new_ticket_label">Occured date</label>
+
+          {{pikaday-input onSelection=(action 'setDate') id="pikaday" class="new_ticket" placeholder="Date" type="date" value=model.date format="YYYY-MM-DD"}}
+      </div>
+      <div>
+          <label class="new_ticket_label">Description</label>
+
+          {{textarea class="new_ticket desc" cols="40" rows="5" required=true value=model.content placeholder="Add Description"}}
+      </div>
+      <button {{action 'saveTicket'}} class="new_ticket_btn">Submit ticket</button>
+      <button {{action 'deleteTicket'}} class="delete_ticket_btn">Delete ticket</button>
+
+  </form>
+
+
+
+</div>

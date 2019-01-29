@@ -5,27 +5,24 @@ ul.nav{
     margin: -0.75% 0% 1.5% -1.5%;
     padding: 0.15% 0% 0.5% 2.5%;
     background-color: #304753;
-    height: 6%;
+    height: 2vw;
     position: fixed;
-    transition: 2s;
     border-width: 2px;
     border-style: solid;
-    font-size: 125%;
 }
 
 li.nav a{
     float: left;
     margin-left: 2%;
     padding-bottom: 0.5%;
+    border-width: 0px 0px 2px 0px;
     border-style: groove;
     border-color: black;
-    border-top-width: 0px;
-    border-bottom-width: 2px;
-    border-left-width: 0;
-    border-right-width: 0;
     color: #d26363;
     text-decoration: none;
     font-weight: bold;
+    font-size: 1vw;
+    transition-duration: 0.5s;
 }
 
 li.nav a:hover{
@@ -36,7 +33,7 @@ li.nav a:hover{
 li.pita a{
     margin: 0% 0.5% 0% 0.5%;
     position: relative;
-    font-size: 175%;
+    font-size: 1.5vw;
     background-color: #0e2a38;
     font-weight: bolder;
     padding: 0% 0.75% 1% 0.75%;
@@ -45,37 +42,23 @@ li.pita a{
 body{
     background-color: #d2a8aa;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
-div.nav_abstand{
-    padding-left:0em;
+    width: 100%;
+    height: 100%;
 }
 
 div.base_background{
     position: fixed;
     overflow: auto;
-    margin: 6em 0em 0em 5em;
+    margin: 6% 0% 0% 5%;
     padding: 0;
     background-color: #f3e5e6;
-    height: 85%;
-    width: 90%;
-    border-radius: 20px;
-}
-
-div.about_text{
-    padding-left: 2.75rem;
-    padding-top: 1rem;
-}
-
-div.about_text p{
-    font-weight: bold;
-    font-size: 20px;
-    font-family: monospace;
+    height: 35vw;
+    width: 90vw;
+    border-radius: 10px;
 }
 
 div.support_ticket a{
     color: rgb(0, 0, 0);
-    font-size: 1.4rem;
     text-decoration: none;
 }
 
@@ -84,22 +67,22 @@ ul.support_ul{
     list-style-type: none;
     width:fit-content;
     background-color: #304753;
-    height: 100%;
+    height: 44vw;
     position: fixed;
     overflow: auto;
-    margin: -3.75em 0em 0em -2.75em;
-    padding-top: 2.25em;
+    margin: 0vw 5% 0% -0.2vw;
+    padding: 0.0vw 0% 0.5% 0.2vw;
 }
 
 
 li.support_li a{
-    font-size: 150%;
+    font-size: 1.25vw;
     word-wrap: break-word;
-    margin: 0.25em 0.25em 0em 1em;
+    margin: -.2% 2% 0% 0%;
     display: block;
     color: #d26363;
     font-weight: bolder;
-    padding-top: 0.25em;
+    padding: 1% 1% 0.5% 4%;
 
 }
 
@@ -109,29 +92,30 @@ li.support_li:hover, li.support_li:hover a{
 }
 
 
-p.overview::before{
-    content: "Support/Overview";
-    position: absolute;
-    margin-left: 14.5%;
-    font-size: 25px;
-    font-weight: bolder;
+p.overview{
+    position: fixed;
+    margin: -3.5% 0% 5% 0%;
+    font-size: 1.25vw;
+    font-weight: bolder;;
+    padding: 0;
+    width: fit-content;
+    height: fit-content;
 }
 
 div.support_inhalt{
     position: fixed;
-    margin-top: 3.5%;
-    margin-left: 13.5%;
-    height: 67.5%;
-    width: 68.5%;
+    margin: 4.5% 0% 0% 15%;
+    height: 35vw;
+    width: 70vw;
     border-radius: 10px;
 }
 
 div.ovw_head{
     overflow-y:auto;
-    height: 100%;
-    width: 100%;
+    height: 27vw;
+    width: inherit;
     display: block;
-    margin: 0em 0em 0em 2em;
+    margin: 0% 0% 0% 2%;
     position: sticky;
     background-color: #304753;
     border-radius: inherit;
@@ -145,7 +129,7 @@ div.ovw_head{
 
 div.ticket_link_ovw{
     position: sticky;
-    padding-bottom: 1.25em;
+    padding-bottom: 1.25%;
     background-color: white;
 }
 
@@ -159,22 +143,22 @@ div.ticket_link_ovw:hover{
 }
 
 div.ticket_list_details{
-    font-size: 1em;
-    padding-top: 0.25em;
-    margin-left: 1em;
+    font-size: 0.9vw;
+    padding-top: 0.25%;
+    margin-left: 1%;
     font-weight: bolder;
 }
 
 div.ticket_list_details .subject{
-    margin-left: 1em;
-    font-size: 0.95em;
-    margin-top: -0.75em;
+    margin-left: 1%;
+    font-size: 0.85vw;
+    margin-top: -0.75%;
     font-weight: bold;
 }
 div.ticket_list_details .content{
-    margin-left: 2em;
-    margin-top: 0.5em;
-    font-size: 0.85em;
+    margin-left: 2%;
+    margin-top: 0.5%;
+    font-size: 0.8vw;
     font-weight: normal;
 }
 
@@ -183,18 +167,20 @@ div.ticket_list_details .content{
     z-index: 3;
     margin: 0;
     position: sticky;
-    margin: 0.25em 0em 0.35em 0.25em;
-    border-radius: 50px;
-    padding-left: 2em;
+    padding: 0vw 0vw 0vw 0.2vw;
+    margin:  0.2vw;
+    border-radius: 10px;
     border-color: transparent;
+    height: 0.85vw;
+    width: 15vw;
 }
 
 div.login_top, div.login_top a{
     position: fixed;
-    margin-top: -1em;
-    margin-left:-1em;
+    margin-top: -1%;
+    margin-left:-1%;
     border-bottom-right-radius: 25px;
-    padding-right: 1em;
+    padding-right: 1%;
     padding-bottom: 0.5%;
     background-color: #304753;
 }
@@ -204,19 +190,35 @@ div.login_top, div.login_top a{
 }
 
 li.login_li a, li.login_li{
+    font-size: 1vw;
     text-align: center;
     width: 20%;
-    padding: 0% 5% 0% 0%;
-    margin: 0% 0% 0% -16%;
+    padding: 0% 0% 2% 0%;
+    margin: 0% 5% 0% -16%;
     float: right;
 }
 
+.new_ticket::placeholder{
+  font-size: 1vw;
+}
+
 .new_ticket{
-    margin-top: 0.25em;
-    margin-bottom: 1em;
+    margin-top: 0.25vw;
+    margin-bottom: 0.7vw;
     display: block;
     border-color: transparent;
     border-radius: 10px;
+    height: 1vw;
+    width: 20vw;
+    padding: 0.1vw;
+    font-size: 1vw;
+}
+
+.delete_ticket_btn{
+  background-color: white;
+  border-color: transparent;
+  font-size: 1vw;
+  border-radius: 10px;
 }
 
 .new_ticket_btn{
@@ -224,32 +226,107 @@ li.login_li a, li.login_li{
     border-color: transparent;
     border-radius: 15px;
     margin-top: 5%;
+    font-size: 1vw;
 }
 
 .new_ticket.desc{
-    margin-top: 0.25em;
     overflow-y: auto;
     overflow-x: hidden;
-    width: 70%;
+    width: 30vw;
+    height: 4vw;
     border-radius: 10px;
     border-color: transparent;
     position: relative;
     display: block;
-    padding-bottom: 2em;
     word-wrap: break-word;
+    padding: 0vw 0vw 0vw 0.25vw;
+    resize: none;
 }
 
 label.new_ticket_label{
     font-weight: bold;
     position: relative;
+    font-size: 1vw;
 }
 
 div.new_ticket_heading{
-    margin-bottom: 1.25em;
+    margin-bottom: 1.25vw;
     font-weight: bold;
-    font-size: 1.25em;
+    font-size: 1.25vw;
 }
 
 form.new_ticket_form{
     margin: 0em 0em 0em 2em;
+}
+
+#pikaday{
+  font-size: 1vw;
+  font-weight: normal;
+}
+
+#ticket_filter::placeholder{
+  position: relative;
+  font-size: 1vw;
+}
+
+div.about_text{
+  position: fixed;
+  margin: 0vw 0vw 0vw 0vw;
+  padding: 1vw 0vw 0vw 5.5vw;
+}
+
+p.about_heading{
+  font-size: 1.5vw;
+  font-weight: bold;
+}
+
+div.about_text_container{
+  overflow: auto;
+  word-wrap: break-word;
+  float: left;
+  margin: 1.75vw 0vw 0vw 0vw;
+  height: 23vw;
+  width: 78vw;
+  resize: none;
+  background-color: white;
+  border-color: transparent;
+  border-radius: 10px;
+  font-size: 1vw;
+  font-weight: 625;
+}
+
+
+div.about_text_container a{
+  text-decoration: none;
+  color:black;
+}
+
+div.patch_ovw{
+  background-color: #304753;
+  width: 82vw;
+  height: 28vw;
+  margin: 3vw 0vw 0vw 4vw;
+  overflow-x: hidden;
+  overflow-y: auto;
+  border-radius: 10px;
+  padding: 0.25vw;
+}
+
+div.patch_head a, div.patch_head{
+  text-decoration: none;
+  border-radius: 10px;
+  color: black;
+  font-size: 1vw;
+  background-color: white;
+  margin: 0.75vw 0vw 0vw 0vw;
+  transition-duration: 0.5s;
+}
+
+article.patch_prevw:hover{
+  background-color: #b6d9c2;
+}
+
+article.patch_prevw{
+  border-radius: 10px;
+  padding: 1vw;
 }
