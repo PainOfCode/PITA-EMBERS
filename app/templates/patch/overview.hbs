@@ -1,8 +1,9 @@
+<button class="patch_btns1" {{action "gotoNew"}}>Create new Patch-Note</button>
 <div>
     <div class="patch_ovw">
       {{#each model as |patch|}}
         {{patch-list patch=patch}}
       {{/each}}
       {{outlet}}
-    </div>
+</div>
 </div>

@@ -5,7 +5,7 @@
   <div class="patch_list_details">
       <div class="patch_version links">
         <span>  Patch: {{patch.version}} </span><br>
-        <span> Release-Date: {{moment-format patch.date 'MMMM D, YYYY h:mm A'}}</span>
+        <span> Release-Date: {{moment-format patch.date 'DD.MM.YYYY HH:mm'}}</span>
       </div>
 
       <div class="patch_version links">
@@ -13,7 +13,7 @@
       </div>
 
       <div class="patch_version links">
-        <span>  Details: {{patch.details}} </span>
+        <span>  Details:<br>{{excerpt patch.details}} </span>
       </div>
   </div>
 </article>

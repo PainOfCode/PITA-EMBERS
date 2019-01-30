@@ -1,1 +1,13 @@
+  <ul class="patch_nav_ul">
+<li class="patch_nav">
+  <div>
+    {{#link-to "patch.overview"}}
+    Back to overview
+    {{/link-to}}
+  </div>
+</li>
+    {{#each model as |patch|}}
+      {{small-patch-list patch=patch}}
+    {{/each}}
+</ul>
 {{outlet}}

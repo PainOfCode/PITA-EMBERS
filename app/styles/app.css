@@ -40,7 +40,7 @@ li.pita a{
 }
 
 body{
-    background-color: #d2a8aa;
+    background-color: #317E5B;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     width: 100%;
     height: 100%;
@@ -48,10 +48,10 @@ body{
 
 div.base_background{
     position: fixed;
-    overflow: auto;
+    overflow: none;
     margin: 6% 0% 0% 5%;
     padding: 0;
-    background-color: #f3e5e6;
+    background-color: #C5CECE;
     height: 35vw;
     width: 90vw;
     border-radius: 10px;
@@ -67,7 +67,7 @@ ul.support_ul{
     list-style-type: none;
     width:fit-content;
     background-color: #304753;
-    height: 44vw;
+    height: 34.5vw;
     position: fixed;
     overflow: auto;
     margin: 0vw 5% 0% -0.2vw;
@@ -281,18 +281,20 @@ p.about_heading{
 }
 
 div.about_text_container{
-  overflow: auto;
+  overflow-y: auto;
+  overflow-x: hidden;
   word-wrap: break-word;
   float: left;
   margin: 1.75vw 0vw 0vw 0vw;
-  height: 23vw;
-  width: 78vw;
+  height: 21vw;
+  width: 76vw;
   resize: none;
   background-color: white;
   border-color: transparent;
   border-radius: 10px;
   font-size: 1vw;
   font-weight: 625;
+  padding: 2vw;
 }
 
 
@@ -303,9 +305,10 @@ div.about_text_container a{
 
 div.patch_ovw{
   background-color: #304753;
-  width: 82vw;
+  width: 70vw;
   height: 28vw;
-  margin: 3vw 0vw 0vw 4vw;
+  position: absolute;
+  margin: -31vw 0vw 0vw 14vw;
   overflow-x: hidden;
   overflow-y: auto;
   border-radius: 10px;
@@ -329,4 +332,169 @@ article.patch_prevw:hover{
 article.patch_prevw{
   border-radius: 10px;
   padding: 1vw;
+}
+
+ul.patch_nav_ul, ul.patch_nav_ul a{
+  list-style: none;
+  text-decoration: none;
+  color: #ff6f69;
+  font-weight: 600;
+  font-size: 1.1vw;
+}
+
+.patch_nav{
+  border-style: solid;
+  border-color: #0e2a38;
+  border-width: 0px 0px 1px 0px;
+}
+ul.patch_nav_ul {
+  height: 34.73vw;
+  width: 10vw;
+  overflow-x: none;
+  overflow-y: auto;
+  background-color: #304753;
+  margin: 0vw 0vw 0vw 0vw;
+  padding: 0.3vw 0vw 0vw 0.6vw;
+  border-radius: 10px 0px 0px 10px;
+}
+
+.patch_nav:hover, .patch_nav:hover a{
+  transition-duration: 0.25s;
+  color:white;
+  background-color: #ff6f69;
+}
+
+
+form.patch_creator{
+  z-index: 2;
+  position: fixed;
+  margin:-33vw 0vw 0vw 14vw;
+  font-weight: 600;
+  font-size: 1.25vw;
+}
+
+.new_patch{
+  margin: 0.5em;
+  border-radius: 10px;
+  border-color: transparent;
+  padding: 0.5em;
+  font-weight: normal;
+  font-size: 0.9vw;
+}
+
+.patch_desc{
+  resize: none;
+  width: 30vw;
+  height: 15vw;
+  font-weight: normal;
+}
+
+
+button.patch_btns1{
+  position: absolute;
+  Margin: -34vw 0vw 0vw 14vw;
+  border-radius: 10px;
+  border-color: transparent;
+  background-color: white;
+  font-size: 1vw;
+}
+
+button.patch_btn_new{
+  font-weight: normal;
+  border-radius: 10px;
+  padding: 0.05vw;
+  border-color: transparent;
+  background-color: white;
+  font-size: 1vw;
+}
+
+form.patch_single{
+  background-color: #304753;
+  height: fit-content;
+  width: 70vw;
+  border-radius: 10px;
+  padding: 1.5vw;
+  font-weight: 500;
+  color: #D1D1D1;
+}
+
+div.patch_single_frame{
+  font-size: 1vw;
+  background-color: #0e2a38;
+  position: absolute;
+  margin: -31vw 0vw 0vw 12vw;
+  width: fit-content;
+  overflow-x: none;
+  overflow-y: auto;
+  height: 25vw;
+  border-radius: 10px;
+  padding: 2vw;
+}
+
+div.comment_on_patch{
+  padding:1vw;
+  height: fit-content;
+  background-color: #304753;
+  border-radius: 10px;
+  margin: 2vw 0vw 0vw 0vw;
+  font-size: 0.9vw;
+}
+
+div.comment_patch_box{
+  resize: none;
+  background-color: #304753;
+  margin: 2vw 0vw 0vw 0vw;
+  padding:1vw;
+  border-radius: 10px;
+}
+
+.comment_box_patch{
+  resize: none;
+  margin: 0.75vw 0vw 0vw 0vw;
+  background-color: transparent;
+  border-radius: 5px;
+  border-color: #0e2a38;
+  color: #D1D1D1;
+  font-size: 0.9vw;
+  font-weight: 400;
+}
+
+label.comment_label{
+  font-size: 1.07vw;
+  font-weight: 600;
+}
+
+button.send_button{
+  border-style: none;
+  border-color: transparent;
+  border-radius: 10px;
+  font-size: 1vw;
+  margin: 0.75vw 0vw 0vw 0vw;
+}
+
+form.login{
+  position: fixed;
+  height: 16vw;
+  width: 20vw;
+  color: white;
+  background-color: #1E8E8E;
+  align: center;
+  align-items: center;
+  text-align: center;
+  border-radius: 5px;
+  margin: 9.5vw 0vw 0vw 35vw;
+}
+
+.login_fields{
+  border-color: transparent;
+  border-radius: 5px;
+  margin: 0.5vw 0vw 0vw 0vw;
+}
+
+button.login_btn_1, button.reg_btn_2{
+  background-color: white;
+  border-style: none;
+  border-color:none;
+  border-radius: 5px;
+  margin-top: 1vw;
 }

@@ -1,3 +1,10 @@
-<form>
-    Start
+
+<form class="login">
+  <p style="font-size:1.4vw;margin:0.5vw 0vw 2vw 0vw">Login</p>
+<label>Username</label><br>
+{{input type="text" value=username class="login_fields"}}<br>
+<label>Password</label><br>
+{{input type="text" value=password class="login_fields"}}<br>
+<button class="login_btn_1" {{action 'signIn'}}>Log in</button>
+<button class="reg_btn_2" {{action 'register'}}>Register</button>
 </form>

@@ -1,14 +1,20 @@
-<div>
-  <div>
-    Back to overview
-  </div>
 
+<form class="patch_creator">
 
-</div>
+    <div>
+        <label> Version </label><br>
+          {{input class="new_patch" type="text" rqeuired=true value=version placeholder="Version"}}
 
-<form>
+    </div>
+    <div>
+        <label> Focus </label><br>
+          {{input class="new_patch" type="text" rqeuired=true value=focus placeholder="Focus"}}
 
-
-
+    </div>
+    <div>
+        <label> Content of Patch</label><br>
+          {{textarea class="new_patch patch_desc" cols="40" rows="4" rqeuired=true value=details placeholder="Content"}}
+    </div>
+    <button {{action "newPatch"}} class="patch_btn_new">Create Patch</button>
 
 </form>

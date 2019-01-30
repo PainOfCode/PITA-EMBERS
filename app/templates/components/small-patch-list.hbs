@@ -1,0 +1,10 @@
+<li class="patch_nav">
+{{#link-to "patch.patches" patch.id}}
+      <div>
+        <span>  Patch: {{patch.version}} </span><br>
+        <span> Release-Date: <br>{{moment-format patch.date 'DD.MM.YYYY'}}</span>
+      </div>
+
+{{/link-to}}
+
+</li>
