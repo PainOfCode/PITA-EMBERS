@@ -312,7 +312,7 @@ div.patch_ovw{
   overflow-x: hidden;
   overflow-y: auto;
   border-radius: 10px;
-  padding: 0.25vw;
+  padding: 0;
 }
 
 div.patch_head a, div.patch_head{
@@ -478,7 +478,6 @@ form.login{
   width: 20vw;
   color: white;
   background-color: #1E8E8E;
-  align: center;
   align-items: center;
   text-align: center;
   border-radius: 5px;
