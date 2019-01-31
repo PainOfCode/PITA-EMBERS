@@ -26,8 +26,6 @@ export default Controller.extend({
       details: '',
       focus: ''
     });
-
-    alert('Successfully created patch');
     window.location.replace('/patch/overview/');
   }}
 });

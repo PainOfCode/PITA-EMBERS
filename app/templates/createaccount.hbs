@@ -1,1 +1,14 @@
-{{outlet}}
+<form class="register">
+  <p style="font-size:1.4vw;margin:0.5vw 0vw 2vw 0vw">Login</p>
+<label class="login_reg">Username</label><br>
+{{input type="text" value=username class="login_fields" placeholder="Username"}}<br>
+<label class="login_reg">E-Mail</label><br>
+{{input type="text" value=email class="login_fields" placeholder="E-Mail"}}<br>
+<label class="login_reg">Password</label><br>
+{{input type="password" value=password1 class="login_fields" placeholder="Password"}}<br>
+<label class="login_reg">Confirm password</label><br>
+{{input type="password" value=password2 class="login_fields" placeholder="Confirm password"}}<br>
+<label class="login_reg">Avatar (optional)</label><br>
+{{input type="text" value=avatar class="login_fields" placeholder="Link to image"}}<br>
+<button class="reg_btn_2" {{action 'createAccount' email password1 password2 username avatar}}>Register</button>
+</form>

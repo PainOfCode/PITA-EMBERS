@@ -34,19 +34,18 @@
                    Support
                   {{/link-to}}
             </li>
-            {{#if this.login_bool}}
-
-                <li class="login_li nav">
-                    Welcome, Test-user
+            {{#if session.isAuthenticated}}
+                <li class="logout nav">
+                  {{#link-to "logout"}}Log out{{/link-to}}
                 </li>
-                <li class="login_li nav">
-                    Log out
+                <li class="sess_top nav">
+                    Welcome, {{session.currentUser.email}}
                 </li>
             {{else}}
-                 <li class="login_li nav">
+                 <li class="create nav">
                    {{#link-to "createaccount"}} Register {{/link-to}}
                  </li>
-                 <li class="login_li nav">
+                 <li class="login nav">
                    {{#link-to "login"}} Log in {{/link-to}}
                  </li>
             {{/if}}
