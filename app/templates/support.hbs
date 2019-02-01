@@ -1,5 +1,5 @@
 
-
+{{#if session.isAuthenticated}}
         <div class="support_ticket">
             <ul class="support_ul">
                 <li class="support_li">
@@ -18,7 +18,8 @@
               <div>
                 <p class="overview">Support/Overview</p>
               </div>
-              
+
             {{outlet}}
         </div>
       </div>
+{{/if}}

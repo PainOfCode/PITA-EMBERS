@@ -39,7 +39,7 @@
                   {{#link-to "logout"}}Log out{{/link-to}}
                 </li>
                 <li class="sess_top nav">
-                    Welcome, {{session.currentUser.email}}
+                    Welcome, {{auth.user.username}}
                 </li>
             {{else}}
                  <li class="create nav">

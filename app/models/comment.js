@@ -1,7 +1,6 @@
 import DS from 'ember-data';
 
 export default DS.Model.extend({
-    body: DS.attr('string'),
-    user: DS.belongsTo('user'),
-    post: DS.belongsTo('post')
+    text: DS.attr('string'),
+    comment: DS.belongsTo('patch')
 });

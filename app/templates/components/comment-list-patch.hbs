@@ -1,3 +1,7 @@
 {{#unless patch.comments}}
     <h4>No comments</h4>
 {{/unless}}
+
+{{#each patch.comments as |comment|}}
+    {{patch.comments}}
+{{/each}}

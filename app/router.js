@@ -22,7 +22,7 @@ Router.map(function() {
   this.route('login');
   this.route('createaccount');
   this.route('patch', function() {
-    this.route('patches', {path:'/:id'});
+    this.route('patches', {path:'/:id'}, function() {});
     this.route('overview');
     this.route('new');
   });
