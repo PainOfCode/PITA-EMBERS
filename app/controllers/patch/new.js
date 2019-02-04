@@ -9,6 +9,7 @@ export default Controller.extend({
     var details = this.get('details');
 
 
+    if (version !== '' && focus !== '' && details !== ''){
 
     var newPatch = this.store.createRecord('patch',{
         version: version,
@@ -27,5 +28,9 @@ export default Controller.extend({
       focus: ''
     });
     window.location.replace('/patch/overview/');
+    }
+    else{
+      alert('Please fill in all fields');
+    }
   }}
 });

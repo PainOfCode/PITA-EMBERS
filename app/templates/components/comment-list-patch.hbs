@@ -1,7 +1,17 @@
-{{#unless patch.comments}}
-    <h4>No comments</h4>
-{{/unless}}
-
 {{#each patch.comments as |comment|}}
-    {{patch.comments}}
+<div class="patch_comment_single">
+
+  <div class="patch_comment_user">
+      {{comment.user.username}}
+  </div>
+  <div class="patch_comment_text">
+    {{comment.text}}
+  </div>
+
+</div>
+
+
+
+  {{else}}
+    <h4>No comments</h4>
 {{/each}}

@@ -1,4 +1,6 @@
+{{#if session.isAuthenticated}}
 <button class="patch_btns1" {{action "gotoNew"}}>Create new Patch-Note</button>
+{{/if}}
 <div>
     <div class="patch_ovw">
       {{#each model as |patch|}}

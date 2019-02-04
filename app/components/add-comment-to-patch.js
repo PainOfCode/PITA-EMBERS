@@ -5,18 +5,33 @@ export default Component.extend({
   session: Ember.inject.service(),
   auth: Ember.inject.service(),
   store: Ember.inject.service(),
+  router: Ember.inject.service(),
 
   actions: {
+
+    gotoLogin: function(){
+      this.get('router').transitionTo('login');
+    },
+
+
     sendComment: function(){
-      console.log(this.get('patch'), 'patch oj');
+      // Create the comment
+
        var newComment = this.get('store').createRecord('comment', {
           text: this.get('comment'),
-          comment: this.get('patch')
+          post: this.get('patch'),
+          user: this.get('auth.user')
        });
-      // console.log('nc',newComment);
-      newComment.save().then(()=>{
-            console.log('kommentar gesendet');
+
+       // Get the parent post
+       var post = this.get('patch');
+       post.get('comments').addObject(newComment);
+
+       // Save the comment, then save the post
+       newComment.save().then(function() {
+         return post.save();
        });
+
     }
   }
 });

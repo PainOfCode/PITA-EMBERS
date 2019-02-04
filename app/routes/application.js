@@ -11,17 +11,13 @@ export default Ember.Route.extend(FindQuery,{
   beforeModel: function() {
     return this.get('session').fetch().then(()=>{
       this.loadUser(this.get('session.currentUser.uid'));
-      console.log('session',this.get('session.currentUser.uid'));
     }).catch(function() {
-      console.log('NO session');
 
     });
   },
 
   loadUser(uid){
-    console.log('loaduser for uid', uid);
     this.filterEqual(this.store, 'user', {'uid':uid},(userdata)=>{
-      console.log(userdata);
     //console.log(userdata[0].username);
     this.get('auth').set('user', userdata[0]);
     })
@@ -30,7 +26,6 @@ export default Ember.Route.extend(FindQuery,{
   actions: {
     signIn: function(email,password) {
       this.get('session').open('firebase', { provider: 'password', email:email, password:password}).then((data)=> {
-        console.log(data.uid);
         this.loadUser(data.uid);
         this.transitionTo('home');
       })

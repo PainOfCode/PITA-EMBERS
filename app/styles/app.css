@@ -4,7 +4,7 @@ ul.nav{
     width: 100%;
     margin: -0.75% 0% 1.5% -1.5%;
     padding: 0.15% 0% 0.5% 2.5%;
-    background-color: #304753;
+    background-color: #88c425;
     height: 2vw;
     position: fixed;
     border-width: 2px;
@@ -18,7 +18,7 @@ li.nav a{
     border-width: 0px 0px 2px 0px;
     border-style: groove;
     border-color: black;
-    color: #d26363;
+    color: #d53025;
     text-decoration: none;
     font-weight: bold;
     font-size: 1vw;
@@ -26,17 +26,18 @@ li.nav a{
 }
 
 li.nav a:hover{
-    background-color: #ff6f69;
+    background-color: #db534d;
     color: white;
 }
 
 li.pita a{
-    margin: 0% 0.5% 0% 0.5%;
+    margin: -1vw 0vw 0vw 0vw;
     position: relative;
     font-size: 1.5vw;
-    background-color: #0e2a38;
+    background-color: #519548;
     font-weight: bolder;
-    padding: 0% 0.75% 1% 0.75%;
+    padding: 1.25vw 0.5vw 1.25vw 0.5vw;
+    letter-spacing: 0.075vw;
 }
 
 body{
@@ -51,7 +52,7 @@ div.base_background{
     overflow: none;
     margin: 6% 0% 0% 5%;
     padding: 0;
-    background-color: #C5CECE;
+    background-color: #eaf1f7;
     height: 35vw;
     width: 90vw;
     border-radius: 10px;
@@ -72,6 +73,7 @@ ul.support_ul{
     overflow: auto;
     margin: 0vw 5% 0% -0.2vw;
     padding: 0.0vw 0% 0.5% 0.2vw;
+    border-radius: 10px 0px 0px 10px;
 }
 
 
@@ -186,8 +188,9 @@ div.ticket_list_details .content{
   border-style: solid;
   border-width: 0px 0px 2px 0px;
   padding: 0vw 0vw 0.5% 0vw;
-  color:#d26363;
+  color:#d53025;
   font-size: 1vw;
+  text-transform: uppercase;
 }
 
 .new_ticket::placeholder{
@@ -545,4 +548,165 @@ div.forum_navbar{
   border-bottom-left-radius: 10px;
   padding:1.5vw;
   color:white;
+}
+
+div.patch_comment_single{
+  height: fit-content;
+  width: inherit;
+  background-color:#eaf1f7;
+  border-radius: 10px;
+  margin: 1vw 0vw 0vw 0vw;
+  padding: 0.75vw;
+}
+
+div.patch_comment_user{
+  font-size: 1vw;
+  font-weight: 600;
+  margin: 0vw 0vw 0.25vw 0vw;
+  text-transform: uppercase;
+}
+
+div.patch_comment_text{
+  font-size: 0.9vw;
+  font-weight: 450;
+}
+
+div.role_nav{
+  position: fixed;
+  border-radius: 10px 0px 0px 10px;
+  background-color: black;
+  height: 35vw;
+  width: 10vw;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+div.role_nav a{
+
+}
+
+div.role_create_edit{
+  position: fixed;
+  height: 29vw;
+  width: 70vw;
+  background-color: blue;
+  margin: 3vw 0vw 0vw 15vw;
+  border-radius: 10px;
+}
+
+div.role_create_edit a{
+
+}
+
+div.role_selector_dropdown{
+  position: fixed;
+  height: 23vw;
+  width: 15vw;
+  background-color: red;
+  z-index: 2;
+  margin: 6vw 0vw 0vw 18vw;
+  padding: 0;
+  border-radius: 10px;
+  padding: 0.25vw;
+}
+
+div.role_selector_dropdown a{
+
+}
+
+div.role_specs{
+  position: fixed;
+  background-color: green;
+  width: 40vw;
+  height: 23vw;
+  z-index: 3;
+  border-radius: 10px;
+  margin: 6vw 0vw 0vw 42vw;
+}
+
+div.role_spacer{
+  position: fixed;
+  height: 26vw;
+  width: 1vw;
+  border-radius: 10px;
+  border-style: dotted;
+  border-width: 0px 2px 0px 0px;
+  border-color: grey;
+  margin: 4.5vw 0vw 0vw 36vw;
+  z-index: 3;
+}
+
+select.role_select, button.role_create_new_drp{
+  background-color: transparent;
+  border-color: transparent;
+}
+
+button.role_create_new_drp{
+}
+
+.role_editor_permissions{
+  border-style: none;
+  border-color: transparent;
+  margin: -2.5vw 0vw 0vw 0vw;
+  padding: 0;
+  width: fit-content;
+  height: fit-content;
+}
+
+div.role_label{
+  position: relative;
+  margin: 0.25vw 0vw 0vw 0.5vw;
+}
+
+div.role_checkboard{
+  position: fixed;
+  z-index: 3;
+  margin: -2vw 0vw 0vw 20vw;
+}
+
+.dropbtn {
+  background-color: #4CAF50;
+  color: white;
+  font-size: 1vw;
+  border: none;
+  text-align: center;
+  width: 15.5vw;
+  height: 2vw;
+  position: absolute;
+  margin: -1.5vw 0vw 0vw -0.25vw;
+ }
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+  z-index: 4;
+  margin: 0vw 0vw 0vw 0vw;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  width: 15.5vw;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  margin: 0.5vw 0vw 0vw -0.25vw;
+}
+
+.dropdown-content a {
+  color: black;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .dropbtn {
+  background-color: #3e8e41;
 }

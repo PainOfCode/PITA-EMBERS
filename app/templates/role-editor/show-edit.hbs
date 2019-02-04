@@ -1,0 +1,47 @@
+<form>
+<div class="role_label">
+<label>Create a comment?</label>
+</div>
+<div class="role_checkboard">
+  {{input type="checkbox" checked=model.postcomment}}
+</div>
+<div class="role_label">
+<label>Create a ticket?</label>
+</div>
+<div class="role_checkboard">
+  {{input type="checkbox" checked=model.createticket}}
+</div>
+<div class="role_label">
+<label>Manage patches?</label>
+</div>
+<div class="role_checkboard">
+    {{input type="checkbox" checked=model.managepatch}}</div>
+<div class="role_label">
+<label>Manage roles?</label>
+</div>
+<div class="role_checkboard">
+  {{input type="checkbox" checked=model.manageroles}}
+</div>
+<div class="role_label">
+<label>Manage users?</label>
+</div>
+<div class="role_checkboard">
+  {{input type="checkbox" checked=model.manageusers}}
+</div>
+<div class="role_label">
+<label>Create a post?</label>
+</div>
+<div class="role_checkboard">
+  {{input type="checkbox" checked=model.createpost}}
+</div>
+<div class="role_label">
+<label>Read tickets?</label>
+</div>
+<div class="role_checkboard">
+  {{input type="checkbox" checked=model.readticket}}
+</div>
+{{input type="text" value=model.rolename placeholder=model.rolename}}
+
+</form>
+
+<button {{action 'applyChanges'}}>Save changes</button>

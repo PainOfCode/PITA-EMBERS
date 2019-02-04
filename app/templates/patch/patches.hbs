@@ -1,10 +1,11 @@
 <div>
   <!-- model.* um auf das in route definierte model zuzugreifen-->
   <!-- edit-funktion hinzufügen-->
+  {{#if session.isAuthenticated}}
   <div>
     <button class="patch_btns1" {{action "deletePatch"}}> Delete patch</button>
   </div>
-
+  {{/if}}
   <div class="patch_single_frame">
 
     <form class="patch_single">
@@ -35,7 +36,7 @@
 
 
     <div class="comment_on_patch">
-    {{comment-list-patch model=model}}
+    {{comment-list-patch patch=model}}
     </div>
   </div>
 

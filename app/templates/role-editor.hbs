@@ -1,0 +1,42 @@
+<div>
+  <div class="role_nav">
+  <!-- Role list small on left with specific users that own this role-->
+  </div>
+  <div class="role_selector_dropdown">
+    <!-- Roles overview with dropdown to select role-->
+    <div>
+      <div class="dropdown">
+        <button class="dropbtn">Select role</button>
+      <div class="dropdown-content">
+      {{#each model as |role|}}
+        {{#link-to 'role-editor.show-edit' role.id}}
+          {{role.rolename}}
+        {{/link-to}}
+      {{/each}}
+    </div>
+  </div>
+    </div>
+
+  </div>
+
+  <div class="role_spacer">
+    <!-- Spacing between dropdown and specs-->
+
+  </div>
+
+  <div class="role_specs">
+    <!-- Detailed list for specific role-->
+    {{outlet}}
+
+  </div>
+
+  <div class="role_create_edit">
+  </div>
+
+  <!--
+  <button {{action 'newRole'}} class="role_create_new_drp">
+    Create new role
+  </button>
+  -->
+
+</div>

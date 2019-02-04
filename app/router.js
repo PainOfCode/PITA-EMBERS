@@ -27,6 +27,11 @@ Router.map(function() {
     this.route('new');
   });
   this.route('logout');
+  this.route('role-editor', function() {
+    this.route('new');
+    this.route('show-edit', {path: '/:id'});
+    this.route('usermanagement');
+  });
 });
 
 export default Router;
