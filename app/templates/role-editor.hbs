@@ -12,7 +12,9 @@
       <div class="role_nav_roles_user {{if showUser 'show'}}">
           {{#each model.users as |usern|}}
             {{#if (eq usern.role.id role.id)}}
-            {{usern.username}}<br>
+            <div class="{{if showUser 'showdiv'}}">
+              {{usern.username}}<br>
+            </div>
             {{/if}}
           {{/each}}
       </div>

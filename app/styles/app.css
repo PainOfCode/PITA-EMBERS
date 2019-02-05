@@ -855,4 +855,12 @@ div.selected_rolename{
 
 .show{
   display: block;
+margin-top: 0.05vw;
+}
+.showdiv{
+  background-color: #f1f1f1;
+  border-style: solid;
+  border-color: #519548;
+  border-width: 0px 0px 1px 0px;
+  padding-left: 0.5vw;
 }
