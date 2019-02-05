@@ -30,7 +30,7 @@ Router.map(function() {
   this.route('role-editor', function() {
     this.route('new');
     this.route('show-edit', {path: '/:id'});
-    this.route('usermanagement');
+    this.route('usermanagement', function() {});
   });
 });
 

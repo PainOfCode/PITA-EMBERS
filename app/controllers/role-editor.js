@@ -4,24 +4,15 @@ import Ember from 'ember';
 export default Controller.extend({
   auth: Ember.inject.service(),
   session: Ember.inject.service(),
-
+  showUser: true,
   actions:{
 
-    newRole: function(){
-      //this.transitionToRoute('role-editor.new');
+    toggleUser:function(){
+      this.toggleProperty('showUser');
+    },
 
-      var role = this.store.createRecord('role', {
-        postcomment: false,
-        managepatch: false,
-        createticket: false,
-        readticket: false,
-        createpost: false,
-        manageroles: false,
-        manageusers: false,
-        rolename: 'Guest'
-      });
-
-      role.save();
+    gotoManageUsers: function(){
+      this.transitionToRoute('role-editor.usermanagement');
     }
   }
 });

@@ -1,23 +1,47 @@
 <div>
+  {{#if (and session.isAuthenticated auth.user.role.manageusers)}}
   <div class="role_nav">
+    <div class="role_nav_roles">
+      <button class="role_nav_roles" {{action 'gotoManageUsers'}}>
+        Edit user roles
+      </button>
+    </div>
   <!-- Role list small on left with specific users that own this role-->
+  {{#each roles as |role|}}
+      <button class="role_nav_roles" {{action 'toggleUser'}}>{{role.rolename}}</button>
+      <div class="role_nav_roles_user {{if showUser 'show'}}">
+          {{#each model.users as |usern|}}
+            {{#if (eq usern.role.id role.id)}}
+            {{usern.username}}<br>
+            {{/if}}
+          {{/each}}
+      </div>
+  {{/each}}
   </div>
+  {{/if}}
+  {{#if (and session.isAuthenticated auth.user.role.manageroles)}}
   <div class="role_selector_dropdown">
     <!-- Roles overview with dropdown to select role-->
     <div>
       <div class="dropdown">
-        <button class="dropbtn">Select role</button>
-      <div class="dropdown-content">
-      {{#each model as |role|}}
-        {{#link-to 'role-editor.show-edit' role.id}}
-          {{role.rolename}}
-        {{/link-to}}
-      {{/each}}
+          <button class="dropbtn">Select role</button>
+          <div class="dropdown-content">
+              {{#each roles as |role|}}
+                {{#link-to 'role-editor.show-edit' role.id}}
+                  {{role.rolename}}
+                {{/link-to}}
+              {{/each}}
+                {{#link-to 'role-editor.new'}}
+                  New role
+                {{/link-to}}
+          </div>
+      </div>
+    </div>
+    <div class="btn_crt_new">
     </div>
   </div>
-    </div>
+  {{/if}}
 
-  </div>
 
   <div class="role_spacer">
     <!-- Spacing between dropdown and specs-->
@@ -32,11 +56,5 @@
 
   <div class="role_create_edit">
   </div>
-
-  <!--
-  <button {{action 'newRole'}} class="role_create_new_drp">
-    Create new role
-  </button>
-  -->
 
 </div>

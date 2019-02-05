@@ -6,5 +6,5 @@ export default DS.Model.extend({
     avatar: DS.attr('string'),
     posts: DS.hasMany('post'),
     comments: DS.hasMany('comment', {inverse:null, polymorphic: true}),
-    role: DS.belongsTo('role')
+    role: DS.belongsTo('role', {inverse: null})
 });

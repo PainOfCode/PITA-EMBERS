@@ -1,1 +1,23 @@
-{{outlet}}
+{{#if (and session.isAuthenticated auth.user.role.manageusers)}}
+
+    <div class="dropdown">
+        <button class="dropbtn manage_users" placeholder="Select a role">{{selectedRole.rolename}}</button>
+        <div class="dropdown-content manage_userstoo">
+            {{#each model.roles as |role|}}
+                <button class="role_select_um" {{action 'selectRole' role}}>{{role.rolename}}</button>
+                <br>
+            {{/each}}
+        </div>
+    </div>
+
+    <div class="select_user">
+      <div class="select_heading">
+        Select users
+      </div>
+        <div>
+          {{#each model.users as |user|}}
+            <button class="{{if (eq user.role.id selectedRole.id) 'moveable_user' 'moved_user'}}" {{action 'selectUser' user}}>{{user.username}}</button><br>
+          {{/each}}
+        </div>
+    </div>
+{{/if}}

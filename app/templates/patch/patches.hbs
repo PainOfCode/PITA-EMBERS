@@ -1,7 +1,7 @@
 <div>
   <!-- model.* um auf das in route definierte model zuzugreifen-->
   <!-- edit-funktion hinzufügen-->
-  {{#if session.isAuthenticated}}
+  {{#if (and auth.user.role.manageroles session.isAuthenticated) }}
   <div>
     <button class="patch_btns1" {{action "deletePatch"}}> Delete patch</button>
   </div>
@@ -25,7 +25,7 @@
         <div>
             <label> Content of Patch:</label><br><br>
               <div>
-            {{model.details}}
+            {{{string-to-html model.details}}}
           </div>
         </div>
     </form>

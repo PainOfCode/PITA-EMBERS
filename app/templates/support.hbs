@@ -1,5 +1,5 @@
 
-{{#if session.isAuthenticated}}
+{{#if (and session.isAuthenticated auth.user.role.createticket)}}
         <div class="support_ticket">
             <ul class="support_ul">
                 <li class="support_li">

@@ -1,26 +1,29 @@
 import Controller from '@ember/controller';
-
+import Ember from 'ember';
 export default Controller.extend({
+  session: Ember.inject.service(),
+  auth: Ember.inject.service(),
+
+  delCmt(){
+    console.log(this.get('model.comments'));
+    this.get('model.comments').forEach((c)=>{
+      c.destroyRecord();
+    });
+  },
+
+  delPtch(){
+    this.get('model').destroyRecord();
+    this.transitionToRoute('patch.overview');
+  },
 
   actions:{
     deletePatch(){
-      let _this = this;
-      async function delCmt(_this){
-        console.log(_this.get('model.comments._objects'));
-        var comment = _this.get('model.comments._objects');
-        for (var i = 0; i < _this.get('model.comments._objects.length');i++){
-          comment[i].destroyRecord();
-        }
-        return 1;
-      }
-      function delPtch(_this){
-        _this.get('model').destroyRecord();
-        _this.transitionToRoute('patch.overview');
-      }
+
       if (this.get('model.comments._objects')){
-        delCmt(_this).then(()=>(delPtch(_this)));
+        this.delCmt();
+        this.delPtch();
       }else{
-        delPtch(_this);
+        this.delPtch();
       }
 
     }

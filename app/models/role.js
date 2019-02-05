@@ -8,5 +8,6 @@ export default DS.Model.extend({
   createpost: DS.attr('boolean',{defaultValue(){return false;}}),
   manageroles: DS.attr('boolean',{defaultValue(){return false;}}),
   manageusers: DS.attr('boolean',{defaultValue(){return false;}}),
-  rolename: DS.attr('string', {defaultValue(){return 'Invalid role';}})
+  rolename: DS.attr('string', {defaultValue(){return 'Invalid role';}}),
+  user: DS.hasMany('user',{inverse:null})
 });

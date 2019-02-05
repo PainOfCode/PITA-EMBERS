@@ -29,11 +29,13 @@
                    About us
                   {{/link-to}}
             </li>
+            {{#if (and session.isAuthenticated auth.user.role.createticket)}}
             <li class="nav">
                  {{#link-to "support.overview"}}
                    Support
                   {{/link-to}}
             </li>
+            {{/if}}
             {{#if session.isAuthenticated}}
                 <li class="logout nav">
                   {{#link-to "logout"}}Log out{{/link-to}}
@@ -49,7 +51,13 @@
                    {{#link-to "login"}} Log in {{/link-to}}
                  </li>
             {{/if}}
-
+            {{#if (and auth.user.role.manageroles session.isAuthenticated) }}
+            <li class="nav">
+                 {{#link-to "role-editor"}}
+                   User/Roles
+                  {{/link-to}}
+            </li>
+            {{/if}}
             </ul>
 
         </div>

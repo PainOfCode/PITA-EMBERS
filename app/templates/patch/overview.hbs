@@ -1,4 +1,4 @@
-{{#if session.isAuthenticated}}
+{{#if (and auth.user.role.managepatch session.isAuthenticated)}}
 <button class="patch_btns1" {{action "gotoNew"}}>Create new Patch-Note</button>
 {{/if}}
 <div>
