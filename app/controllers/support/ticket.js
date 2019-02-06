@@ -12,9 +12,9 @@ export default Controller.extend({
 
     saveTicket: function(){
       //ID des Tickets
-      this.get('model').save().then(function(){
+      this.get('model').save().then(()=>{
         console.log('success');
-        window.location.replace('/support/overview');
+        this.transitionToRoute('support.overview');
       }).catch(function(error){
         console.log(error);
       });
@@ -22,8 +22,8 @@ export default Controller.extend({
 
 
     deleteTicket: function(){
-      this.get('model').destroyRecord().then(function(){
-        window.location.replace('/support/overview');
+      this.get('model').destroyRecord().then(()=>{
+        this.transitionToRoute('support.overview');
       });
     }
   }

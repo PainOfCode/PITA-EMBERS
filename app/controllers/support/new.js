@@ -28,8 +28,7 @@ export default Controller.extend({
             content: '',
             subject: ''
         });
-        alert('Ticket created Successfully');
-        window.location.replace('/support/overview');
+        this.transitionToRoute('support.overview');
     }
 
 }
