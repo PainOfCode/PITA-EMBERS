@@ -27,7 +27,7 @@ export default Controller.extend({
       details: '',
       focus: ''
     });
-    window.location.replace('/patch/overview/');
+    this.transitionToRoute('patch.overview');
     }
     else{
       alert('Please fill in all fields');

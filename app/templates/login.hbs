@@ -1,10 +1,13 @@
-
-<form class="login" autocomplete=off>
-  <p style="font-size:1.4vw;margin:0.5vw 0vw 2vw 0vw">Login</p>
-<label class="login_reg">E-Mail</label><br>
-{{input type="text" value=email class="login_fields" autocomplete="off"}}<br>
-<label class="login_reg">Password</label><br>
-{{input type="password" value=password class="login_fields" autocomplete="off"}}<br>
-<button class="login_btn_1 btn_login1" {{action 'signIn' email password}}>Log in</button>
-<button class="reg_btn_2 btn_login2" {{action 'register'}}>Register</button>
-</form>
+<div class="row10">
+  <div class="col-2 login">
+    <form autocomplete=off>
+      <p>Login</p>
+    <label >E-Mail</label><br>
+    {{input type="text" value=email autocomplete="off"}}<br>
+    <label >Password</label><br>
+    {{input type="password" value=password  autocomplete="off"}}<br>
+    <button  {{action 'signIn' email password}}>Log in</button>
+    <button  {{action 'register'}}>Register</button>
+    </form>
+  </div>
+</div>

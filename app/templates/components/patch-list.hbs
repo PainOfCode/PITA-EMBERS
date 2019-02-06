@@ -1,18 +1,18 @@
-<div class="patch_head">
+<div>
 
 {{#link-to "patch.patches" patch.id}}
-<article class="patch_prevw">
-  <div class="patch_list_details">
-      <div class="patch_version links">
+<article >
+  <div>
+      <div>
         <span>  Patch: {{patch.version}} </span><br>
         <span> Release-Date: {{moment-format patch.date 'DD.MM.YYYY HH:mm'}}</span>
       </div>
 
-      <div class="patch_version links">
+      <div>
         <span>  Focus: {{patch.focus}} </span>
       </div>
 
-      <div class="patch_version links">
+      <div>
         <span>  Details:<br>{{excerpt patch.details}} </span>
       </div>
   </div>

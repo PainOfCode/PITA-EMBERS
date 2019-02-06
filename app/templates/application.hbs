@@ -1,58 +1,56 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <div>
     <header>
-    <div>
-       <div>
+    <div class="row">
+       <div class="col-12 nav">
+           <ul>
 
+            <li class="pita">
 
-           <ul class="nav">
-
-            <li class="pita nav">
-
-                 {{#link-to "index" class="pita"}}
+                 {{#link-to "index"}}
                       PITA
                   {{/link-to}}
             </li>
 
-            <li class="nav">
+            <li >
                 {{#link-to "forum" }}
                   Forum
                 {{/link-to}}
             </li>
-            <li class="nav">
+            <li >
                  {{#link-to "patch.overview"}}
                    Patches
                   {{/link-to}}
             </li>
-            <li class="nav">
+            <li >
                  {{#link-to "about"}}
                    About us
                   {{/link-to}}
             </li>
             {{#if (and session.isAuthenticated auth.user.role.createticket)}}
-            <li class="nav">
+            <li >
                  {{#link-to "support.overview"}}
                    Support
                   {{/link-to}}
             </li>
             {{/if}}
             {{#if session.isAuthenticated}}
-                <li class="logout nav">
+                <li >
                   {{#link-to "logout"}}Log out{{/link-to}}
                 </li>
-                <li class="sess_top nav">
+                <li >
                     Welcome, {{auth.user.username}}
                 </li>
             {{else}}
-                 <li class="create nav">
+                 <li >
                    {{#link-to "createaccount"}} Register {{/link-to}}
                  </li>
-                 <li class="login nav">
+                 <li >
                    {{#link-to "login"}} Log in {{/link-to}}
                  </li>
             {{/if}}
             {{#if (and auth.user.role.manageroles session.isAuthenticated) }}
-            <li class="nav">
+            <li >
                  {{#link-to "role-editor"}}
                    User/Roles
                   {{/link-to}}
@@ -64,8 +62,8 @@
 
     </div>
     </header>
-    <div class="body">
-        <div class="base_background">
+    <div class="row2">
+        <div class="col-10 body_base">
       {{outlet}}
       </div>
     </div>

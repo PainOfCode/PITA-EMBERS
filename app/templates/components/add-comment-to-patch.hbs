@@ -1,25 +1,22 @@
-{{#if (and auth.user.role.postcomment session.isAuthenticated)}}
-<div class="comment_patch_box">
-  <div>
-  <label class="comment_label">Add comment</label><br>
-  {{textarea type="text" rows="6" cols="80" placeholder="Comment.." class="comment_box_patch" value=comment}}
-  </div>
-  <button {{action 'sendComment' comment model}} class="send_button">Send</button>
-</div>
 
-{{else}}
-{{#if (not auth.user.postcomment)}}
-<div class="comment_patch_box">
-  <div style="font-size:1vw;color:white">
-    You are not allowed to comment
-  </div>
-</div>
-{{else}}
-<div class="comment_patch_box">
-  <div style="font-size:1vw;color:white">
-    Please Log in to write a comment
-  </div>
-  <button {{action 'gotoLogin'}} class="send_button">Log in</button>
-</div>
-{{/if}}
-{{/if}}
+    {{#if (and auth.user.role.postcomment session.isAuthenticated)}}
+    <div>
+      <div>
+      <label>Add comment</label><br>
+      {{textarea type="text" rows="6" cols="80" placeholder="Comment.." value=comment}}
+      </div>
+      <button {{action 'sendComment' comment model}} class="send_button">Send</button>
+    </div>
+
+    {{else}}
+    {{#if (not auth.user.postcomment)}}
+      <div>
+        You are not allowed to comment
+      </div>
+    {{else}}
+      <div style="font-size:1vw;color:white">
+        Please Log in to write a comment
+      </div>
+      <button {{action 'gotoLogin'}}>Log in</button>
+    {{/if}}
+    {{/if}}

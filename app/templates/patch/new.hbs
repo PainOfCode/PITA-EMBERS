@@ -1,20 +1,23 @@
+<div class="row6">
+  <div class="col-6">
+    <form>
 
-<form class="patch_creator">
+        <div>
+            <label> Version </label><br>
+              {{input type="text" rqeuired=true value=version placeholder="Version"}}
 
-    <div>
-        <label> Version </label><br>
-          {{input class="new_patch" type="text" rqeuired=true value=version placeholder="Version"}}
+        </div>
+        <div>
+            <label> Focus </label><br>
+              {{input type="text" rqeuired=true value=focus placeholder="Focus"}}
 
-    </div>
-    <div>
-        <label> Focus </label><br>
-          {{input class="new_patch" type="text" rqeuired=true value=focus placeholder="Focus"}}
+        </div>
+        <div>
+            <label> Content of Patch</label><br>
+              {{textarea cols="40" rows="4" rqeuired=true value=details placeholder="Content"}}
+        </div>
+        <button {{action "newPatch"}} >Create Patch</button>
 
-    </div>
-    <div>
-        <label> Content of Patch</label><br>
-          {{textarea class="new_patch patch_desc" cols="40" rows="4" rqeuired=true value=details placeholder="Content"}}
-    </div>
-    <button {{action "newPatch"}} class="patch_btn_new">Create Patch</button>
-
-</form>
+    </form>
+  </div>
+</div>

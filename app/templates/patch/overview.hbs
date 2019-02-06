@@ -1,8 +1,10 @@
-{{#if (and auth.user.role.managepatch session.isAuthenticated)}}
-<button class="patch_btns1" {{action "gotoNew"}}>Create new Patch-Note</button>
-{{/if}}
-<div>
-    <div class="patch_ovw">
+<div class="row4">
+    {{#if (and auth.user.role.managepatch session.isAuthenticated)}}
+    <button {{action "gotoNew"}}>Create new Patch-Note</button>
+    {{/if}}
+</div>
+<div class="row5">
+    <div class="col-7 patch_ovw">
       {{#each model as |patch|}}
         {{patch-list patch=patch}}
       {{/each}}
