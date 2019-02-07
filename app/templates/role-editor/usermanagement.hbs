@@ -1,23 +1,29 @@
-{{#if (and session.isAuthenticated auth.user.role.manageusers)}}
+  {{#if (and session.isAuthenticated auth.user.role.manageusers)}}
 
-    <div class="dropdown">
-        <button class="dropbtn manage_users" placeholder="Select a role">{{selectedRole.rolename}}</button>
-        <div class="dropdown-content manage_userstoo">
-            {{#each model.roles as |role|}}
-                <button class="role_select_um" {{action 'selectRole' role}}>{{role.rolename}}</button>
-                <br>
-            {{/each}}
-        </div>
+    <div class="row7">
+      <div class="col-2 dropdown">
+          <!-- Roles overview with dropdown to select role-->
+          <button class="role_dropbtn">{{if selectedRole selectedRole.rolename 'Select a role'}}</button>
+          <div class="drop_content">
+              {{#each model.roles as |role|}}
+                  <button {{action 'selectRole' role}}>{{role.rolename}}</button><br>
+              {{/each}}
+          </div>
+      </div>
     </div>
+    {{log selectedRole}}
 
-    <div class="select_user">
-      <div class="select_heading">
-        Select users
+    <div class="row6">
+      <div class="col-2">
+
+      <div>
+        Select users for role: {{selectedRole.rolename}}
       </div>
         <div>
           {{#each model.users as |user|}}
             <button class="{{if (eq user.role.id selectedRole.id) 'moveable_user' 'moved_user'}}" {{action 'selectUser' user}}>{{user.username}}</button><br>
           {{/each}}
         </div>
+      </div>
     </div>
 {{/if}}

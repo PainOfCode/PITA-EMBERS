@@ -16,7 +16,7 @@ export default Component.extend({
 
     sendComment: function(){
       // Create the comment
-
+      if(this.get('comment.length') >= 10){
        var newComment = this.get('store').createRecord('comment', {
           text: this.get('comment'),
           post: this.get('patch'),
@@ -31,7 +31,8 @@ export default Component.extend({
        newComment.save().then(function() {
          return post.save();
        });
-
+       this.set('comment','');
+     }
     }
   }
 });

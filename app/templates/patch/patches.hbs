@@ -1,16 +1,20 @@
-<div class="row7">
-  <div class="col-9">
+
   <!-- model.* um auf das in route definierte model zuzugreifen-->
   <!-- edit-funktion hinzufügen-->
-  {{#if (and auth.user.role.manageroles session.isAuthenticated) }}
-  <div class="del_btn_ptch">
-    <button {{action "deletePatch"}}> Delete patch</button>
+<div class="row15">
+  <div class="col-2">
+    {{#if (and auth.user.role.manageroles session.isAuthenticated) }}
+    <div>
+      <button {{action "deletePatch"}}> Delete patch</button>
+    </div>
+    {{/if}}
   </div>
-  {{/if}}
-  <div class="ptch_sgl">
+</div>
 
-    <form>
 
+<div class="row16">
+  <div class="col-7">
+    <form class="sgl_ptch">
         <div>
             <label> Version:</label><br>
             {{model.version}}<br>
@@ -31,30 +35,20 @@
         </div>
     </form>
 
-    <div class="row8">
-      <div class="col-9 add_cmt">
       {{add-comment-to-patch patch=model}}
-      </div>
-    </div>
 
 
-    <div class="row9">
-      <div class="col-9 cmt_lst">
+      <div class="cmt_list">
         {{#each model.comments as |comment|}}
-
-          <div>
+        <div class="cmt_frame">
             {{comment.user.username}}:
             <br>
             {{comment.text}}
-          </div>
-
+        </div>
 
         {{else}}
             <h4>No comments</h4>
         {{/each}}
       </div>
     </div>
-
   </div>
-  </div>
-</div>

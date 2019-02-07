@@ -1,37 +1,41 @@
-{{#if (and session.isAuthenticated auth.user.role.manageroles)}}
-<form>
-    <div class="role_ovw _one">
-        <label class="role_label">Create a comment?</label>
-          {{input type="checkbox" checked=this.comment class="role_checkboard"}}
+<div class="row5">
+  <div class="col-2">
+    {{#if (and session.isAuthenticated auth.user.role.manageroles)}}
+    <form>
+        <div class=" _one">
+            <label>Create a comment?</label>
+              {{input type="checkbox" checked=this.comment}}
 
-    </div>
-    <div class="role_ovw _two">
-        <label class="role_label">Create a ticket?</label>
-        {{input type="checkbox" checked=this.createTicket class="role_checkboard"}}
-    </div>
-    <div class="role_ovw _one">
-        <label class="role_label">Manage patches?</label>
-          {{input type="checkbox" checked=this.patches class="role_checkboard"}}
-    </div>
-    <div class="role_ovw _two">
-        <label class="role_label">Manage roles?</label>
-          {{input type="checkbox" checked=this.roles class="role_checkboard"}}
-    </div>
-    <div class="role_ovw _one">
-        <label class="role_label">Manage users?</label>
-          {{input type="checkbox" checked=this.users class="role_checkboard"}}
-    </div>
-    <div class="role_ovw _two">
-        <label class="role_label">Create a post?</label>
-          {{input type="checkbox" checked=this.post class="role_checkboard"}}
-    </div>
-    <div class="role_ovw _one">
-        <label class="role_label">Read tickets?</label>
-          {{input type="checkbox" checked=this.answerTicket class="role_checkboard"}}
-    </div>
-{{input class="rolename_field" type="text" value=this.rolename placeholder=model.rolename}}
-</form>
+        </div>
+        <div class=" _two">
+            <label>Create a ticket?</label>
+            {{input type="checkbox" checked=this.createTicket}}
+        </div>
+        <div class=" _one">
+            <label>Manage patches?</label>
+              {{input type="checkbox" checked=this.patches}}
+        </div>
+        <div class=" _two">
+            <label>Manage roles?</label>
+              {{input type="checkbox" checked=this.roles}}
+        </div>
+        <div class=" _one">
+            <label>Manage users?</label>
+              {{input type="checkbox" checked=this.users}}
+        </div>
+        <div class=" _two">
+            <label>Create a post?</label>
+              {{input type="checkbox" checked=this.post}}
+        </div>
+        <div class=" _one">
+            <label>Read tickets?</label>
+              {{input type="checkbox" checked=this.answerTicket }}
+        </div>
+    {{input type="text" class="rolename" value=this.rolename placeholder="Rolename"}}
+    </form>
 
 
-<button class="apply_btn" {{action 'saveCreate'}}>Save/Create</button>
-{{/if}}
+    <button {{action 'saveCreate'}}>Save/Create</button>
+    {{/if}}
+  </div>
+</div>

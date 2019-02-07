@@ -18,7 +18,7 @@ export default Controller.extend({
       this.transitionToRoute('login');
     },
     createAccount:function(email, password1,password2, username, avatar){
-      if (password1 === password2 && email !== '' && username !== ''){
+      if (password1 === password2 && email.length >= 10 && (username.length >= 6 && username.length <= 12)){
         var password = password1;
         this.get('firebaseApp').auth().createUserWithEmailAndPassword(email,password).then((data)=>{
           console.log(data);
@@ -45,10 +45,6 @@ export default Controller.extend({
           });
         })
       }
-    else
-        {
-          alert('Passwords do not match');
-        }
     }
   }
 });

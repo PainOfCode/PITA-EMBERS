@@ -1,62 +1,69 @@
 <div>
-  {{#if (and session.isAuthenticated auth.user.role.manageusers)}}
-  <div class="role_nav">
-    <div class="role_nav_roles">
-      <button class="role_nav_roles" {{action 'gotoManageUsers'}}>
-        Edit user roles
-      </button>
-    </div>
-  <!-- Role list small on left with specific users that own this role-->
-  {{#each roles as |role|}}
-      <button class="role_nav_roles" {{action 'toggleUser'}}>{{role.rolename}}</button>
-      <div class="role_nav_roles_user {{if showUser 'show'}}">
-          {{#each model.users as |usern|}}
-            {{#if (eq usern.role.id role.id)}}
-            <div class="{{if showUser 'showdiv'}}">
-              {{usern.username}}<br>
-            </div>
-            {{/if}}
-          {{/each}}
-      </div>
-  {{/each}}
-  </div>
-  {{/if}}
-  {{#if (and session.isAuthenticated auth.user.role.manageroles)}}
-  <div class="role_selector_dropdown">
-    <!-- Roles overview with dropdown to select role-->
+<div class="row3">
+  <div class="col-2">
+    {{#if (and session.isAuthenticated auth.user.role.manageusers)}}
     <div>
-      <div class="dropdown">
-          <button class="dropbtn">Select role</button>
-          <div class="dropdown-content">
-              {{#each roles as |role|}}
-                {{#link-to 'role-editor.show-edit' role.id}}
-                  {{role.rolename}}
-                {{/link-to}}
-              {{/each}}
-                {{#link-to 'role-editor.new'}}
-                  New role
-                {{/link-to}}
-          </div>
+      <div>
+        <button {{action 'gotoManageUsers'}}>
+          Edit user role assignment
+        </button>
       </div>
+    <!-- Role list small on left with specific users that own this role-->
+    {{#each roles as |role|}}
+        <button {{action 'toggleUser'}}>{{role.rolename}}</button><br>
+        <div class="role_nav_roles_user {{if showUser 'showdiv'}}">
+            {{#each model.users as |usern|}}
+              {{#if (eq usern.role.id role.id)}}
+              <div>
+                {{usern.username}}<br>
+              </div>
+              {{/if}}
+            {{/each}}
+        </div>
+    {{/each}}
     </div>
-    <div class="btn_crt_new">
-    </div>
+    {{/if}}
   </div>
-  {{/if}}
+</div>
+
+<div class="spacer2">
+  <!-- Spacing between dropdown and specs-->
+
+</div>
+
+<div class="row4">
+  <div class="col-2 dropdown">
+    {{#if (and session.isAuthenticated auth.user.role.manageroles)}}
+      <!-- Roles overview with dropdown to select role-->
+            <button class="role_dropbtn">Select role</button>
+            <div class="drop_content">
+                {{#each roles as |role|}}
+                  {{#link-to 'role-editor.show-edit' role.id}}
+                    {{role.rolename}}<br>
+                  {{/link-to}}
+                {{/each}}
+                  {{#link-to 'role-editor.new'}}
+                    New role
+                  {{/link-to}}
+            </div>
+    {{/if}}
+  </div>
+</div>
 
 
-  <div class="role_spacer">
+
+  <div class="spacer">
     <!-- Spacing between dropdown and specs-->
 
   </div>
 
-  <div class="role_specs">
+  <div>
     <!-- Detailed list for specific role-->
     {{outlet}}
 
   </div>
 
-  <div class="role_create_edit">
+  <div>
   </div>
 
 </div>

@@ -2,8 +2,8 @@
 <div>
     <header>
     <div class="row">
-       <div class="col-12 nav">
-           <ul>
+       <div class="col-1 nav">
+           <ul class="nav_ul_main">
 
             <li class="pita">
 
@@ -38,7 +38,7 @@
                 <li >
                   {{#link-to "logout"}}Log out{{/link-to}}
                 </li>
-                <li >
+                <li class="wlcm_user">
                     Welcome, {{auth.user.username}}
                 </li>
             {{else}}
