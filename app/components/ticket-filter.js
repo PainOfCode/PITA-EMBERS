@@ -7,7 +7,6 @@ export default Component.extend({
     init(){
         this._super(...arguments);
         let filterAction = this.get('filter');
-
         this.set('results', filterAction(''));
 
     },

@@ -2,62 +2,77 @@
 <div>
     <header>
     <div class="row">
-       <div class="col-1 nav">
-           <ul class="nav_ul_main">
-
-            <li class="pita">
+       <div class="col-1">
 
                  {{#link-to "index"}}
+                 <div class="pita" id="pita">
                       PITA
+                    </div>
                   {{/link-to}}
-            </li>
 
-            <li >
                 {{#link-to "forum" }}
+                <div>
                   Forum
+                </div>
                 {{/link-to}}
-            </li>
-            <li >
                  {{#link-to "patch.overview"}}
+                 <div>
                    Patches
+                 </div>
                   {{/link-to}}
-            </li>
-            <li >
                  {{#link-to "about"}}
+                 <div>
                    About us
+                 </div>
                   {{/link-to}}
-            </li>
             {{#if (and session.isAuthenticated auth.user.role.createticket)}}
-            <li >
                  {{#link-to "support.overview"}}
+                 <div>
                    Support
+                 </div>
                   {{/link-to}}
-            </li>
             {{/if}}
             {{#if session.isAuthenticated}}
-                <li >
+            <div>
                   {{#link-to "logout"}}Log out{{/link-to}}
-                </li>
-                <li class="wlcm_user">
-                    Welcome, {{auth.user.username}}
-                </li>
+                </div>
+                  {{#link-to "friends"}}
+                  <div>
+                    Friends
+                  </div>
+                  {{/link-to}}
+                  {{#link-to "membership"}}
+                  <div>
+                    Membership
+                </div><br><br>
+                {{/link-to}}
+                <div>
+                    Welcome, <br>{{auth.user.username}}
+                </div>
             {{else}}
-                 <li >
-                   {{#link-to "createaccount"}} Register {{/link-to}}
-                 </li>
-                 <li >
-                   {{#link-to "login"}} Log in {{/link-to}}
-                 </li>
+               {{#link-to "createaccount"}}
+                 <div>
+                   Register
+                  </div>
+               {{/link-to}}
+                   {{#link-to "login"}}
+                   <div>
+                   Log in
+                 </div>
+                   {{/link-to}}
             {{/if}}
             {{#if (and auth.user.role.manageroles session.isAuthenticated) }}
-            <li >
                  {{#link-to "role-editor"}}
+                 <div >
                    User/Roles
+                 </div>
                   {{/link-to}}
-            </li>
             {{/if}}
-            </ul>
-
+            <div>
+              {{#link-to "settings"}}
+                Settings
+              {{/link-to}}
+            </div>
         </div>
 
     </div>

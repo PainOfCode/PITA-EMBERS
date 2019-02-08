@@ -1,16 +1,16 @@
 
-<div class="ticket_link_ovw">
+<div class="row20">
 {{#link-to "support.ticket" ticket.id}}
-<article class="ticket_list">
-    <div class="ticket_list_details">
-        <h3>Ticket: {{ticket.title}}</h3>
-        <h5>ID: {{ticket.id}}</h5>
-        <div class="ticket_list_details subject">
-            <span>From: {{moment-format ticket.date 'MMMM D, YYYY h:mm A'}}</span><br>
-            <span>Subject: {{ticket-definer ticket.subject}} - {{ticket.subject}}</span>
+<article>
+    <div>
+        <span class="t_title">Ticket: {{ticket.title}}</span><br>
+        <div>
+            <span class="t_date">From: {{moment-format ticket.date 'MMMM D, YYYY h:mm A'}}</span><br>
+            <span class="t_id">ID: {{ticket.id}}</span><br>
+            <span class="t_subject">Subject: {{ticket-definer ticket.subject}} - {{ticket.subject}}</span>
         </div>
-        <div class="ticket_list_details content">
-            <span>Content: {{ticket.content}}</span>
+        <div>
+            <span class="t_content">Content: {{ticket.content}}</span>
         </div>
     </div>
 </article>
