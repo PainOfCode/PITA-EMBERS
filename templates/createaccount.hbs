@@ -1,0 +1,18 @@
+<div class="row9">
+  <div class="col-2">
+    <form>
+      <p style="font-size:1.2em;margin:0.5vw 0vw 2vw 0vw">Register</p>
+    <label>Username</label><br>
+    {{input type="text" value=username placeholder="Username"}}<br>
+    <label>E-Mail</label><br>
+    {{input type="text" value=email placeholder="E-Mail"}}<br>
+    <label>Password</label><br>
+    {{input type="password" value=password1 placeholder="Password"}}<br>
+    <label>Confirm password</label><br>
+    {{input type="password" value=password2 placeholder="Confirm password"}}<br>
+    <label>Avatar (optional)</label><br>
+    {{input type="text" value=avatar placeholder="Link to image"}}<br>
+    <button {{action 'createAccount' email password1 password2 username avatar}}>Register</button>
+    </form>
+  </div>
+</div>

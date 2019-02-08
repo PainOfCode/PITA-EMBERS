@@ -1,0 +1,18 @@
+
+<div class="row20">
+{{#link-to "support.ticket" ticket.id}}
+<article>
+    <div>
+        <span class="t_title">Ticket: {{ticket.title}}</span><br>
+        <div>
+            <span class="t_date">From: {{moment-format ticket.date 'MMMM D, YYYY h:mm A'}}</span><br>
+            <span class="t_id">ID: {{ticket.id}}</span><br>
+            <span class="t_subject">Subject: {{ticket-definer ticket.subject}} - {{ticket.subject}}</span>
+        </div>
+        <div>
+            <span class="t_content">Content: {{ticket.content}}</span>
+        </div>
+    </div>
+</article>
+{{/link-to}}
+</div>
