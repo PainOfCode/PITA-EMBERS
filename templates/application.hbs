@@ -1,0 +1,85 @@
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<div>
+    <header>
+    <div class="row">
+       <div class="col-1">
+
+                 {{#link-to "index"}}
+                 <div class="pita" id="pita">
+                      PITA
+                    </div>
+                  {{/link-to}}
+
+                {{#link-to "forum" }}
+                <div>
+                  Forum
+                </div>
+                {{/link-to}}
+                 {{#link-to "patch.overview"}}
+                 <div>
+                   Patches
+                 </div>
+                  {{/link-to}}
+                 {{#link-to "about"}}
+                 <div>
+                   About us
+                 </div>
+                  {{/link-to}}
+            {{#if (and session.isAuthenticated auth.user.role.createticket)}}
+                 {{#link-to "support.overview"}}
+                 <div>
+                   Support
+                 </div>
+                  {{/link-to}}
+            {{/if}}
+            {{#if session.isAuthenticated}}
+            <div>
+                  {{#link-to "logout"}}Log out{{/link-to}}
+                </div>
+                  {{#link-to "friends"}}
+                  <div>
+                    Friends
+                  </div>
+                  {{/link-to}}
+                  {{#link-to "membership"}}
+                  <div>
+                    Membership
+                </div><br><br>
+                {{/link-to}}
+                <div>
+                    Welcome, <br>{{auth.user.username}}
+                </div>
+            {{else}}
+               {{#link-to "createaccount"}}
+                 <div>
+                   Register
+                  </div>
+               {{/link-to}}
+                   {{#link-to "login"}}
+                   <div>
+                   Log in
+                 </div>
+                   {{/link-to}}
+            {{/if}}
+            {{#if (and auth.user.role.manageroles session.isAuthenticated) }}
+                 {{#link-to "role-editor"}}
+                 <div >
+                   User/Roles
+                 </div>
+                  {{/link-to}}
+            {{/if}}
+            <div>
+              {{#link-to "settings"}}
+                Settings
+              {{/link-to}}
+            </div>
+        </div>
+
+    </div>
+    </header>
+    <div class="row2">
+        <div class="col-10 body_base">
+      {{outlet}}
+      </div>
+    </div>
+</div>

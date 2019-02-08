@@ -1,0 +1,48 @@
+<!--
+
+Plan for the whole section:
+
+  -Online status of 'friends'
+  -List possible friends [know a friend of a friend]
+  -Add user as friend after accept of friend-request after search with name
+  -Block users never have to see their content again
+  -Click on username -> goto profile of them with maybe a bio and such
+  -Report to moderator
+  -Notifications [Friend req.]
+  -Send images/Links
+  -Challenge them to a game
+  -Groupchats
+  -Voice-Chat [?]
+  -Watch2gether-feature-like clone
+  -Commands and custom emotes
+
+-->
+
+<!-- Linksseitige overview, aufklappbar nach grp sortiert [Online und offline only]-->
+<div class="row23">
+  <div class="col-2">
+
+    {{#link-to "friends.add"}}
+      <div>
+        Add new friend
+      </div>
+    {{/link-to}}
+    {{#each model as |group|}}
+
+    {{#link-to "friends.chat.user" group.username}}
+    <div>
+      {{group.username}}
+    </div>
+    {{/link-to}}
+
+    {{else}}
+
+    <div>
+      No friends online
+    </div>
+    {{/each}}
+
+  </div>
+</div>
+
+{{outlet}}
