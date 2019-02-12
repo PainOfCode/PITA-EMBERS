@@ -1,20 +1,16 @@
-<div class="row12">
-  <div class="col-2">
-      {{#if (and auth.user.role.managepatch session.isAuthenticated)}}
-      <button {{action "gotoNew"}}>Create new Patch-Note</button>
-      {{/if}}
-  </div>
-</div>
 
-<div class="row13">
-  <div class="col-8">
-    <div>
-        {{#each model as |patch|}}
-          {{patch-list patch=patch}}
-          {{else}}
-          No patches available
-        {{/each}}
-      {{outlet}}
+    <div class="col-2 patch_bl">
+        {{#if (and auth.user.role.managepatch session.isAuthenticated)}}
+        <button {{action "gotoNew"}}>Create new Patch-Note</button>
+        {{/if}}
     </div>
-  </div>
-</div>
+    <div class="col-8 bg_nav scrollable patch_bl_ls">
+      <div>
+          {{#each model as |patch|}}
+            {{patch-list patch=patch}}
+            {{else}}
+            No patches available
+          {{/each}}
+        {{outlet}}
+      </div>
+    </div>

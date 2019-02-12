@@ -5,7 +5,7 @@
   <div class="col-2">
     {{#if (and auth.user.role.manageroles session.isAuthenticated) }}
     <div>
-      <button {{action "deletePatch"}}> Delete patch</button>
+      <button class="button_style" {{action "deletePatch"}}> Delete patch</button>
     </div>
     {{/if}}
   </div>
@@ -13,8 +13,8 @@
 
 
 <div class="row16">
-  <div class="col-7">
-    <form class="sgl_ptch">
+  <div class="col-7 outline_4_d scrollable bg_nav_div">
+    <form class="sgl_ptch outline_4_d bg_nav">
         <div>
             <label> Version:</label><br>
             {{model.version}}<br>
@@ -38,7 +38,7 @@
       {{add-comment-to-patch patch=model}}
 
 
-      <div class="cmt_list">
+      <div class="outline_4_d">
         {{#each model.comments as |comment|}}
         <div class="cmt_frame">
             {{comment.user.username}}:
@@ -47,7 +47,7 @@
         </div>
 
         {{else}}
-            <h4>No comments</h4>
+            <h4 style="text-align: center;">No comments</h4>
         {{/each}}
       </div>
     </div>

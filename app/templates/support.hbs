@@ -1,25 +1,21 @@
-
 {{#if (and session.isAuthenticated auth.user.role.createticket)}}
-        <div class="support_ticket">
-            <ul class="support_ul">
-                <li class="support_li">
-                    {{#link-to "support.new"}}
-                        New ticket
-                    {{/link-to}}
-                </li>
-                <li class="support_li">
-                    {{#link-to "support.listAll"}}
-                        List current tickets
-                    {{/link-to}}
-                </li>
-            </ul>
+<div class="row">
+  <div class="col-2 scrollable bg_nav outline_r support">
+    <p class="support_nav_h">Support/Overview</p>
+        {{#link-to "support.new"}}
+          <div>
+            New ticket
+          </div>
+        {{/link-to}}
 
-        <div class="support_inhalt">
-              <div>
-                <p class="overview">Support/Overview</p>
-              </div>
+        {{#link-to "support.listAll"}}
+          <div>
+            List current tickets
+          </div>
+        {{/link-to}}
+  </div>
 
-            {{outlet}}
-        </div>
-      </div>
+  {{outlet}}
+
+</div>
 {{/if}}

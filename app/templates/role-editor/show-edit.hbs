@@ -1,32 +1,32 @@
-<div class="row5">
-  <div class="col-2">
+<div class="row">
+  <div class="col-2 save">
     {{#if (and session.isAuthenticated auth.user.role.manageroles)}}
     <form>
-        <div class="_one">
+        <div class="bg_nav_div">
             <label>Create a comment?</label>
               {{input type="checkbox" checked=model.postcomment}}
         </div>
-        <div class="_two">
+        <div class="bg_nav">
             <label>Create a ticket?</label>
             {{input type="checkbox" checked=model.createticket}}
         </div>
-        <div class="_one">
+        <div class="bg_nav_div">
             <label>Manage patches?</label>
               {{input type="checkbox" checked=model.managepatch}}
         </div>
-        <div class="_two">
+        <div class="bg_nav">
             <label>Manage roles?</label>
               {{input type="checkbox" checked=model.manageroles}}
         </div>
-        <div class="_one">
+        <div class="bg_nav_div">
             <label>Manage users?</label>
               {{input type="checkbox" checked=model.manageusers}}
         </div>
-        <div class="_two">
+        <div class="bg_nav">
             <label>Create a post?</label>
               {{input type="checkbox" checked=model.createpost}}
         </div>
-        <div class="_one">
+        <div class="bg_nav_div">
             <label>Read tickets?</label>
               {{input type="checkbox" checked=model.readticket}}
         </div>

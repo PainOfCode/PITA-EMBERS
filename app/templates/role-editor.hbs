@@ -1,17 +1,16 @@
-<div>
-<div class="row3">
-  <div class="col-2">
+<div class="row outline_r">
+  <div class="col-2 outline_4_d scrollable bg_nav user_ovw_roles">
     {{#if (and session.isAuthenticated auth.user.role.manageusers)}}
     <div>
       <div>
-        <button {{action 'gotoManageUsers'}}>
+        <button class="bg_nav_div" {{action 'gotoManageUsers'}}>
           Edit user role assignment
         </button>
       </div>
     <!-- Role list small on left with specific users that own this role-->
     {{#each roles as |role|}}
-        <button {{action 'toggleUser'}}>{{role.rolename}}</button><br>
-        <div class="role_nav_roles_user {{if showUser 'showdiv'}}">
+        <button class="bg_nav_div" {{action 'toggleUser'}}>{{role.rolename}}</button><br>
+        <div class="role_nav_roles_user bg_nav {{if showUser 'showdiv'}}">
             {{#each model.users as |usern|}}
               {{#if (eq usern.role.id role.id)}}
               <div>
@@ -24,46 +23,33 @@
     </div>
     {{/if}}
   </div>
-</div>
 
-<div class="spacer2">
-  <!-- Spacing between dropdown and specs-->
 
-</div>
 
-<div class="row4">
-  <div class="col-2 dropdown">
+  <div class="col-2 dropdown bg_nav">
     {{#if (and session.isAuthenticated auth.user.role.manageroles)}}
       <!-- Roles overview with dropdown to select role-->
-            <button class="role_dropbtn">Select role</button>
-            <div class="drop_content">
+            <button class="role_dropbtn bg_nav_div scrollable">Select role</button>
+            <div class="drop_content bg_nav scrollable">
                 {{#each roles as |role|}}
                   {{#link-to 'role-editor.show-edit' role.id}}
+                    <div>
                     {{role.rolename}}<br>
+                    </div>
                   {{/link-to}}
                 {{/each}}
                   {{#link-to 'role-editor.new'}}
+                  <div>
                     New role
+                  </div>
                   {{/link-to}}
             </div>
     {{/if}}
   </div>
-</div>
 
+    <div>
+      <!-- Detailed list for specific role-->
+      {{outlet}}
 
-
-  <div class="spacer">
-    <!-- Spacing between dropdown and specs-->
-
-  </div>
-
-  <div>
-    <!-- Detailed list for specific role-->
-    {{outlet}}
-
-  </div>
-
-  <div>
-  </div>
-
+    </div>
 </div>

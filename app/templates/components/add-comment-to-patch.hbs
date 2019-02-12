@@ -1,16 +1,16 @@
 
     {{#if (and auth.user.role.postcomment session.isAuthenticated)}}
-    <div class="row17">
+    <div class="row17 outline_4_d">
       <div>
       <label>Add comment</label><br>
-      {{textarea type="text" rows="6" cols="80" placeholder="Comment.." value=comment}}
+      {{textarea class="outline_4_s" type="text" rows="6" cols="80" placeholder="Comment.." value=comment}}
       </div>
-      <button {{action 'sendComment' comment model}} class="send_button">Send</button>
+      <button class="outline_4_s" {{action 'sendComment' comment model}}>Send</button>
     </div>
 
     {{else}}
     {{#if (not auth.user.postcomment)}}
-      <div>
+      <div style="text-align: center;">
         You are not allowed to comment
       </div>
     {{else}}

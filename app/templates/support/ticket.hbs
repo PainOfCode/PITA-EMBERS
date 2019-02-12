@@ -1,30 +1,30 @@
-<div>
+<div class="row">
+  <div class="col-4 outline_4_s">
+    <form>
+        <div>
+            <label>Title</label><br>
+            {{input class="bg_nav outline_4_s" type="text" required=true value=model.title}}
+        </div>
+        <div>
+            <label>Subject</label><br>
 
-  <form class="new_ticket_form">
-      <div>
-          <label class="new_ticket_label">Title</label>
-          {{input class="new_ticket" type="text" required=true value=model.title}}
-      </div>
-      <div>
-          <label class="new_ticket_label">Subject</label>
+            {{input class="bg_nav outline_4_s" type="text" required=true value=model.subject placeholder="Add subject"}}
+        </div>
+        <div>
+            <label>Occured date</label><br>
 
-          {{input class="new_ticket" type="text" required=true value=model.subject placeholder="Add subject"}}
-      </div>
-      <div>
-          <label class="new_ticket_label">Occured date</label>
+            {{pikaday-input class="bg_nav outline_4_s" onSelection=(action 'setDate') id="pikaday" placeholder="Date" type="date" value=model.date format="YYYY-MM-DD"}}
+        </div>
+        <div>
+            <label>Description</label><br>
 
-          {{pikaday-input onSelection=(action 'setDate') id="pikaday" class="new_ticket" placeholder="Date" type="date" value=model.date format="YYYY-MM-DD"}}
-      </div>
-      <div>
-          <label class="new_ticket_label">Description</label>
+            {{textarea class="bg_nav outline_4_s" cols="40" rows="5" required=true value=model.content placeholder="Add Description"}}
+        </div>
+        <button class="bg_nav outline_4_s" {{action 'saveTicket'}}>Save ticket</button>
+        <button class="bg_nav outline_4_s" {{action 'deleteTicket'}}>Delete ticket</button>
 
-          {{textarea class="new_ticket desc" cols="40" rows="5" required=true value=model.content placeholder="Add Description"}}
-      </div>
-      <button {{action 'saveTicket'}} class="new_ticket_btn">Submit ticket</button>
-      <button {{action 'deleteTicket'}} class="delete_ticket_btn">Delete ticket</button>
-
-  </form>
+    </form>
 
 
-
+  </div>
 </div>

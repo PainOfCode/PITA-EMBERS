@@ -1,18 +1,16 @@
-<div class="row11">
-  <div class="col-2">
-    <ul>
-      <li>
-        <div style="border-style: solid; border-color:rgba(73,74,76,0.75); border-width:0px 0px 2px 0px;">
-          {{#link-to "patch.overview"}}
-          Back to overview
-          {{/link-to}}
-        </div>
-      </li>
-        {{#each model as |patch|}}
-          {{small-patch-list patch=patch}}
-        {{/each}}
-      </ul>
-  </div>
-</div>
+<div class="row">
+  <div class="col-2 patches bg_nav outline_r">
 
-{{outlet}}
+      {{#link-to "patch.overview"}}
+      <div id="patch_ovw">
+        Back to overview
+      </div>
+        {{/link-to}}
+          {{#each model as |patch|}}
+            {{small-patch-list patch=patch}}
+          {{/each}}
+
+
+  </div>
+  {{outlet}}
+</div>

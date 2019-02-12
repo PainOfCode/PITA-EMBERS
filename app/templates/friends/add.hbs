@@ -1,10 +1,10 @@
 <div class="row24">
   <div class="col-7">
-    {{#user-filter model=model filter=(action "searchUser") class="filter_user" as |user|}}
+    {{#user-filter class="filter_user" model=model.users filter=(action "searchUser") as |user|}}
 
     {{#each user as |res|}}
     <div class="add_ul">
-    <button class="user_selection">
+    <button class="user_selection" {{action "sendFQ" res}}>
     Name: {{res.username}}<br>
     Role: {{res.role.rolename}}
     </button>

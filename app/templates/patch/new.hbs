@@ -1,22 +1,22 @@
-<div class="row14">
-  <div class="col-9">
+<div class="row">
+  <div class="col-9 outline_4_d patch_form">
     <form>
 
         <div>
             <label> Version </label><br>
-              {{input type="text" rqeuired=true value=version placeholder="Version"}}
+              {{input class="outline_4_s" type="text" rqeuired=true value=version placeholder="Version"}}
 
         </div>
         <div>
             <label> Focus </label><br>
-              {{input type="text" rqeuired=true value=focus placeholder="Focus"}}
+              {{input class="outline_4_s" type="text" rqeuired=true value=focus placeholder="Focus"}}
 
         </div>
         <div>
             <label> Content of Patch</label><br>
-              {{textarea cols="103" rows="20" rqeuired=true value=details placeholder="Content"}}
+              {{textarea class="outline_4_s" cols="103" rows="15" rqeuired=true value=details placeholder="Content"}}
         </div>
-        <button {{action "newPatch"}} >Create Patch</button>
+        <button class="button_style" {{action "newPatch"}} >Create Patch</button>
 
     </form>
   </div>

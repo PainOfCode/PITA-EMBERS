@@ -1,8 +1,5 @@
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<div>
-    <header>
-    <div class="row">
-       <div class="col-1">
+    <div class="row scrollable">
+       <div class="col-1 outline_r">
 
                  {{#link-to "index"}}
                  <div class="pita" id="pita">
@@ -11,75 +8,69 @@
                   {{/link-to}}
 
                 {{#link-to "forum" }}
-                <div>
+                <div class="outline_t_b_l bg_nav_div">
                   Forum
                 </div>
                 {{/link-to}}
                  {{#link-to "patch.overview"}}
-                 <div>
+                 <div class="outline_t_b_l bg_nav_div">
                    Patches
                  </div>
                   {{/link-to}}
                  {{#link-to "about"}}
-                 <div>
+                 <div class="outline_t_b_l bg_nav_div">
                    About us
                  </div>
                   {{/link-to}}
             {{#if (and session.isAuthenticated auth.user.role.createticket)}}
-                 {{#link-to "support.overview"}}
-                 <div>
+            {{#link-to "support.overview"}}
+                 <div class="outline_t_b_l bg_nav_div">
                    Support
                  </div>
                   {{/link-to}}
             {{/if}}
             {{#if session.isAuthenticated}}
-            <div>
+            <div class="outline_t_b_l bg_nav_div">
                   {{#link-to "logout"}}Log out{{/link-to}}
                 </div>
                   {{#link-to "friends"}}
-                  <div>
+                  <div class="outline_t_b_l bg_nav_div">
                     Friends
                   </div>
                   {{/link-to}}
                   {{#link-to "membership"}}
-                  <div>
+                  <div class="outline_t_b_l bg_nav_div">
                     Membership
                 </div><br><br>
                 {{/link-to}}
-                <div>
+                <div class="outline_t_b_l bg_nav_div">
                     Welcome, <br>{{auth.user.username}}
                 </div>
             {{else}}
                {{#link-to "createaccount"}}
-                 <div>
+                 <div class="outline_t_b_l bg_nav_div">
                    Register
                   </div>
                {{/link-to}}
                    {{#link-to "login"}}
-                   <div>
+                   <div class="outline_t_b_l bg_nav_div">
                    Log in
                  </div>
                    {{/link-to}}
             {{/if}}
             {{#if (and auth.user.role.manageroles session.isAuthenticated) }}
                  {{#link-to "role-editor"}}
-                 <div >
+                 <div class="outline_t_b_l bg_nav_div">
                    User/Roles
                  </div>
                   {{/link-to}}
             {{/if}}
-            <div>
+            <div class="outline_t_b_l bg_nav_div">
               {{#link-to "settings"}}
                 Settings
               {{/link-to}}
             </div>
         </div>
 
+        {{outlet}}
     </div>
-    </header>
-    <div class="row2">
-        <div class="col-10 body_base">
-      {{outlet}}
-      </div>
-    </div>
-</div>

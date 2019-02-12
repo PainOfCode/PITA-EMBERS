@@ -20,17 +20,17 @@ Plan for the whole section:
 
 <!-- Linksseitige overview, aufklappbar nach grp sortiert [Online und offline only]-->
 <div class="row23">
-  <div class="col-2">
+  <div class="col-2 bg_nav outline_r">
 
     {{#link-to "friends.add"}}
-      <div>
+      <div class="bg_nav_div">
         Add new friend
       </div>
     {{/link-to}}
-    {{#each model as |group|}}
+    {{#each model.users as |group|}}
 
     {{#link-to "friends.chat.user" group.username}}
-    <div>
+    <div class="bg_nav_div">
       {{group.username}}
     </div>
     {{/link-to}}
