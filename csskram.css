@@ -1,0 +1,867 @@
+
+ul.nav{
+    text-align: center;
+    list-style-type: none;
+    width: 100%;
+    margin: -0.75% 0% 1.5% -1.5%;
+    padding: 0.15% 0% 0.5% 2.5%;
+    background-color: #88c425;
+    height: 2vw;
+    position: fixed;
+    border-width: 2px;
+    border-style: solid;
+}
+
+li.nav a{
+    float: left;
+    margin-left: 2%;
+    padding-bottom: 0.5%;
+    border-width: 0px 0px 2px 0px;
+    border-style: groove;
+    border-color: black;
+    color: #d53025;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1vw;
+    transition-duration: 0.5s;
+}
+
+li.nav a:hover{
+    background-color: #db534d;
+    color: white;
+}
+
+li.pita a{
+    margin: -1vw 0vw 0vw 0vw;
+    position: relative;
+    font-size: 1.5vw;
+    background-color: #519548;
+    font-weight: bolder;
+    padding: 1.25vw 0.5vw 1.25vw 0.5vw;
+    letter-spacing: 0.075vw;
+}
+
+body{
+    background-color: #317E5B;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    width: 100%;
+    height: 100%;
+}
+
+div.base_background{
+    position: fixed;
+    overflow: none;
+    margin: 6% 0% 0% 5%;
+    padding: 0;
+    background-color: #eaf1f7;
+    height: 35vw;
+    width: 90vw;
+    border-radius: 10px;
+}
+
+div.support_ticket a{
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+}
+
+
+ul.support_ul{
+    list-style-type: none;
+    width:fit-content;
+    background-color: #304753;
+    height: 34.5vw;
+    position: fixed;
+    overflow: auto;
+    margin: 0vw 5% 0% -0.2vw;
+    padding: 0.0vw 0% 0.5% 0.2vw;
+    border-radius: 10px 0px 0px 10px;
+}
+
+
+li.support_li a{
+    font-size: 1.25vw;
+    word-wrap: break-word;
+    margin: -.2% 2% 0% 0%;
+    display: block;
+    color: #d26363;
+    font-weight: bolder;
+    padding: 1% 1% 0.5% 4%;
+
+}
+
+li.support_li:hover, li.support_li:hover a{
+    color: white;
+    background-color: #ff6f69;
+}
+
+
+p.overview{
+    position: fixed;
+    margin: -3.5% 0% 5% 0%;
+    font-size: 1.25vw;
+    font-weight: bolder;;
+    padding: 0;
+    width: fit-content;
+    height: fit-content;
+}
+
+div.support_inhalt{
+    position: fixed;
+    margin: 4.5% 0% 0% 15%;
+    height: 35vw;
+    width: 70vw;
+    border-radius: 10px;
+}
+
+div.ovw_head{
+    overflow-y:auto;
+    height: 27vw;
+    width: inherit;
+    display: block;
+    margin: 0% 0% 0% 2%;
+    position: sticky;
+    background-color: #304753;
+    border-radius: inherit;
+    max-block-size: 100% 300%;
+}
+
+::-webkit-scrollbar{
+    width: 0px;
+    background: transparent;
+}
+
+div.ticket_link_ovw{
+    position: sticky;
+    padding-bottom: 1.25%;
+    background-color: white;
+}
+
+div.ticket_link_ovw a{
+    text-decoration: none;
+    color: 	black;
+}
+div.ticket_link_ovw:hover{
+    transition-duration: 0.25s;
+    background-color: #b6d9c2;
+}
+
+div.ticket_list_details{
+    font-size: 0.9vw;
+    padding-top: 0.25%;
+    margin-left: 1%;
+    font-weight: bolder;
+}
+
+div.ticket_list_details .subject{
+    margin-left: 1%;
+    font-size: 0.85vw;
+    margin-top: -0.75%;
+    font-weight: bold;
+}
+div.ticket_list_details .content{
+    margin-left: 2%;
+    margin-top: 0.5%;
+    font-size: 0.8vw;
+    font-weight: normal;
+}
+
+
+.ticket_filter_subject{
+    z-index: 3;
+    margin: 0;
+    position: sticky;
+    padding: 0vw 0vw 0vw 0.2vw;
+    margin:  0.2vw;
+    border-radius: 10px;
+    border-color: transparent;
+    height: 0.85vw;
+    width: 15vw;
+}
+
+
+
+.sess_top{
+  float: left;
+  color:inherit;
+  font-weight: bold;
+  margin-left: 1.5vw;
+  border-color:black;
+  border-style: solid;
+  border-width: 0px 0px 2px 0px;
+  padding: 0vw 0vw 0.5% 0vw;
+  color:#d53025;
+  font-size: 1vw;
+  text-transform: uppercase;
+}
+
+.new_ticket::placeholder{
+  font-size: 1vw;
+}
+
+.new_ticket{
+    margin-top: 0.25vw;
+    margin-bottom: 0.7vw;
+    display: block;
+    border-color: transparent;
+    border-radius: 10px;
+    height: 1vw;
+    width: 20vw;
+    padding: 0.1vw;
+    font-size: 1vw;
+}
+
+.delete_ticket_btn{
+  background-color: white;
+  border-color: transparent;
+  font-size: 1vw;
+  border-radius: 10px;
+}
+
+.new_ticket_btn{
+    background-color: white;
+    border-color: transparent;
+    border-radius: 15px;
+    margin-top: 5%;
+    font-size: 1vw;
+}
+
+.new_ticket.desc{
+    overflow-y: auto;
+    overflow-x: hidden;
+    width: 30vw;
+    height: 4vw;
+    border-radius: 10px;
+    border-color: transparent;
+    position: relative;
+    display: block;
+    word-wrap: break-word;
+    padding: 0vw 0vw 0vw 0.25vw;
+    resize: none;
+}
+
+label.new_ticket_label{
+    font-weight: bold;
+    position: relative;
+    font-size: 1vw;
+}
+
+div.new_ticket_heading{
+    margin-bottom: 1.25vw;
+    font-weight: bold;
+    font-size: 1.25vw;
+}
+
+form.new_ticket_form{
+    margin: 0em 0em 0em 2em;
+}
+
+#pikaday{
+  font-size: 1vw;
+  font-weight: normal;
+}
+
+#ticket_filter::placeholder{
+  position: relative;
+  font-size: 1vw;
+}
+
+div.about_text{
+  position: fixed;
+  margin: 0vw 0vw 0vw 0vw;
+  padding: 1vw 0vw 0vw 5.5vw;
+}
+
+p.about_heading{
+  font-size: 1.5vw;
+  font-weight: bold;
+}
+
+div.about_text_container{
+  overflow-y: auto;
+  overflow-x: hidden;
+  word-wrap: break-word;
+  float: left;
+  margin: 1.75vw 0vw 0vw 0vw;
+  height: 21vw;
+  width: 76vw;
+  resize: none;
+  background-color: white;
+  border-color: transparent;
+  border-radius: 10px;
+  font-size: 1vw;
+  font-weight: 625;
+  padding: 2vw;
+}
+
+
+div.about_text_container a{
+  text-decoration: none;
+  color:black;
+}
+
+div.patch_ovw{
+  background-color: #304753;
+  width: 70vw;
+  height: 28vw;
+  position: absolute;
+  margin: -31vw 0vw 0vw 14vw;
+  overflow-x: hidden;
+  overflow-y: auto;
+  border-radius: 10px;
+  padding: 0vw;
+}
+
+div.patch_head a, div.patch_head{
+  text-decoration: none;
+  border-radius: 10px;
+  color: black;
+  font-size: 1vw;
+  background-color: white;
+  margin: 0.75vw 0vw 0vw 0vw;
+  transition-duration: 0.5s;
+}
+
+article.patch_prevw:hover{
+  background-color: #b6d9c2;
+}
+
+article.patch_prevw{
+  border-radius: 10px;
+  padding: 1vw;
+}
+
+ul.patch_nav_ul, ul.patch_nav_ul a{
+  list-style: none;
+  text-decoration: none;
+  color: #ff6f69;
+  font-weight: 600;
+  font-size: 1.1vw;
+}
+
+.patch_nav{
+  border-style: solid;
+  border-color: #0e2a38;
+  border-width: 0px 0px 1px 0px;
+}
+ul.patch_nav_ul {
+  height: 34.73vw;
+  width: 10vw;
+  overflow-x: none;
+  overflow-y: auto;
+  background-color: #304753;
+  margin: 0vw 0vw 0vw 0vw;
+  padding: 0.3vw 0vw 0vw 0.6vw;
+  border-radius: 10px 0px 0px 10px;
+}
+
+.patch_nav:hover, .patch_nav:hover a{
+  transition-duration: 0.25s;
+  color:white;
+  background-color: #ff6f69;
+}
+
+
+form.patch_creator{
+  z-index: 2;
+  position: fixed;
+  margin:-33vw 0vw 0vw 14vw;
+  font-weight: 600;
+  font-size: 1.25vw;
+}
+
+.new_patch{
+  margin: 0.5em;
+  border-radius: 10px;
+  border-color: transparent;
+  padding: 0.5em;
+  font-weight: normal;
+  font-size: 0.9vw;
+}
+
+.patch_desc{
+  resize: none;
+  width: 30vw;
+  height: 15vw;
+  font-weight: normal;
+}
+
+
+button.patch_btns1{
+  position: absolute;
+  Margin: -34vw 0vw 0vw 14vw;
+  border-color: transparent;
+  background-color: white;
+  font-size: 1vw;
+}
+
+button.patch_btn_new{
+  font-weight: normal;
+  padding: 0vw;
+  margin: 0.25vw 0vw 0vw 1vw;
+  height: 2vw;
+  width: 8vw;
+  border-color: transparent;
+  background-color: white;
+  font-size: 1vw;
+}
+
+form.patch_single{
+  background-color: #304753;
+  height: fit-content;
+  width: 70vw;
+  border-radius: 10px;
+  padding: 1.5vw;
+  font-weight: 500;
+  color: #D1D1D1;
+}
+
+div.patch_single_frame{
+  font-size: 1vw;
+  background-color: #0e2a38;
+  position: absolute;
+  margin: -31vw 0vw 0vw 12vw;
+  width: fit-content;
+  overflow-x: none;
+  overflow-y: auto;
+  height: 25vw;
+  border-radius: 10px;
+  padding: 2vw;
+}
+
+div.comment_on_patch{
+  padding:1vw;
+  height: fit-content;
+  background-color: #304753;
+  border-radius: 10px;
+  margin: 2vw 0vw 0vw 0vw;
+  font-size: 0.9vw;
+}
+
+div.comment_patch_box{
+  resize: none;
+  background-color: #304753;
+  margin: 2vw 0vw 0vw 0vw;
+  padding:1vw;
+  border-radius: 10px;
+}
+
+.comment_box_patch{
+  resize: none;
+  margin: 0.75vw 0vw 0vw 0vw;
+  background-color: transparent;
+  border-radius: 5px;
+  border-color: #0e2a38;
+  color: #D1D1D1;
+  font-size: 0.9vw;
+  font-weight: 400;
+}
+
+label.comment_label{
+  font-size: 1.07vw;
+  font-weight: 600;
+}
+
+button.send_button{
+  border-style: none;
+  border-color: transparent;
+  font-size: 1vw;
+  margin: 0.75vw 0vw 0vw 0vw;
+}
+
+form.login{
+  position: fixed;
+  height: 18vw;
+  width: 20vw;
+  color: white;
+  background-color: #1E8E8E;
+  align: center;
+  align-items: center;
+  text-align: center;
+  border-radius: 5px;
+  margin: 8.5vw 0vw 0vw 35vw;
+}
+
+::placeholder{
+  font-size: 1vw;
+}
+
+.login_fields{
+  border-color: transparent;
+  border-radius: 5px;
+  margin: 0.5vw 0vw 0.75vw 0vw;
+  height: 1.25vw;
+  width: 13vw;
+}
+
+.login_reg{
+  font-size:1.25vw;
+}
+
+button.login_btn_1, button.reg_btn_2{
+  background-color: white;
+  border-style: none;
+  border-color:none;
+  margin-top: 1vw;
+  text-align: center;
+  width: 4.85vw;
+  height: 1.5vw;
+  font-size: 1vw;
+}
+
+.btn_login1{
+  margin-right: 3vw;
+}
+
+form.register{
+    position: fixed;
+    height: 31vw;
+    width: 20vw;
+    color: white;
+    background-color: #1E8E8E;
+    align: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 5px;
+    margin: 2vw 0vw 0vw 35vw;
+}
+
+div.forum_inhalt{
+  overflow-y: auto;
+  overflow-x: hidden;
+  position: fixed;
+  width: 64.5vw;
+  height: 27vw;
+  background-color: black;
+  margin: 2.5vw 0vw 0vw 17.5vw;
+  border-radius: 5px;
+  padding:1.5vw;
+  color:white;
+}
+
+div.forum_navbar{
+  overflow-y: auto;
+  overflow-x: hidden;
+  position:fixed;
+  width: 9.5vw;
+  height: 32vw;
+  background-color: black;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  padding:1.5vw;
+  color:white;
+}
+
+div.patch_comment_single{
+  height: fit-content;
+  width: inherit;
+  background-color:#eaf1f7;
+  border-radius: 10px;
+  margin: 1vw 0vw 0vw 0vw;
+  padding: 0.75vw;
+}
+
+div.patch_comment_user{
+  font-size: 1vw;
+  font-weight: 600;
+  margin: 0vw 0vw 0.25vw 0vw;
+  text-transform: uppercase;
+}
+
+div.patch_comment_text{
+  font-size: 0.9vw;
+  font-weight: 450;
+}
+
+div.role_nav{
+  position: fixed;
+  border-radius: 10px 0px 0px 10px;
+  background-color: #88c425;
+  height: 35vw;
+  width: 10vw;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+button.role_nav_roles{
+  font-size: 1vw;
+  width: 10vw;
+  height: 2vw;
+  margin: 0.5vw 0vw 0vw 0vw;
+}
+
+div.role_nav a{
+  color: black;
+  text-decoration: none;
+}
+
+div.role_create_edit{
+  position: fixed;
+  height: 29vw;
+  width: 70vw;
+  background-color: #42c98f;
+  margin: 3vw 0vw 0vw 15vw;
+  border-radius: 10px;
+}
+
+div.role_create_edit a{
+
+}
+
+div.role_selector_dropdown{
+  position: fixed;
+  height: 23vw;
+  width: 15vw;
+  background-color: transparent;
+  z-index: 2;
+  margin: 6vw 0vw 0vw 18vw;
+  padding: 0;
+  border-radius: 10px;
+  padding: 0.25vw;
+}
+
+div.role_selector_dropdown a{
+
+}
+
+div.role_specs{
+  position: fixed;
+  background-color: #28B0AC;
+  width: 40vw;
+  height: 23vw;
+  z-index: 3;
+  border-radius: 10px;
+  margin: 5vw 0vw 0vw 40.5vw;
+  padding: 1vw;
+}
+
+div.role_spacer{
+  position: fixed;
+  height: 26vw;
+  width: 1vw;
+  border-radius: 10px;
+  border-style: dotted;
+  border-width: 0px 2px 0px 0px;
+  border-color: grey;
+  margin: 4.5vw 0vw 0vw 36vw;
+  z-index: 3;
+}
+
+select.role_select, button.role_create_new_drp{
+  background-color: transparent;
+  border-color: transparent;
+}
+
+button.role_create_new_drp{
+}
+
+.role_editor_permissions{
+  border-style: none;
+  border-color: transparent;
+  margin: -2.5vw 0vw 0vw 0vw;
+  padding: 0;
+  width: fit-content;
+  height: fit-content;
+}
+
+.role_label{
+  position: relative;
+  margin: 0.25vw 0vw 0vw 0.5vw;
+}
+
+.role_checkboard{
+  position: relative;
+  z-index: 3;
+  margin: 0.5vw 0vw 0vw 0vw;
+  float: right;
+}
+
+div.role_ovw{
+  width: 20vw;
+}
+
+._one{
+  background-color: #78ad97;
+}
+
+._two{
+  background-color: #619982;
+}
+
+.dropbtn {
+  background-color: #88c425;
+  color: white;
+  font-size: 1vw;
+  border: none;
+  text-align: center;
+  width: 15.5vw;
+  height: 2vw;
+  position: absolute;
+  margin: -1.5vw 0vw 0vw -0.25vw;
+  border-radius: 10px 10px 0px 0px;
+ }
+
+.dropdown {
+  position: fixed;
+  display: inline-block;
+  z-index: 4;
+  margin: 1vw 0vw 0vw 0vw;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  width: 15.5vw;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  margin: 0.5vw 0vw 0vw -0.25vw;
+  font-size: 1vw;
+}
+
+.dropdown-content a {
+  color: black;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .dropbtn {
+  background-color: #3e8e41;
+}
+
+button.role_nav_roles, div.role_nav_roles{
+  width: 10vw;
+  background-color: #f1f1f1;
+  border-color: transparent
+}
+
+div.role_nav_roles_user{
+
+}
+
+button.role_nav_roles:hover, div.role_nav_roles a:hover{
+  background-color: #CCC;
+}
+
+button.manage_users{
+  border-radius: 0px 0px 0px;
+  margin: 1vw 0vw 0vw 2vw;
+  font-size: 1vw;
+}
+
+button.role_select_um{
+  width: 15.5vw;
+  border-color: transparent;
+  background-color: #f1f1f1;
+  text-align: left;
+}
+
+button.role_select_um:hover{
+  background-color: #ccc;
+}
+
+.selectedrole{
+  position: fixed;
+  margin: 2vw 0vw 0vw 22vw;
+  height: 1.75vw;
+  width: 15vw;
+  font-size: 1vw;
+  border-color:transparent;
+  padding: 0;
+}
+
+.manage_userstoo{
+  margin: 3vw 0vw 0vw 2vw;
+}
+
+button.continue_to_user{
+  position: fixed;
+  margin: 6vw 0vw 0vw 30vw;
+  border-color: transparent;
+  font-size: 1vw;
+  height: 1.75vw;
+  width: 7vw;
+}
+
+.moved_user{
+  width: 7vw;
+  height: 1.5vw;
+  font-size: 1vw;
+  background-color: #a1a1a1;
+  border-color: transparent;
+}
+
+.moveable_user{
+  width: 7vw;
+  height: 1.5vw;
+  font-size: 1vw;
+  background-color: #88c425;
+  border-color: transparent;
+}
+
+.select_user{
+  height: 14vw;
+  width: 7vw;
+  background-color: #ccc;
+  position: fixed;
+  overflow-x: hidden;
+  overflow-y: auto;
+  margin: 7vw 0vw 0vw 3vw;
+  font-size: 1.25vw;
+  text-align: center;
+}
+
+.select_heading{
+  background-color: #519548;
+}
+
+div.selected_rolename{
+  position: fixed;
+  margin: 2vw 0vw 0vw 22.5vw;
+  text-align: left;
+  width: 15.25vw;
+  height: 1.75vw;
+  background-color: #f1f1f1;
+  font-size: 1vw;
+  padding: 0.25vw 0vw 0vw 0.5vw;
+}
+
+.rolename_field{
+  height: 1.5vw;
+  width: 10vw;
+  border-color: transparent;
+  font-size: 1vw;
+  margin: 1vw 0vw 0.5vw 0.75vw;
+}
+
+.apply_btn{
+  height: 1.5vw;
+  width: 8vw;
+  border-color: transparent;
+  font-size: 1vw;
+  margin: 0vw 0vw 0vw 0.75vw;
+}
+
+
+.role_nav_roles_user{
+  display: none;
+}
+
+.show{
+  display: block;
+margin-top: 0.05vw;
+}
+.showdiv{
+  background-color: #f1f1f1;
+  border-style: solid;
+  border-color: #519548;
+  border-width: 0px 0px 1px 0px;
+  padding-left: 0.5vw;
+}

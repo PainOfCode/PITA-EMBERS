@@ -1,0 +1,38 @@
+farben:
+
+bg:
+nav div's #394854
+nav #293039 
+hover #6E98BA
+center maybe #AFB3B2
+Body #21252A
+
+Outline:
+#394854
+
+color: 
+nav a's #C5D7ED
+
+Dark pallet [internet]
+  $font-clr: #F0F2F3;
+  $hover-clr: #EC1A62;
+  $nav-clr: #38444C;
+  $nav-div-clr: #697278;
+  $outline-clr: #394854;
+  $body-clr: #293238;
+
+Dark pallet [own]
+  $font-clr: #C5D7ED;
+  $hover-clr: #6E98BA;
+  $nav-div-clr: #394854;
+  $nav-clr: #293039;
+  $outline-clr: #394854;
+
+
+outline_4 4 sides
+outline_l left
+outline_r right
+outline_t_b_l top bottom left
+bg_nav_div bg clr
+bg_nav bg clr
+scrollable x n y j
