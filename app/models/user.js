@@ -10,5 +10,8 @@ export default DS.Model.extend({
     pm: DS.hasMany('privatemessage', {inverse: 'sender'}), //Privat nachrichten
     forumposts: DS.hasMany('forumpost'),
     forumcomments: DS.hasMany('forumcomment'),
-    follow: DS.hasMany('forumcommunity')
+    follow: DS.hasMany('forumcommunity'),
+    online: DS.attr('boolean', {defaultValue(){return false;}}),
+    recfq: DS.hasMany('friendreq', {inverse: null}),
+    sendfq: DS.hasMany('friendreq', {inverse: null})
 });

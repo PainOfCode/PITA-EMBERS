@@ -1,0 +1,437 @@
+  html, body{
+    margin:0;
+    padding:0;
+    height: 100%;
+  }
+
+  $font-clr: #F0F2F3;
+  $hover-clr: #EC1A62;
+  $nav-clr: #38444C;
+  $nav-div-clr: #4D5C6B;
+  $outline-clr: #394854;
+  $body-clr: #293238;
+
+
+
+  * {
+    box-sizing: border-box;
+  }
+
+  a{
+    text-decoration: none;
+    color: black;
+  }
+
+  .ember-view{
+    height: 100%;
+  }
+
+  ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  :focus{
+
+      outline: none;
+  }
+
+  /*#3b8686*/
+
+  ::-webkit-scrollbar{
+      width: 0px;
+      background: transparent;
+  }
+
+  body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: $body-clr;
+  }
+
+  .role_nav_roles_user{
+      display:none;
+  }
+
+  .showdiv{
+    display: block;
+    text-align: center;
+  }
+
+  .scrollable{
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+
+  .bg_nav{
+    background-color: $nav-clr;
+    color:$font-clr;
+  }
+
+  .bg_nav_div{
+    background-color: $nav-div-clr;
+    color: $font-clr;
+  }
+
+  .outline_l{
+    border-color: $outline-clr;
+    border-style: solid;
+    border-width: 0px 0px 0px 1px;
+  }
+
+  .outline_r{
+    border-color: $outline-clr;
+    border-style: solid;
+    border-width: 0px 1px 0px 0px;
+  }
+
+  .outline_l_r{
+    border-color: $outline-clr;
+    border-style: solid;
+    border-width: 0px 1px 0px 1px;
+  }
+
+  .outline_4_d{
+    border-color: $outline-clr;
+    border-style: dashed;
+    border-width: 1px;
+  }
+
+  .outline_4_s{
+    border-color: $outline-clr;
+    border-style: solid;
+    border-width: 1px;
+  }
+
+  .button_style{
+    color: black;
+    background-color: white;
+    border-radius: 5px;
+    border:none;
+  }
+
+  .bg_nav_div a,.bg_nav a{
+    color: $font-clr;
+  }
+
+  .bg_nav_div button,.bg_nav button{
+    color: $font-clr;
+  }
+
+  .bg_nav_div div,.bg_nav div{
+    color: $font-clr;
+  }
+
+  .bg_nav_div button a,.bg_nav button a{
+    color: $font-clr;
+  }
+
+  .outline_t_b_l{
+    border-color: $outline-clr;
+    border-style: solid;
+    border-width: 1px 0px 1px 1px;
+  }
+
+
+  .col-1 {width: 8.33%;}
+  .col-2 {width: 16.66%;}
+  .col-3 {width: 25%;}
+  .col-4 {width: 33.33%;}
+  .col-5 {width: 41.66%;}
+  .col-6 {width: 50%;}
+  .col-7 {width: 58.33%;}
+  .col-8 {width: 66.66%;}
+  .col-9 {width: 75%;}
+  .col-10 {width: 83.33%;}
+  .col-11 {width: 91.66%;}
+  .col-12 {width: 100%;}
+
+  [class*="col-"]{
+    float:left;
+    padding:0;
+    margin:0;
+  }
+
+  #pita{
+    text-align: center;
+    font-weight: 600;
+    background-color: $hover-clr;
+    padding: 0% 0% 0% -1%;
+    color: $font-clr;
+    margin-top: 7.5%;
+    font-size: 1.1em;
+    letter-spacing: 10px;
+  }
+
+//Generelle seite, alles in einer reihe
+  .row{
+    &::after{
+      content: "";
+      clear:both;
+      display: table;
+    }
+
+    font-size: 1.25vw;
+    height: 100%;
+    background-color: transparent;
+
+    .col-1{
+      height: 100%;
+      div{
+        margin-bottom: 7.5%;
+        margin-left: 10%;
+      }
+      div:hover{
+        background-color: $hover-clr;
+      }
+    }
+
+    .col-10{
+      min-height: 100%;
+      margin-left: 1.25%;
+      padding: 2.5%;
+      color: $font-clr;
+
+      a{
+        color: $hover-clr;
+      }
+
+      div{
+        border-radius: 5px;
+        padding: 2.5%;
+        font-weight: 440;
+      }
+    }
+
+
+      ::placeholder{
+        font-size: 0.95em;
+      }
+
+      &::after{
+        content: "";
+        clear:both;
+        display: table;
+      }
+      height: 100%;
+      width: 100%;
+
+      .col-2{
+        margin: 10% 5% 5% 5%;
+      }
+
+      .support{
+        margin:0;
+        height: 100%;
+        padding-left: 0.75%;
+      }
+
+      .support div:hover{
+        background-color: $hover-clr;
+      }
+
+      .support_nav_h{
+        background-color: $hover-clr;
+        text-align: center;
+      }
+
+      .user_ovw_roles{
+        margin: 10% 5% 5% 5%;
+        height: 70%;
+        border-radius: 5px;
+      }
+
+      .col-2 button{
+        border:none;
+        width: 100%;
+        font-size: 0.95em;
+        margin-bottom: 2.5%;
+      }
+
+      .col-2 button:hover{
+        background-color: $hover-clr;
+      }
+
+      .dropdown{
+        display: inline-block;
+      }
+
+      .drop_content{
+        display: none;
+      }
+
+      .dropdown:hover{
+        .drop_content{
+          display: block;
+        }
+      }
+
+      .drop_content a div:hover{
+        background-color: $hover-clr;
+      }
+
+      .col-2 form{
+        margin-top: 10%;
+      }
+
+      .col-2 form div{
+        margin-bottom: 2.5%;
+      }
+
+      .col-2 form input{
+        float: right;
+        z-index: 2;
+        height: 1vw;
+      }
+
+      .save button{
+        margin-top: 5%;
+        font-size: 0.95em;
+        border: 1.5px solid $outline-clr;
+        border-radius: 5px;
+        background-color: transparent;
+      }
+
+      .rolename{
+        color: $font-clr;
+        max-width: 100%;
+        background-color: transparent;
+        border: solid 1px $outline-clr;
+      }
+
+      .role {
+        margin-top: 11.7%;
+        &::after{
+          content: "";
+          clear:both;
+          display: table;
+        }
+
+        .user{
+          margin-top: 10%;
+        }
+
+      }
+
+      .col-7{
+        min-height: 25%;
+        max-height: 60%;
+        margin: 10% 0% 0% 7%;
+        font-size: 0.95em;
+        .t_id{
+          font-size: 0.85em;
+        }
+
+        input{
+          color: $font-clr;
+          background-color: transparent;
+          border-color: $outline-clr;
+          border-style: double;
+          border-width: 0px 0px 1.5px 0px;
+        }
+
+        article{
+          background-color: $nav-div-clr;
+          border-radius: 10px;
+          margin-bottom: 0.25%;
+        }
+
+        article:hover{
+          background-color: $hover-clr;
+        }
+
+      }
+
+      .col-4{
+        margin: 12.75% 0% 0% 18.25%;
+        padding: 2.5%;
+
+        textarea{
+          resize: none;
+          color: $font-clr;
+          border: 1px solid $outline-clr;
+        }
+
+        input{
+          color: $font-clr;
+          border: 1px solid $outline-clr;
+        }
+      }
+
+      .patches{
+        margin: 0;
+        height: 100%;
+
+        #patch_ovw:hover{
+          background-color: $outline-clr;
+        }
+
+        .ember-view{
+          height: 11%;
+        }
+
+        article{
+          background-color: $nav-div-clr;
+        }
+        article:hover{
+          background-color: $hover-clr;
+        }
+
+      }
+
+      .patch_bl{
+        margin: 0;
+        float: right;
+
+        button{
+          float: left;
+          color: $font-clr;
+          background-color: transparent;
+          border-style: solid;
+          border-width: 1px;
+          border-color: $outline-clr;
+        }
+      }
+
+      .patch_bl_ls{
+        margin: 5.25% 0% 0% 4.5%;
+        max-height: 70%;
+        min-height: 25%;
+        border-radius: 10px;
+        article{
+          border-radius: 10px;
+          padding: 2.5%;
+          font-size: 85%;
+        }
+        article:hover{
+          background-color: $hover-clr;
+        }
+
+      }
+
+      .patch_form{
+        margin: 8.675% 0% 0% 9.125%;
+        width: fit-content;
+        padding: 2%;
+
+        input, textarea, button{
+          resize: none;
+          border: solid 1px $outline-clr;
+          background-color: transparent;
+          border-radius: 5px;
+          color: $font-clr;
+        }
+        label{
+          color: $font-clr;
+        }
+      }
+
+  }
+
+
+  .moveable_user button{
+    background-color: $hover-clr;
+  }
+  .moved_user button{
+    background-color: $font-clr;
+  }

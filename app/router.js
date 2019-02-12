@@ -18,6 +18,14 @@ Router.map(function() {
   this.route('membership');
   this.route('forum', function() {
     this.route('posts', {path: '/:titleurl'});
+    this.route('chatroom');
+
+    this.route('c', function() {
+      this.route('community', {path: '/:name'}, function() {
+        this.route('chat');
+        this.route('posts');
+      });
+    });
   });
   this.route('login');
   this.route('createaccount');
@@ -32,6 +40,14 @@ Router.map(function() {
     this.route('show-edit', {path: '/:id'});
     this.route('usermanagement', function() {});
   });
+  this.route('friends', function() {
+    this.route('add');
+    this.route('chat', function() {
+      this.route('user', {path:'/:name'});
+    });
+    this.route('reqs');
+  });
+  this.route('settings');
 });
 
 export default Router;
