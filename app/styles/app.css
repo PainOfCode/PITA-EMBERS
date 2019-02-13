@@ -4,6 +4,27 @@ html, body {
   height: 100%;
 }
 
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  -webkit-text-fill-color: #EC1A62;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+.rolename {
+  color: #F0F2F3;
+  max-width: 100%;
+  background-color: transparent;
+  border: solid 1px #394854;
+  height: fit-content;
+  width: 100%;
+  padding: 4% 3% 4% 3%;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -78,6 +99,18 @@ body {
   border-color: #394854;
   border-style: solid;
   border-width: 0px 1px 0px 1px;
+}
+
+.outline_b_s {
+  border-width: 0px 0px 1px 0px;
+  border-style: solid;
+  border-color: #394854;
+}
+
+.outline_t_b_s {
+  border-color: #394854;
+  border-style: solid;
+  border-width: 1px 0px 1px 0px;
 }
 
 .outline_4_d {
@@ -206,7 +239,7 @@ body {
   margin-left: 10%;
 }
 .row .col-1 div:hover {
-  background-color: #EC1A62;
+  background-color: #400016;
 }
 .row .col-10 {
   min-height: 100%;
@@ -236,14 +269,14 @@ body {
 .row .support {
   margin: 0;
   height: 100%;
-  padding-left: 0.75%;
 }
 .row .support div:hover {
-  background-color: #EC1A62;
+  background-color: #400016;
 }
 .row .support_nav_h {
   background-color: #EC1A62;
   text-align: center;
+  margin: 0;
 }
 .row .user_ovw_roles {
   margin: 10% 5% 5% 5%;
@@ -257,7 +290,7 @@ body {
   margin-bottom: 2.5%;
 }
 .row .col-2 button:hover {
-  background-color: #EC1A62;
+  background-color: #400016;
 }
 .row .dropdown {
   display: inline-block;
@@ -269,7 +302,7 @@ body {
   display: block;
 }
 .row .drop_content a div:hover {
-  background-color: #EC1A62;
+  background-color: #400016;
 }
 .row .col-2 form {
   margin-top: 10%;
@@ -279,7 +312,7 @@ body {
 }
 .row .col-2 form input {
   float: right;
-  z-index: 2;
+  z-index: 1;
   height: 1vw;
 }
 .row .save button {
@@ -288,12 +321,6 @@ body {
   border: 1.5px solid #394854;
   border-radius: 5px;
   background-color: transparent;
-}
-.row .rolename {
-  color: #F0F2F3;
-  max-width: 100%;
-  background-color: transparent;
-  border: solid 1px #394854;
 }
 .row .role {
   margin-top: 11.7%;
@@ -328,7 +355,7 @@ body {
   margin-bottom: 0.25%;
 }
 .row .col-7 article:hover {
-  background-color: #EC1A62;
+  background-color: #400016;
 }
 .row .col-4 {
   margin: 12.75% 0% 0% 18.25%;
@@ -347,8 +374,11 @@ body {
   margin: 0;
   height: 100%;
 }
+.row .patches #patch_ovw {
+  background-color: #EC1A62;
+}
 .row .patches #patch_ovw:hover {
-  background-color: #394854;
+  background-color: #400016;
 }
 .row .patches .ember-view {
   height: 11%;
@@ -357,7 +387,7 @@ body {
   background-color: #4D5C6B;
 }
 .row .patches article:hover {
-  background-color: #EC1A62;
+  background-color: #400016;
 }
 .row .patch_bl {
   margin: 0;
@@ -381,9 +411,10 @@ body {
   border-radius: 10px;
   padding: 2.5%;
   font-size: 85%;
+  margin: 0.5% 0% 0% 0%;
 }
 .row .patch_bl_ls article:hover {
-  background-color: #EC1A62;
+  background-color: #400016;
 }
 .row .patch_form {
   margin: 8.675% 0% 0% 9.125%;
@@ -399,6 +430,207 @@ body {
 }
 .row .patch_form label {
   color: #F0F2F3;
+}
+.row .del_patch {
+  float: right;
+  margin: 0% 0% 0% 0%;
+}
+.row .del_patch button {
+  background-color: transparent;
+  border: 1px solid #394854;
+  color: #F0F2F3;
+}
+.row .del_patch button:hover {
+  background-color: #400016;
+}
+.row .sgl_ptch {
+  margin: 1.5% 0% 0% 8.25%;
+  padding: 0.25%;
+  color: #F0F2F3;
+  min-height: 30%;
+  max-height: 85%;
+}
+.row .sgl_ptch form {
+  padding: 2.5%;
+  margin-bottom: 1%;
+}
+.row .sgl_ptch .patch_comment {
+  margin-bottom: 1%;
+  padding: 2.5%;
+}
+.row .sgl_ptch .patch_comment textarea {
+  color: #F0F2F3;
+  background-color: transparent;
+  border: 1px solid #394854;
+  resize: none;
+  border-radius: 5px;
+}
+.row .sgl_ptch .patch_comment button {
+  background-color: transparent;
+  color: #F0F2F3;
+  border-radius: 5px;
+}
+.row .sgl_ptch .patch_comment button:hover {
+  background-color: #400016;
+}
+.row .sgl_ptch .cmt_frame {
+  padding: 1.25%;
+}
+.row .login_form {
+  border: 1px dashed #394854;
+  padding: 2.5%;
+  color: #F0F2F3;
+  margin: 12.5% 0% 0% 37.5%;
+  border-radius: 5px;
+}
+.row .login_form::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+.row .login_form form p {
+  color: #EC1A62;
+  font-weight: 450;
+}
+.row .login_form form input {
+  width: 100%;
+  height: fit-content;
+  border: 1px solid #394854;
+  color: #F0F2F3;
+  background-color: transparent;
+  border-radius: 5px;
+  padding: 1% 0.5% 0.5% 1.5%;
+  margin: 2.5% 0% 2.5% 0%;
+}
+.row .login_form button {
+  margin-top: 5%;
+  margin-bottom: -2%;
+  border: 1px solid #394854;
+  background-color: transparent;
+  color: #F0F2F3;
+  border-radius: 5px;
+}
+.row .login_form button:hover {
+  background-color: #400016;
+}
+.row .register {
+  margin: 8% 0% 0% 37.5%;
+  padding: 2.5%;
+}
+.row .register form input {
+  width: 100%;
+  height: fit-content;
+  border: 1px solid #394854;
+  color: #F0F2F3;
+  background-color: transparent;
+  border-radius: 5px;
+  padding: 1% 0.5% 0.5% 1.5%;
+  margin: 2.5% 0% 2.5% 0%;
+}
+.row .register p {
+  font-weight: 450;
+  color: #EC1A62;
+}
+.row .register button {
+  margin-top: 5%;
+  border: 1px solid #394854;
+  background-color: transparent;
+  color: #F0F2F3;
+  border-radius: 5px;
+}
+.row .register button:hover {
+  background-color: #400016;
+}
+.row .friend_nav {
+  margin: 0;
+  height: 100%;
+  color: #F0F2F3;
+}
+.row .friend_nav a {
+  color: #F0F2F3;
+}
+.row .add_friend {
+  margin: 9.75% 0% 0% 8.25%;
+  color: #F0F2F3;
+  padding: 2.5%;
+}
+.row .add_friend button {
+  float: right;
+  background-color: transparent;
+  color: #F0F2F3;
+  border: 1px solid #394854;
+}
+.row .add_friend .add_ul {
+  padding: 0.5%;
+  margin: 2% 0% 0% -1%;
+}
+.row .friendlist {
+  padding: 2.5% 0% 2.5% 2.5%;
+}
+.row .friendlist:hover {
+  background-color: #400016;
+}
+.row .friends_reqs {
+  margin: 6% 0% 0% 8.25%;
+  color: #F0F2F3;
+  min-height: 20%;
+  max-height: 75%;
+  border: solid 1px #394854;
+  padding: 2%;
+}
+.row .friends_reqs .fq_user {
+  margin: 2%;
+  padding: 2.5%;
+}
+.row .friends_reqs .fq_user button {
+  width: 20%;
+  font-size: 0.85em;
+  text-align: center;
+  background-color: transparent;
+  color: #F0F2F3;
+  float: right;
+  border: solid 1px #394854;
+  border-radius: 5px;
+}
+.row .chat_base {
+  margin: 3.5% 0% 0% 4.125%;
+  height: 85%;
+}
+.row .chat_base .row2 {
+  height: 100%;
+}
+.row .chat_base .row2 .last_chats {
+  margin: 0;
+  min-height: 100%;
+  max-height: 100%;
+}
+.row .chat_base .row2 .last_chats .last_conv {
+  color: #EC1A62;
+}
+.row .chat_base .row2 .last_chats .last_conv:hover {
+  background-color: #400016;
+}
+.row .chat_base .row2 .rest_chat {
+  margin-left: 16.66%;
+  width: 83.34%;
+  height: 100%;
+  background-color: red;
+}
+
+.moveable_user {
+  background-color: #EC1A62;
+}
+
+.moved_user {
+  background-color: #4D5C6B;
+}
+
+.acc, .acc a {
+  color: #EC1A62;
+}
+
+.no_acc, .no_acc a {
+  color: #00B210;
 }
 
 /*# sourceMappingURL=app.css.map */

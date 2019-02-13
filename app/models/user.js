@@ -6,8 +6,9 @@ export default DS.Model.extend({
     avatar: DS.attr('string'),
     comments: DS.hasMany('comment', {inverse:null, polymorphic: true}),
     role: DS.belongsTo('role', {inverse: null}),
-    friend: DS.hasMany('user', {inverse: 'friend'}),
-    pm: DS.hasMany('privatemessage', {inverse: 'sender'}), //Privat nachrichten
+    friend: DS.hasMany('user', {inverse: null}),
+    sendpm: DS.hasMany('privatemessage', {inverse: null}), //gesendete privat nachrichten
+    recpm: DS.hasMany('privatemessage',{inverse: null}), //empfangene privat nachrichten
     forumposts: DS.hasMany('forumpost'),
     forumcomments: DS.hasMany('forumcomment'),
     follow: DS.hasMany('forumcommunity'),
