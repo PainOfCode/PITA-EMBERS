@@ -1,1 +1,18 @@
-{{outlet}}
+<div class="col-8 outline_4_s chat_base">
+
+  <!--Content für Chat, last chats usw-->
+    <div class="row2">
+      <div class="col-2 outline_r bg_nav_div last_chats scrollable">
+        {{#each auth.user.friend as |friend|}}
+          {{#link-to "friends.chat.user" friend.username}}
+              <div class="acc last_conv outline_b_s">
+                {{friend.username}}
+              </div>
+            {{/link-to}}
+        {{/each}}
+      </div>
+      {{outlet}}
+    </div>
+
+
+</div>

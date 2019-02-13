@@ -1,6 +1,6 @@
 
     {{#if (and auth.user.role.postcomment session.isAuthenticated)}}
-    <div class="row17 outline_4_d">
+    <div class="outline_4_d patch_comment">
       <div>
       <label>Add comment</label><br>
       {{textarea class="outline_4_s" type="text" rows="6" cols="80" placeholder="Comment.." value=comment}}
@@ -10,13 +10,13 @@
 
     {{else}}
     {{#if (not auth.user.postcomment)}}
-      <div style="text-align: center;">
+      <div>
         You are not allowed to comment
       </div>
     {{else}}
-      <div style="font-size:1vw;color:white">
+      <div>
         Please Log in to write a comment
       </div>
-      <button {{action 'gotoLogin'}}>Log in</button>
+      <button class="outline_4_s" {{action 'gotoLogin'}}>Log in</button>
     {{/if}}
     {{/if}}

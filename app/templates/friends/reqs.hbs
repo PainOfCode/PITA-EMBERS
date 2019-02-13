@@ -1,7 +1,22 @@
-{{log myReqs}}
-{{model.reqs.length}}
-{{#each myReqs as |user|}}
+<div class="col-7 friends_reqs scrollable">
+  {{#each myReqs as |user|}}
 
-{{user.from.username}} -> {{user.to.username}}<br>
+    {{#if (eq user.from.id auth.user.id)}}
+      <div class="fq">
+        <div class="fq_user outline_4_s">
+          Successfully send a friend request to {{user.to.username}}.
+          <button {{action 'cancelFq' user}}>Cancel request</button>
+        </div>
+      </div>
+    {{else}}
+      <div class="fq">
+        <div class="fq_user outline_4_s">
+          You recieved a friend request from {{user.from.username}}.
+          <button {{action 'acceptFq' user}}>Accept</button>
+        </div>
+      </div>
 
-{{/each}}
+    {{/if}}
+
+  {{/each}}
+</div>

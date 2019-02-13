@@ -19,19 +19,20 @@ Plan for the whole section:
 -->
 
 <!-- Linksseitige overview, aufklappbar nach grp sortiert [Online und offline only]-->
-<div class="row23">
-  <div class="col-2 bg_nav outline_r">
+  <div class="col-2 outline_r friend_nav">
 
     {{#link-to "friends.add"}}
-      <div class="bg_nav_div">
+      <div class="acc bg_nav_div" style="text-align: center;">
         Add new friend
       </div>
     {{/link-to}}
-    {{#each model.users as |group|}}
 
-    {{#link-to "friends.chat.user" group.username}}
-    <div class="bg_nav_div">
-      {{group.username}}
+    {{#each auth.user.friend as |friend|}}
+
+    {{#link-to "friends.chat.user" friend.username}}
+    <div class="outline_t_b_s friendlist">
+      {{friend.username}}<br>
+      Status: <span class="{{if friend.online 'no_acc' 'acc'}}">{{if friend.online "Online" "Offline"}}</span>
     </div>
     {{/link-to}}
 
@@ -41,8 +42,19 @@ Plan for the whole section:
       No friends online
     </div>
     {{/each}}
+    {{#if (or auth.user.sendfq auth.user.recfq)}}
+    {{#link-to "friends.reqs"}}
+    <div>
+      {{#if auth.user.sendfq}}
+        <span class="acc" style="padding-left: 5%;">You send {{auth.user.sendfq.length}} friend requests.</span>
+      {{/if}}
+      {{#if auth.user.recfq}}
+        <span class="acc" style="padding-left: 5%;">You have {{auth.user.recfq.length}} friend requests.</span>
+      {{/if}}
+    </div>
+    {{/link-to}}
+    {{/if}}
 
   </div>
-</div>
 
 {{outlet}}

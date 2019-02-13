@@ -45,6 +45,13 @@
                 {{/link-to}}
                 <div class="outline_t_b_l bg_nav_div">
                     Welcome, <br>{{auth.user.username}}
+                  <!--
+                    {{#each auth.user.friend as |friend|}}
+
+                    {{log friend.username}}
+
+                    {{/each}}
+                  -->
                 </div>
             {{else}}
                {{#link-to "createaccount"}}

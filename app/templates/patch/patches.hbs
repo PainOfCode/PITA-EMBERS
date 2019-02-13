@@ -1,34 +1,30 @@
 
   <!-- model.* um auf das in route definierte model zuzugreifen-->
   <!-- edit-funktion hinzufügen-->
-<div class="row15">
-  <div class="col-2">
+  <div class="col-2 del_patch">
     {{#if (and auth.user.role.manageroles session.isAuthenticated) }}
     <div>
-      <button class="button_style" {{action "deletePatch"}}> Delete patch</button>
+      <button {{action "deletePatch"}}> Delete patch</button>
     </div>
     {{/if}}
   </div>
-</div>
 
-
-<div class="row16">
-  <div class="col-7 outline_4_d scrollable bg_nav_div">
-    <form class="sgl_ptch outline_4_d bg_nav">
+  <div class="col-7 outline_4_d scrollable sgl_ptch">
+    <form class="outline_4_d">
         <div>
-            <label> Version:</label><br>
+            <label class="acc"> Version:</label><br>
             {{model.version}}<br>
-            <br><label> Release-Date:</label><br>
+            <br><label class="acc"> Release-Date:</label><br>
             {{moment-format model.date 'MMMM D, YYYY HH:mm'}}<br><br>
         </div>
         <div>
-            <label> Focus:</label><br>
+            <label class="acc"> Focus:</label><br>
             <div>
             {{model.focus}}<br><br><br>
           </div>
         </div>
         <div>
-            <label> Content of Patch:</label><br><br>
+            <label class="acc"> Content of Patch:</label><br><br>
               <div>
             {{{string-to-html model.details}}}
           </div>
@@ -41,7 +37,7 @@
       <div class="outline_4_d">
         {{#each model.comments as |comment|}}
         <div class="cmt_frame">
-            {{comment.user.username}}:
+            <span class="acc">{{comment.user.username}}:</span>
             <br>
             {{comment.text}}
         </div>
@@ -51,4 +47,3 @@
         {{/each}}
       </div>
     </div>
-  </div>
