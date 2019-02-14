@@ -79,7 +79,7 @@ body {
 }
 
 .bg_nav_div {
-  background-color: #4D5C6B;
+  background-color: #5C6E7F;
   color: #F0F2F3;
 }
 
@@ -350,7 +350,7 @@ body {
   border-width: 0px 0px 1.5px 0px;
 }
 .row .col-7 article {
-  background-color: #4D5C6B;
+  background-color: #5C6E7F;
   border-radius: 10px;
   margin-bottom: 0.25%;
 }
@@ -384,7 +384,7 @@ body {
   height: 11%;
 }
 .row .patches article {
-  background-color: #4D5C6B;
+  background-color: #5C6E7F;
 }
 .row .patches article:hover {
   background-color: #400016;
@@ -549,6 +549,24 @@ body {
 .row .friend_nav a {
   color: #F0F2F3;
 }
+.row .friend_nav div {
+  margin: 0;
+}
+.row .friend_nav div button {
+  margin: 0;
+  padding: 2.5% 0% 2.5% 2.5%;
+  height: 100%;
+  width: 100%;
+  color: #F0F2F3;
+  background-color: transparent;
+  border-style: solid;
+  border-color: #394854;
+  border-width: 1px 0px 1px 0px;
+  text-align: left;
+}
+.row .friend_nav div .button:hover {
+  background-color: #400016;
+}
 .row .add_friend {
   margin: 9.75% 0% 0% 8.25%;
   color: #F0F2F3;
@@ -563,12 +581,6 @@ body {
 .row .add_friend .add_ul {
   padding: 0.5%;
   margin: 2% 0% 0% -1%;
-}
-.row .friendlist {
-  padding: 2.5% 0% 2.5% 2.5%;
-}
-.row .friendlist:hover {
-  background-color: #400016;
 }
 .row .friends_reqs {
   margin: 6% 0% 0% 8.25%;
@@ -603,9 +615,26 @@ body {
   margin: 0;
   min-height: 100%;
   max-height: 100%;
+  background-color: #394854;
+}
+.row .chat_base .row2 .last_chats div {
+  margin: 0;
+}
+.row .chat_base .row2 .last_chats div button {
+  margin: 0;
+  padding: 2.5% 0% 2.5% 2.5%;
+  height: 100%;
+  width: 100%;
+  color: #EC1A62;
+  background-color: transparent;
+  border-style: solid;
+  border-color: #37424D;
+  border-width: 1px 0px 1px 0px;
 }
 .row .chat_base .row2 .last_chats .last_conv {
   color: #EC1A62;
+  text-align: center;
+  padding: 1%;
 }
 .row .chat_base .row2 .last_chats .last_conv:hover {
   background-color: #400016;
@@ -614,7 +643,71 @@ body {
   margin-left: 16.66%;
   width: 83.34%;
   height: 100%;
-  background-color: red;
+  background-color: #5C6E7F;
+}
+.row .chat_base .row2 .rest_chat .row2 {
+  height: 10%;
+  width: 100%;
+  color: #F0F2F3;
+  background-color: #37424D;
+}
+.row .chat_base .row2 .rest_chat .row2 .heading {
+  margin-left: 5%;
+}
+.row .chat_base .row2 .rest_chat .row3 {
+  padding-bottom: 2.5%;
+  color: #F0F2F3;
+  height: 70%;
+  width: 100%;
+  background-color: #293238;
+}
+.row .chat_base .row2 .rest_chat .row3 .me, .row .chat_base .row2 .rest_chat .row3 .op {
+  border-radius: 10px;
+  border: 1px solid #394854;
+  background-color: #37424D;
+  padding: 1.25%;
+}
+.row .chat_base .row2 .rest_chat .row3 .bbl_right {
+  margin: 0;
+  float: right;
+  min-width: 55%;
+  max-width: 75%;
+  margin-right: 1%;
+}
+.row .chat_base .row2 .rest_chat .row3 .bbl_right p {
+  margin: 2.5% 0% 1% 3.5%;
+}
+.row .chat_base .row2 .rest_chat .row3 .bbl_left {
+  margin: 0;
+  float: left;
+  min-width: 55%;
+  max-width: 75%;
+  margin-left: 1%;
+}
+.row .chat_base .row2 .rest_chat .row3 .bbl_left p {
+  margin: 2.5% 0% 1% 2.5%;
+}
+.row .chat_base .row2 .rest_chat .row4 {
+  height: 20%;
+  width: 100%;
+  background-color: #37424D;
+}
+.row .chat_base .row2 .rest_chat .row4 textarea {
+  resize: none;
+  width: 70%;
+  height: 70%;
+  border-radius: 10px;
+  background-color: #293238;
+  padding: 0.75%;
+  margin: 2% 0% 0% 15%;
+  color: #F0F2F3;
+}
+.row .chat_base .row2 .rest_chat .row4 button {
+  background-color: transparent;
+  border-radius: 15px;
+  float: right;
+  color: #F0F2F3;
+  margin: 5.25% 4.5% 0% 0%;
 }
 
 .moveable_user {
@@ -622,7 +715,7 @@ body {
 }
 
 .moved_user {
-  background-color: #4D5C6B;
+  background-color: #5C6E7F;
 }
 
 .acc, .acc a {

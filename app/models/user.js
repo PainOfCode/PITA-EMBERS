@@ -1,4 +1,6 @@
 import DS from 'ember-data';
+import Ember from 'ember';
+const { computed } = Ember;
 
 export default DS.Model.extend({
     uid: DS.attr('string'),
@@ -12,7 +14,11 @@ export default DS.Model.extend({
     forumposts: DS.hasMany('forumpost'),
     forumcomments: DS.hasMany('forumcomment'),
     follow: DS.hasMany('forumcommunity'),
-    online: DS.attr('boolean', {defaultValue(){return false;}}),
+    lastaction: DS.attr('date'),
+    online: computed('lastaction', function(){
+      //8250ms pro aktaulisierung + delay schon bzw spielraum
+      return ((new Date().getTime())-(this.get('lastaction').getTime()) < 8250);
+    }),
     recfq: DS.hasMany('friendreq', {inverse: null}),
     sendfq: DS.hasMany('friendreq', {inverse: null})
 });

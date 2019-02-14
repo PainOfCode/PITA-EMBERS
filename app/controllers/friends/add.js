@@ -77,7 +77,7 @@ actions: {
      let notrecieved = false;
      let count_v = 0;
 
-     if (this.get('model.reqs')){
+     if (this.get('model.reqs.length')>0){
        this.get('model.reqs').forEach((data)=>{
          count_v++;
          console.log(data.to.content.id);
