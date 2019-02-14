@@ -28,14 +28,10 @@ Plan for the whole section:
     {{/link-to}}
 
     {{#each auth.user.friend as |friend|}}
-
-    {{#link-to "friends.chat.user" friend.username}}
-    <div class="outline_t_b_s friendlist">
-      {{friend.username}}<br>
-      Status: <span class="{{if friend.online 'no_acc' 'acc'}}">{{if friend.online "Online" "Offline"}}</span>
+    <div>
+      <button {{action "chatWith" friend}}>{{friend.username}}<br>
+        Status: <span class="{{if friend.online 'no_acc' 'acc'}}">{{if friend.online "Online" "Offline"}}</span></button>
     </div>
-    {{/link-to}}
-
     {{else}}
 
     <div>
@@ -58,3 +54,12 @@ Plan for the whole section:
   </div>
 
 {{outlet}}
+
+<!--
+{{#link-to "friends.chat.user" friend.username}}
+<div class="outline_t_b_s friendlist">
+  {{friend.username}}<br>
+  Status: <span class="{{if friend.online 'no_acc' 'acc'}}">{{if friend.online "Online" "Offline"}}</span>
+</div>
+{{/link-to}}
+-->

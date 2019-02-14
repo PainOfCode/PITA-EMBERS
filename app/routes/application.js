@@ -6,7 +6,7 @@ import FindQuery from 'ember-emberfire-find-query/mixins/find-query';
 export default Ember.Route.extend(FindQuery,{
   session: Ember.inject.service(),
   auth: Ember.inject.service(),
-
+  onlinestatus: Ember.inject.service(),
 
   beforeModel: function() {
     return this.get('session').fetch().then(()=>{

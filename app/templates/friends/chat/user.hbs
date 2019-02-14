@@ -1,5 +1,60 @@
-<div class="rest_chat">
 
+{{#if (not-eq chat.crntChat.username auth.user.username)}}
+  <div class="rest_chat">
+    <!--Head - Online, offline and name-->
+      <div class="row2">
+        {{#if chat.crntChat}}
+        <div class="heading">
+          <span>{{chat.crntChat.username}}</span><br>
+          <span class="{{if chat.crntChat.online 'no_acc' 'acc'}}">{{if chat.crntChat.online 'Online' 'Offline'}}</span>
+        </div>
+        {{else}}
+          Nope
+        {{/if}}
+        <!--Rechts 3 punkte für optionen (melden, blockieren, stummschalten)-->
+      </div>
+    <!--Content, old messages and so on-->
 
+    <div class="row3 scrollable">
+    {{#if chat.crntChat}}
+          <!--myChat = current opened chat-->
+          {{#each myChat as |pm|}}
 
-</div>
+            {{#if (eq auth.user.id pm.sender.id)}}
+
+              <div class="bbl_right">
+                <p>{{auth.user.username}}</p>
+                <div class="me">
+                  {{pm.text}}
+                </div>
+              </div>
+
+            {{else}}
+                <div class="bbl_left">
+                  <p>{{pm.sender.username}}</p>
+                  <div class="op">
+                    {{pm.text}}
+                  </div>
+                </div>
+            {{/if}}
+          {{/each}}
+        {{else}}
+        Nope
+      {{/if}}
+    </div>
+
+    <!--Field to type in to send messsages-->
+      <div class="row4">
+          {{#if chat.crntChat}}
+            {{textarea placeholder="Write a message" class="outline_4_s" value=text}}
+            <button class="outline_4_s" {{action 'sendPm'}}>Send</button>
+          {{else}}
+            Nope
+          {{/if}}
+      </div>
+  </div>
+
+  {{else}}
+
+<span>You can't write with yourself</span>
+{{/if}}
