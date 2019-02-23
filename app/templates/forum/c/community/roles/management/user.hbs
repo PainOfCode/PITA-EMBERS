@@ -1,0 +1,16 @@
+{{#if (or (eq auth.user.id auth.chosencom.creator.id) auth.chosencomrole.banuser)}}
+  <div class="outline_t_b_s">
+    {{#each auth.chosencom.follower as |user|}}
+
+      <button {{action "ban" user}}>{{user.username}}</button>
+
+      {{#if user.comrole.banned}}
+        banned
+      {{/if}}
+      {{#if (not user.comrole.banned)}}
+        not banned
+      {{/if}}
+        <br>
+    {{/each}}
+  </div>
+{{/if}}

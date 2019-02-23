@@ -2,7 +2,7 @@ import Controller from '@ember/controller';
 import Ember from 'ember';
 
 export default Controller.extend({
-
+notifications: Ember.inject.service('toast'),
 auth: Ember.inject.service(),
 init(){
   this._super(...arguments);
@@ -23,7 +23,7 @@ actions: {
 
 
   sendFQ: function(param){
-
+    let noti = this.get('notifications')
     let notme = false;
     if (this.get('auth.user.id') === param.id){
         notme = false;
@@ -80,12 +80,10 @@ actions: {
      if (this.get('model.reqs.length')>0){
        this.get('model.reqs').forEach((data)=>{
          count_v++;
-         console.log(data.to.content.id);
          if(data.to.content.id === this.get('auth.user.id') && data.from.content.id === param.id){
            notrecieved = false;
            count_v = (this.get('model.reqs.length')*(-100));
-           console.log('hello world');
-         }else if(count_v === this.get('model.reqs.length')){
+        }else if(count_v === this.get('model.reqs.length')){
            notrecieved = true;
          }else if(count_v === (this.get('model.reqs.length')*(-100))){
            notrecieved = false;
@@ -96,7 +94,20 @@ actions: {
      }
 
     //Alle bedingungen mit namen, wo die req hingehen hätte sollen
-    console.log('Not me: ',notme,'Not recieved: ',notrecieved,'Not friends: ',notfriends,'Not send: ',notsend,'to user: ',param.username);
+    //console.log('Not me: ',notme,'Not recieved: ',notrecieved,'Not friends: ',notfriends,'Not send: ',notsend,'to user: ',param.username);
+
+    if (!notme){
+      noti.warning('You cant send a friendrequest to yourself, '+this.get('auth.user.username')+'!','',{timeOut:1750})
+    }
+    if (!notsend){
+      noti.warning('You already send '+param.username+' a friendrequest','',{timeOut:1750})
+    }
+    if (!notfriends){
+      noti.warning('You are already friends with '+param.username,'',{timeOut:1750})
+    }
+    if (!notrecieved){
+      noti.warning('You already recieved a friend request from '+param.username,'',{timeOut:1750})
+    }
 
     if (notme === true && notsend === true && notfriends === true && notrecieved === true){
 
@@ -117,7 +128,9 @@ actions: {
 
       toUser.get('recfq').addObject(fq);
       fq.save().then(()=>{
-        toUser.save();
+        toUser.save().then(()=>{
+          noti.info('Successfully send friendrequest to '+this.get('param.username'),'Send request!', {timeOute:1250})
+        });
       });
     }
   }

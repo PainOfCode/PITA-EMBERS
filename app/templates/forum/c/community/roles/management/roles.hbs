@@ -1,0 +1,26 @@
+{{#if (eq auth.user.id auth.chosencom.creator.id)}}
+  <div class="outline_t_b_s">
+    <button class="forum_new_role" {{action "gotoNew"}}>New role</button>
+    <button class="forum_role_user" {{action "gotoUser"}}>User assignment</button>
+    <div>
+      <span style="font-size: 0.65em;color: #F0F2F3;">(Click on rolename to edit the role)</span><br><br>
+      {{#each auth.chosencom.roles as |role|}}
+      {{#link-to "forum.c.community.roles.management.roles.edit" role.id}}
+        <div class="forum_rolename" style="color: #F0F2F3;font-size: 1em;">
+          Role: {{role.name}}<br>
+        </div>
+      {{/link-to}}
+      <span style="color: #F0F2F3;">User:<br></span>
+        {{#each role.user as |user|}}
+          <div class="forum_user_list" style="color: #F0F2F3;font-size: 1em;">
+            <pre class="premade"> -{{user.username}}</pre><br>
+          </div>
+        {{/each}}
+        <br>
+      {{/each}}
+    </div>
+
+
+  {{outlet}}
+  </div>
+{{/if}}

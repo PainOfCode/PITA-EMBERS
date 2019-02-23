@@ -1,0 +1,29 @@
+{{auth.kakjdk}}
+{{#if (and auth.user session.isAuthenticated)}}
+
+<div class="com_role_selec">
+  <form>
+    <div class="com_role_dropdown">
+      <button class="com_role_dropbtn">Select a role</button>
+        <div class="com_role_content scrollable">
+
+          {{#each auth.createdcommunity.roles as |comrole|}}
+            {{#link-to "forum.c.new.roles.show-edit" comrole.id}}
+              <div>
+                {{comrole.name}}
+              </div>
+            {{/link-to}}
+          {{/each}}
+
+            {{#link-to 'forum.c.new.roles.new'}}
+              <div>
+                New role
+              </div>
+            {{/link-to}}
+        </div>
+    </div>
+  </form>
+</div>
+
+{{outlet}}
+{{/if}}

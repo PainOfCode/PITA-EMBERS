@@ -1,14 +1,12 @@
 
-  <div class="col-7 add_friend outline_4_s scrollable">
-    {{#user-filter class="filter_user" model=model.users filter=(action "searchUser") as |user|}}
+    {{#user-filter class="" model=model.users filter=(action "searchUser") as |user|}}
 
     {{#each user as |res|}}
-    <div class="add_ul outline_4_d">
-    Name: {{res.username}}<br>
-    Role: {{res.role.rolename}}
-    <button class="user_selection" {{action "sendFQ" res}}>Send request</button>
-    </div>
+      <div class="">
+        Name: {{res.username}}<br>
+        Role: {{res.role.rolename}}
+          <button class="" {{action "sendFQ" res}}>Send request</button>
+      </div>
     {{/each}}
 
     {{/user-filter}}
-  </div>

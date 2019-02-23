@@ -1,0 +1,18 @@
+{{#if (and auth.user session.isAuthenticated)}}
+  <div class="col-9 new_community">
+    <form class="outline_4_s">
+      <label>Community name</label><br>
+        <span>(max. 20 letters)</span><br>
+          {{input type="text" value=model.forumcommunity.name placeholder="Community name"}}<br>
+
+      <label>Community description</label><br>
+        <span>(max. 255 letters)</span><br>
+          {{textarea rows="10" value=model.forumcommunity.description placeholder="Community description"}}
+
+      <button {{action 'roleSetup'}}>Set up roles</button>
+    </form>
+
+      {{outlet}}
+
+  </div>
+{{/if}}

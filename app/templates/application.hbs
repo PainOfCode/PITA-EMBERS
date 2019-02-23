@@ -1,84 +1,137 @@
     <div class="row scrollable">
        <div class="col-1 outline_r">
-
          {{onlinestatus.lastaction}}
-
-                 {{#link-to "index"}}
-                 <div class="pita" id="pita">
+                  {{#link-to "index"}}
+                    <div class="pita" id="pita">
                       PITA
                     </div>
                   {{/link-to}}
 
-                {{#link-to "forum" }}
-                <div class="outline_t_b_l bg_nav_div">
-                  Forum
-                </div>
-                {{/link-to}}
-                 {{#link-to "patch.overview"}}
-                 <div class="outline_t_b_l bg_nav_div">
-                   Patches
-                 </div>
-                  {{/link-to}}
-                 {{#link-to "about"}}
-                 <div class="outline_t_b_l bg_nav_div">
-                   About us
-                 </div>
-                  {{/link-to}}
-            {{#if (and session.isAuthenticated auth.user.role.createticket)}}
-            {{#link-to "support.overview"}}
-                 <div class="outline_t_b_l bg_nav_div">
-                   Support
-                 </div>
-                  {{/link-to}}
-            {{/if}}
-            {{#if session.isAuthenticated}}
-            <div class="outline_t_b_l bg_nav_div">
-                  {{#link-to "logout"}}Log out{{/link-to}}
-                </div>
+
+
+                  {{#if session.isAuthenticated}}
+
+
+                  <div class="outline_t_b_l bg_nav_div">
+                    Welcome, {{auth.user.username}}!
+                  </div>
+
+
                   {{#link-to "friends"}}
-                  <div class="outline_t_b_l bg_nav_div">
-                    Friends
-                  </div>
+                    <div class="outline_t_b_l bg_nav_div">
+                      Friends
+                    </div>
                   {{/link-to}}
+
+
+                  {{#link-to "forum" }}
+                    <div class="outline_t_b_l bg_nav_div">
+                      Forum
+                    </div>
+                  {{/link-to}}
+
+
+                  {{#link-to "patch.overview"}}
+                    <div class="outline_t_b_l bg_nav_div">
+                      Patches
+                    </div>
+                  {{/link-to}}
+
+
+                  {{#link-to "about"}}
+                    <div class="outline_t_b_l bg_nav_div">
+                      About us
+                    </div>
+                  {{/link-to}}
+
+
                   {{#link-to "membership"}}
-                  <div class="outline_t_b_l bg_nav_div">
-                    Membership
-                </div><br><br>
-                {{/link-to}}
-                <div class="outline_t_b_l bg_nav_div">
-                    Welcome, <br>{{auth.user.username}}
-                  <!--
-                    {{#each auth.user.friend as |friend|}}
-
-                    {{log friend.username}}
-
-                    {{/each}}
-                  -->
-                </div>
-            {{else}}
-               {{#link-to "createaccount"}}
-                 <div class="outline_t_b_l bg_nav_div">
-                   Register
-                  </div>
-               {{/link-to}}
-                   {{#link-to "login"}}
-                   <div class="outline_t_b_l bg_nav_div">
-                   Log in
-                 </div>
-                   {{/link-to}}
-            {{/if}}
-            {{#if (and auth.user.role.manageroles session.isAuthenticated) }}
-                 {{#link-to "role-editor"}}
-                 <div class="outline_t_b_l bg_nav_div">
-                   User/Roles
-                 </div>
+                    <div class="outline_t_b_l bg_nav_div">
+                      Membership
+                    </div>
                   {{/link-to}}
-            {{/if}}
-            <div class="outline_t_b_l bg_nav_div">
-              {{#link-to "settings"}}
-                Settings
-              {{/link-to}}
-            </div>
+
+
+                  <br> <br>
+
+
+                {{#if auth.user.role.manageroles}}
+                  {{#link-to "role-editor"}}
+                    <div class="outline_t_b_l bg_nav_div">
+                      Role-Editor
+                    </div>
+                  {{/link-to}}
+                {{/if}}
+
+                  {{#link-to "settings"}}
+                    <div class="outline_t_b_l bg_nav_div">
+                      Settings
+                    </div>
+                  {{/link-to}}
+
+                  {{#link-to "help"}}
+                    <div class="outline_t_b_l bg_nav_div">
+                      Help
+                    </div>
+                  {{/link-to}}
+
+
+                  {{#link-to "logout"}}
+                    <div class="outline_t_b_l bg_nav_div">
+                      Logout
+                    </div>
+                  {{/link-to}}
+
+
+                  {{else}}
+
+
+                    {{#link-to "forum"}}
+                      <div class="outline_t_b_l bg_nav_div">
+                        Forum
+                      </div>
+                    {{/link-to}}
+
+
+                    {{#link-to "patch.overview"}}
+                      <div class="outline_t_b_l bg_nav_div">
+                        Patches
+                      </div>
+                    {{/link-to}}
+
+
+                    {{#link-to "about"}}
+                    <div class="outline_t_b_l bg_nav_div">
+                      About us
+                    </div>
+                    {{/link-to}}
+
+
+                    <br><br>
+
+                    {{#link-to "help"}}
+                      <div class="outline_t_b_l bg_nav_div">
+                        Help
+                      </div>
+                    {{/link-to}}
+
+                    {{#link-to "login"}}
+                    <div class="outline_t_b_l bg_nav_div">
+                      Login
+                    </div>
+                    {{/link-to}}
+
+
+                    {{#link-to "createaccount"}}
+                    <div class="outline_t_b_l bg_nav_div">
+                      Register
+                    </div>
+                    {{/link-to}}
+
+
+                  {{/if}}
+
+
         </div>
 
         {{outlet}}

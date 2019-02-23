@@ -8,22 +8,31 @@ const Router = EmberRouter.extend({
 
 Router.map(function() {
   this.route('about');
-  this.route('support', function() {
-    this.route('overview');
-    this.route('ticket', {path:'/:id'});
-    this.route('new');
-    this.route('listAll');
-  });
   this.route('home');
   this.route('membership');
   this.route('forum', function() {
-    this.route('posts', {path: '/:titleurl'});
-    this.route('chatroom');
-
     this.route('c', function() {
-      this.route('community', {path: '/:name'}, function() {
-        this.route('chat');
+      this.route('new', function() {
+        this.route('roles', function() {
+          this.route('new');
+          this.route('show-edit', {path: '/:id'});
+        });
+      });
+      this.route('community',{path: '/:name'}, function() {
+        this.route('new');
         this.route('posts');
+
+        this.route('roles', function() {
+          this.route('management', function() {
+            this.route('user');
+            this.route('roles', function() {
+              this.route('user');
+              this.route('edit', {path: '/:id'});
+              this.route('new');
+            });
+          });
+        });
+        this.route('post', {path: '/:id'});
       });
     });
   });
@@ -44,10 +53,18 @@ Router.map(function() {
     this.route('add');
     this.route('chat', function() {
       this.route('user', {path:'/:name'});
+
+      this.route('groupchat', function() {});
     });
     this.route('reqs');
+
+    this.route('groupchat', function() {
+      this.route('new');
+      this.route('chat', {path:'/:name'});
+    });
   });
   this.route('settings');
+  this.route('help');
 });
 
 export default Router;

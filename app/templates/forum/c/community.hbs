@@ -1,1 +1,24 @@
-{{outlet}}
+{{xya.followed}}
+<div class="row2">
+    {{#if (or (eq auth.user.id auth.chosencom.creator.id) auth.chosencomrole.createpost)}}
+        <button class="new_post outline_4_s bg_nav" {{action "createPost"}}>Create a post</button>
+    {{/if}}
+
+    {{#if (or (eq auth.user.id auth.chosencom.creator.id) auth.chosencomrole.banuser)}}
+      <button class="manage outline_4_s bg_nav" {{action "manage"}}>Manage roles/user/Community</button>
+    {{/if}}
+
+    <button class="follow_com" {{action "follow"}}>Follow</button>
+
+  <div class="col-7 posts scrollable outline_l_r">
+    {{outlet}}
+
+  </div>
+
+</div>
+
+<!--
+
+Rework permissions, try not to do it in handlebars
+
+-->

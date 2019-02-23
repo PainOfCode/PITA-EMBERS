@@ -1,0 +1,40 @@
+{{#if (eq auth.user.id auth.chosencom.creator.id)}}
+  <form class="forum_role_form">
+    <div class="forum_role_edit">
+      <form>
+        <div>
+          <label>Create post: </label>
+            {{input type="checkbox" checked=createpost}}<br>
+        </div>
+
+        <div class="">
+          <label>Comment: </label>
+          {{input type="checkbox" checked=comment}}<br>
+        </div>
+
+        <div class="">
+          <label>Delete Posts:</label>
+          {{input type="checkbox" checked=deleteposts}}<br>
+        </div>
+
+        <div class="">
+          <label>Delete comments:</label>
+          {{input type="checkbox" checked=deletecomment}}<br>
+        </div>
+
+        <div class="">
+          <label>Ban user:</label>
+          {{input type="checkbox" checked=banuser}}<br>
+        </div>
+
+        <br>
+
+          <label>Rolename</label>
+          {{input type="text" class="role" value=name}}<br>
+
+
+        <button {{action 'create'}}>create</button>
+      </form>
+    </div>
+  </form>
+{{/if}}

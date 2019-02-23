@@ -1,2 +1,45 @@
-
+<div class="row2 forum">
+  <div class="col-2 forum_nav outline_r">
+    {{#if session.isAuthenticated}}
+      {{#link-to 'forum.c.new'}}
+        <div class="forum_new">
+          Create a new community
+        </div>
+      {{/link-to}}
+    {{/if}}
+    {{#forum-search class="searchfield" model=model filter=(action "filterCommunity") as |com|}}
+      <div class="scrollable forum_list">
+        {{#each com as |forum|}}
+            {{#link-to 'forum.c.community.posts' forum.name}}
+              <div class="forum_com {{if (eq forum.name auth.chosencom.name) 'acc_route'}}">
+                c/{{forum.name}}
+              </div>
+            {{/link-to}}
+        {{/each}}
+      </div>
+    {{/forum-search}}
+  </div>
 {{outlet}}
+</div>
+
+
+<!--
+
+Feature List for forum:
+  -Create community similar to reddit[DONE]
+  -Community chats like discord/reddit
+  -have roles for each sub, like moderators[DONE]
+  -Posts with picture preview if uploaded
+  -Forum mainpage posts from subscribed subs with highest upvotes [PART: DONE]
+    -> If not logged in -> generally show highest upvoted posts of 48h
+      -> Or spefic visited sub
+  -Updvote/Downvote mechanic -> same as like and dislike
+  -Threshold to post in subs -> mods may set the required amount of 'points'
+  -Sort by new for newest posts, or Hot for most upvoted posts
+  -User banable from specific subs
+  -NAV shows subscribed subs in overview with /c/'Community name' [DONE]
+    -> Links to specific sub [DONE]
+  -Report posts to mod/admin
+  -Click on username -> See their profile + add friend + report user
+
+-->

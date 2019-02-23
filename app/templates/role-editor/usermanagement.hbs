@@ -1,25 +1,22 @@
   {{#if (and session.isAuthenticated auth.user.role.manageusers)}}
 
-    <div class="row">
-      <div class="col-2 dropdown role">
-          <!-- Roles overview with dropdown to select role-->
-          <button class="role_dropbtn bg_nav_div" id="role_slct">{{if selectedRole selectedRole.rolename 'Select a role'}}</button>
+      <div class="col-2 dropdown role bg_nav">
+        <!-- Roles overview with dropdown to select role-->
+           <button class="role_dropbtn bg_nav_div" id="role_slct">{{if selectedRole selectedRole.rolename 'Select a role'}}</button>
           <div class="drop_content scrollable">
-              {{#each model.roles as |role|}}
-                  <button class="bg_nav" {{action 'selectRole' role}}>{{role.rolename}}</button><br>
-              {{/each}}
+            {{#each model.roles as |role|}}
+                <button class="bg_nav" {{action 'selectRole' role}}>{{role.rolename}}</button><br>
+            {{/each}}
           </div>
+      </div>
     {{log selectedRole}}
-    <div class="user bg_nav">
-      <div id="slctd_us">
-        Select users for role: {{selectedRole.rolename}}
-      </div>
-        <div>
+    <div class="user scrollable">
+
+        <span id="slctd_us">
+            Select users for role: {{selectedRole.rolename}}<br>
+        </span>
           {{#each model.users as |user|}}
-            <button class="bg_nav_div {{if (eq user.role.id selectedRole.id) 'moveable_user' 'moved_user'}}" {{action 'selectUser' user}}>{{user.username}}</button><br>
+            <button class="{{if (eq user.role.id selectedRole.id) 'moveable_user' 'moved_user'}}" {{action 'selectUser' user}}>{{user.username}}</button><br>
           {{/each}}
-        </div>
-      </div>
-      </div>
     </div>
 {{/if}}

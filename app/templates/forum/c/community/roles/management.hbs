@@ -1,0 +1,13 @@
+<div style="height:7.5%;">
+  {{#if (eq auth.user.id auth.chosencom.creator.id)}}
+    <button class="delForum outline_4_s bg_nav" style="width:31.25%;" {{action "deleteForum"}}>Delete community</button>
+
+    <button class="delForum outline_4_s bg_nav" style="width:31.25%;" {{action "gotoManage"}}>Manage roles/assignment</button>
+  {{/if}}
+
+  {{#if (or (eq auth.user.id auth.chosencom.creator.id) auth.chosencomrole.banuser)}}
+    <button class="delForum outline_4_s bg_nav" style="width:31.25%;" {{action "gotoBan"}}>Ban users</button>
+  {{/if}}
+</div>
+<button class="back_btn" {{action 'back'}}>Back</button>
+{{outlet}}

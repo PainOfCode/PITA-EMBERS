@@ -1,0 +1,38 @@
+{{#if (and auth.user session.isAuthenticated)}}
+  <div class="com_role_perm">
+    <form>
+      <div class="bg_nav">
+        <label>Create post: </label>
+          {{input type="checkbox" checked=model.createpost}}<br>
+      </div>
+
+      <div class="bg_nav_div">
+        <label>Comment: </label>
+        {{input type="checkbox" checked=model.comment}}<br>
+      </div>
+
+      <div class="bg_nav">
+        <label>Delete Posts:</label>
+        {{input type="checkbox" checked=model.deleteposts}}<br>
+      </div>
+
+      <div class="bg_nav_div">
+        <label>Delete comments:</label>
+        {{input type="checkbox" checked=model.deletecomment}}<br>
+      </div>
+
+      <div class="bg_nav">
+        <label>Ban user:</label>
+        {{input type="checkbox" checked=model.banuser}}<br>
+      </div>
+
+      <br>
+
+        <label>Rolename</label>
+        {{input type="text" class="com_role" value=model.name}}<br>
+
+
+      <button {{action 'saveChanges'}}>Save</button>
+    </form>
+  </div>
+{{/if}}

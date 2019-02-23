@@ -71,7 +71,7 @@
   }
 
   body{
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Trebuchet MS', sans-serif, monospace;
     background-color: $body-clr;
   }
 
@@ -192,13 +192,13 @@
 
   #pita{
     text-align: center;
-    font-weight: 600;
+    font-weight: 650;
     background-color: $accent-clr;
     padding: 0% 0% 0% -1%;
     color: $font-clr;
     margin-top: 7.5%;
-    font-size: 1.1em;
-    letter-spacing: 10px;
+    font-size: 1.2em;
+    letter-spacing: 3px;
   }
 
 //Generelle seite, alles in einer reihe
@@ -332,17 +332,27 @@
 
 
       .role {
-        margin-top: 11.7%;
-        &::after{
-          content: "";
-          clear:both;
-          display: table;
-        }
+        //margin-top: 11.7%;
 
-        .user{
-          margin-top: 10%;
-        }
 
+      }
+      .user{
+        width: 16%;
+        position: fixed;
+        margin: 22.5% 0% 0% 67%;
+        background-color: $nav-clr;
+        color: $font-clr;
+        min-height: 42.5%;
+        max-height: 45%;
+        border-radius: 0px 0px 5px 5px;
+
+        button{
+          width: 100%;
+          color: $font-clr;
+          border-style: solid;
+          border-color: $outline-clr;
+          border-width: 1px 0px 1px 0px;
+        }
       }
 
       .col-7{
@@ -593,203 +603,559 @@
         }
       }
 
-    .friend_nav{
-      margin: 0;
+
+
+    .forum{
+      &::after{
+        content: "";
+        clear:both;
+        display: table;
+      }
       height: 100%;
-      color: $font-clr;
 
-      a{
-        color: $font-clr;
-      }
-      div{
-        margin: 0;
-        button{
-          margin:0;
-          padding: 2.5% 0% 2.5% 2.5%;
-          height: 100%;
-          width: 100%;
-          color: $font-clr;
-          background-color: transparent;
-          border-style: solid;
-          border-color: $outline-clr;
-          border-width: 1px 0px 1px 0px;
-          text-align: left;
-        }
-
-        .button:hover{
-          background-color: $hover-clr;
-        }
-      }
-    }
-
-    .add_friend{
-      margin: 9.75% 0% 0% 8.25%;
-      color: $font-clr;
-      padding: 2.5%;
-
-      button{
-        float: right;
-        background-color: transparent;
-        color: $font-clr;
-        border: 1px solid $outline-clr;
-      }
-
-      .add_ul{
-        padding: 0.5%;
-        margin: 2% 0% 0% -1%;
-      }
-    }
-
-
-    .friends_reqs{
-      margin: 6% 0% 0% 8.25%;
-      color: $font-clr;
-      min-height: 20%;
-      max-height: 75%;
-      border: solid 1px $outline-clr;
-      padding: 2%;
-
-      .fq_user{
-        margin: 2%;
-        padding: 2.5%;
-
-        button{
-          width: 20%;
-          font-size: 0.85em;
-          text-align: center;
-          background-color: transparent;
-          color: $font-clr;
-          float: right;
-          border: solid 1px $outline-clr;
-          border-radius: 5px;
-        }
-      }
-    }
-
-    .chat_base{
-      margin: 3.5% 0% 0% 4.125%;
-      height: 85%;
-
-      .row2{
+      .forum_nav{
+        background-color: $nav-clr;
         height: 100%;
+        margin:0;
 
-        .last_chats{
-          margin: 0;
-          min-height: 100%;
-          max-height: 100%;
-          background-color: #394854;
+        .forum_new{
+          border-style: solid;
+          border-color: $hover-clr;
+          border-width: 0px 0px 1px 0px;
+          color: $font-clr;
+          text-align: center;
+         }
 
-          div{
+        .searchfield{
+          height: 96.25%;
+
+          input{
+            height: 6%;
+            width: 100%;
             margin: 0;
-            button{
-              margin:0;
-              padding: 2.5% 0% 2.5% 2.5%;
-              height: 100%;
-              width: 100%;
-              color: $accent-clr;
-              background-color: transparent;
+            padding: 0% 0% 0% 2%;
+            background-color: transparent;
+            border:none;
+
+            border-style: solid;
+            border-color: $hover-clr;
+            border-width: 0px 0px 1px 0px;
+            color: $font-clr;
+          }
+
+          .forum_list{
               border-style: solid;
-              border-color: $nav-alt-clr;
-              border-width: 1px 0px 1px 0px;
-            }
+              border-color: $hover-clr;
+              border-width: 0px 0px 1px 0px;
+              color: $font-clr;
+              height: 94%;
+              padding: 0% 0% 0% 5%;
+
+              .forum_com{
+                padding: 2.5% 0% 2.5% 5%;
+                border-style: solid;
+                border-color: $hover-clr;
+                border-width: 0px 0px 1px 0px;
+                color: $font-clr;
+              }
+          }
+        }
+      }
+
+      .new_community{
+        height: 100%;
+        color: $font-clr;
+
+        form{
+          height: fit-content;
+          width: 25%;
+          background-color: transparent;
+          padding: 2.5%;
+          margin: 11.25% 0% 0% 5%;
+          border-radius: 5px;
+
+          ::placeholder{
+            color: $font-clr;
+            font-size: 1em;
           }
 
-          .last_conv{
-            color: $accent-clr;
-            text-align: center;
-            padding: 1%;
+          span{
+            font-size: 0.65em;
+            margin-bottom: 5%;
+            margin: 0;
           }
 
-          .last_conv:hover{
+          label{
+            font-size: 0.85em;
+            margin: 0;
+          }
+          textarea,input{
+            background-color: transparent;
+            border: 1px solid $outline-clr;
+            color: $font-clr;
+            padding-left: 2.5%;
+            width: 95%;
+            border-radius: 5px;
+            resize: none;
+            margin-top: 5%;
+            margin-bottom: 10%;
+          }
+
+          textarea{
+            min-height: 200%;
+          }
+
+          button{
+            color: $font-clr;
+            border-radius: 5px;
+            background-color: transparent;
+            border: 1px solid $outline-clr;
+          }
+
+          button:hover{
             background-color: $hover-clr;
           }
         }
 
-        .rest_chat{
-          margin-left: 16.66%;
-          width: 100%-16.66%;
-          height: 100%;
-          background-color: $nav-div-clr;
+        .com_role_selec{
+          form{
+            margin: 0;
+          }
 
+          .com_role_dropdown{
+            z-index: 2;
+            position: absolute;
+            margin: -30.75% 0% 0% 29%;
+            width: 12%;
+            min-height: 10%;
+            max-height: 80%;
 
-          .row2{
-            height: 10%;
-            width: 100%;
-            color: $font-clr;
-            background-color: $nav-alt-clr;
-            .heading{
-              margin-left: 5%;
+            .com_role_dropbtn{
+              width: 100%;
+              z-index: 1;
+              font-size: 1em;
+            }
+
+            .com_role_content{
+              display: none;
+              background-color: $nav-alt-clr;
             }
           }
 
-          .row3{
-              padding-bottom: 2.5%;
-              color: $font-clr;
-              height: 70%;
-              width: 100%;
-              background-color: $body-clr;
-
-              .me, .op{
-                border-radius: 10px;
-                border: 1px solid $outline-clr;
-                background-color: $nav-alt-clr;
-                padding: 1.25%;
-              }
-
-              .bbl_right{
-                margin: 0;
-                float: right;
-                min-width: 55%;
-                max-width: 75%;
-                margin-right: 1%;
-
-                p{
-                  margin: 2.5% 0% 1% 3.5%;
-                }
-              }
-
-              .bbl_left{
-                margin: 0;
-                float: left;
-                min-width: 55%;
-                max-width: 75%;
-                margin-left: 1%;
-
-                p{
-                  margin: 2.5% 0% 1% 2.5%;
-                }
-              }
-          }
-
-          .row4{
-              height: 20%;
-              width: 100%;
-              background-color: $nav-alt-clr;
-
-              textarea{
-                resize: none;
-                width: 70%;
-                height: 70%;
-                border-radius: 10px;
-                background-color: $body-clr;
-                padding: 0.75%;
-                margin: 2% 0% 0% 15%;
-                color: $font-clr;
-              }
-
-              button{
-                background-color: transparent;
-                border-radius: 15px;
-                float: right;
-                color: $font-clr;
-                margin:5.25% 4.5% 0% 0%;
-              }
+          .com_role_dropdown:hover{
+            .com_role_content{
+              display: block;
+            }
           }
         }
 
+        .com_role_perm{
+          position: absolute;
+          margin: -32.75% 0% 0% 52%;
+          width: 20%;
+          background-color: transparent;
+          border: solid 1px $outline-clr;
+
+          form{
+            margin: 0;
+            width: 100%;
+            padding: 10%;
+
+            input{
+              margin: 0;
+              margin-top: 2%;
+              z-index: 1;
+              height: 12.5px;
+              width: fit-content;
+              float: right;
+            }
+
+            label{
+              margin: 0;
+              margin-top: 2.5%;
+            }
+
+            input.com_role{
+              padding: 5%;
+              float: left;
+              margin-bottom: 5%;
+            }
+          }
+
+
+        }
+
+        .com_role_users{
+          position: absolute;
+          margin: -30.75% 0% 0% 33%;
+          width: 12%;
+
+          form{
+            margin: 0;
+          }
+        }
       }
 
+      .row2{
+        background-color: transparent;
+        width: 75%;
+        height: 100%;
+        margin-left: 25%;
 
+        .new_post{
+          float: right;
+          margin: 2.5% 5% 0% 0%;
+          background-color: transparent;
+          color: $font-clr;
+        }
+
+        .manage{
+          background-color: transparent;
+          position: fixed;
+          float: right;
+          bottom: 0;
+          right: 0;
+          margin: 0% 1.25% 1.25% 0%;
+        }
+
+        .posts{
+          min-height: 100%;
+          max-height: 100%;
+          height: 100%;
+          margin: 0% 0% 0% 10%;
+
+
+          .forum_user_s{
+            border-color: $outline-clr;
+            border-width: 1px 0px 0px 0px;
+            border-style: solid;
+            label{
+              margin: 0% 0% 0% 0%;
+              color: $font-clr;
+            }
+            form{
+              margin: 2.5% 0% 5% 2%;
+              padding: 0;
+              position: relative;
+
+              button{
+                margin: 0;
+                padding: 0;
+                position: relative;
+              }
+
+              .forum_user_select{
+                max-height: 45%;
+              }
+
+            }
+          }
+
+          .forum_role_form{
+            margin: 0;
+            padding: 0;
+
+            width: 100%;
+
+            .forum_role_edit{
+              margin:5% 0% 0% 20%;
+              padding: 0;
+
+              width: 60%;
+              height: fit-content;
+
+              form{
+                margin:0;
+                padding: 0;
+
+                button{
+                  height: 5%;
+                  width: 12.5%;
+                  margin: 5%;
+                }
+
+                .role{
+                  height: 6%;
+                  border-radius: 0px;
+                  margin: 0% 0% 0% 0%;
+                  width: 20%;
+                }
+
+                div{
+                  padding: 0;
+                  width: 100%;
+                  margin: 0% 0% 2.5% 0%;
+                  border-color: $outline-clr;
+                  border-style: solid;
+                  border-width: 1px 0px 1px 0px;
+
+                  input{
+                    width: fit-content;
+                    float: right;
+                  }
+                }
+              }
+            }
+          }
+
+          .delForum{
+            margin: 1.5% 1.5% 0% 0%;
+            background-color: transparent;
+            float: right;
+          }
+
+          article.sgl_post{
+            border-radius: 0px;
+            background-color: #2B343B;
+            border: none;
+            color: $font-clr;
+            margin: 0% 0% 0% 0%;
+            padding: 0;
+            height: fit-content;
+            width: 100%;
+            font-size: 0.95em;
+
+            form{
+              border-style: solid;
+              border-color: $outline-clr;
+              border-width: 0px 0px 1.25px 0px;
+            }
+
+            .content{
+              padding: 2.5% 0% 5% 1%;
+
+              .content{
+                margin: 1.25%;
+                font-size: 0.9em;
+              }
+              .title{
+                color: $font-clr;
+                font-size: 1em;
+              }
+            }
+            .add_comment{
+              padding: 2%;
+
+              textarea{
+                resize: none;
+                position: relative;
+                width: 85%;
+                margin: 0% 0% 0% 4%;
+                background-color: transparent;
+                border: 1px solid $outline-clr;
+                color: $font-clr;
+                border-radius: 5px;
+              }
+
+              button{
+                position: relative;
+                width: fit-content;
+                float: right;
+                margin: 5.5% 2% 0% 0%;
+              }
+            }
+            .comments{
+              padding: 1.25% 2% 1.25% 2%;
+
+              .comment{
+                padding: 0% 0% 0% 0%;
+                margin: 0.5% 0% 1% 0%;
+                border:none;
+                background-color: transparent;
+                position: relative;
+                font-size: 1em;
+              }
+
+              .user{
+                position: relative;
+                margin: 0% 0% 0% 1.5%;
+                padding: 0;
+                font-size: 0.9em;
+                color: $font-clr;
+                background-color: transparent;
+              }
+              .body{
+                position: relative;
+                margin: 0% 0% 0% 2.5%;
+                padding: 0% 0% 0% 0%;
+                font-size: 0.8em;
+              }
+            }
+          }
+
+          article{
+            border-radius: 0px;
+            border-style: solid;
+            border-color: $outline-clr;
+            border-width: 1.25px 0px 1.25px 0px ;
+            background-color: #2B343B;
+            color: $font-clr;
+            margin: 2% 0% 2% 0%;
+            padding: 1% 2% 1% 2%;
+            height: fit-content;
+            width: 100%;
+            font-size: 0.95em;
+
+            span{
+              font-size: 0.65em;
+              color: #BEBFC0;
+            }
+            article{
+              margin: 0.25% 0% 0% 2%;
+              padding:0;
+              background-color: transparent;
+              border:none;
+              border-radius: 0px;
+              font-size: 0.9em;
+            }
+          }
+
+          form{
+            width: 100%;
+            min-height: 100%;
+            height: 100%;
+            background-color: transparent;
+
+            button{
+              border: 1px solid $outline-clr;
+              border-radius: 5px;
+              background-color: transparent;
+              color: $font-clr;
+              margin: 3% 0% 0% -14%;
+              position: fixed;
+              width: 13.66667%;
+            }
+
+            div{
+              background-color: transparent;
+              float: left;
+              margin: 13% 0% 0% 12.5%;
+              padding:2.5% 0% 2.5% 3.25%;
+              width: 75%;
+              height: 75%;
+              border: 1px solid $outline-clr;
+
+              label{
+                color: $font-clr;
+                margin-bottom: 1.25%;
+              }
+
+              button,input,textarea{
+                position: relative;
+                height: fit-content;
+                border: 1px solid $outline-clr;
+                background-color: transparent;
+                color: $font-clr;
+                border-radius: 5px;
+                resize: none;
+                width: 95%;
+                margin-bottom: 2.5%;
+              }
+
+              input{
+                min-height: 6%;
+                max-height: 6%;
+              }
+
+              textarea{
+                min-height: 75%;
+                max-height: 75%;
+              }
+
+              button{
+                margin: 0;
+                padding: 0;
+                width: 47%;
+                min-height: 5%;
+                max-height: 5%;
+                font-size: 0.8em;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .friends{
+      width: 91.67%;
+      margin-left: 8.33%;
+      height: 100%;
+
+      .nav{
+        margin: 0;
+        width: 15%;
+        height: 100%;
+        background-color: $nav-clr;
+        div,span{
+          color: $font-clr;
+          border-style: solid;
+          border-color: $hover-clr;
+          border-width: 0px 0px 1px 0px;
+        }
+        .friend{
+          margin-left: 5%;
+          padding: 2.5% 0% 1.25% 2.5%;
+        }
+        .friend:hover{
+          background-color: $hover-clr;
+        }
+        .head{
+          width: 100%;
+          margin: 0;
+        }
+        .ovw{
+          margin: 0% 0% 0% 0%;
+        }
+        .no_border{
+          border:none;
+          margin-top: 3.5%;
+          margin-bottom: 7.5%;
+        }
+      }
+
+      .rest{
+        height: 100%;
+        width: 65%;
+      }
+    }
+
+    .grp_chat{
+      color: $font-clr;
+      width: 75%;
+      margin: 11.25% 0% 0% 35%;
+
+      input{
+        background-color: transparent;
+        border: 1px solid $outline-clr;
+        margin-bottom: 2.5%;
+      }
+
+      button{
+        color: $font-clr;
+        border-color: $outline-clr;
+        border-style: solid;
+        border-width: 1px;
+        background-color: transparent;
+        margin-top: 3.5%;
+      }
+
+      .grp_select{
+        background-color: $nav-clr;
+        max-height: 50%;
+        width: fit-content;
+        padding: 0.31075% 0% 0.31075% 0%;
+        margin: 0% 0% 0% 0%;
+
+        button{
+          padding: 7.5% 8.5% 7.5% 7.5%;
+          width: 100%;
+          margin: 0;
+          font-size: 0.85em;
+        }
+        button:hover{
+          background-color: $hover-clr;
+        }
+      }
     }
 
   }
@@ -805,8 +1171,120 @@
 
   .acc, .acc a{
     color: $accent-clr;
+    font-style: italic;
   }
 
   .no_acc, .no_acc a{
     color: $no-accent-clr;
+    font-style: italic;
   }
+
+  .acc_route{
+    background-image: linear-gradient(90deg, rgba(204, 111, 39, 1) 20%, rgba(200, 57, 23, 0.5) 100%);
+    color: $font-clr;
+    button, div, a, textarea, article, input, span, label, h1, h2, h3, h4, h5, p{
+      color: $font-clr;
+    }
+  }
+
+  .premade{
+    margin: 0;
+  }
+
+
+$rainbow-time: 10s;
+
+  .wrapper {
+  height: 100%;
+  width: 100%;
+  left:0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+background: linear-gradient(124deg, #ff2400, #e81d1d, #e8b71d, #e3e81d, #1de840, #1ddde8, #2b1de8, #dd00f3, #dd00f3);
+background-size: 1800% 1800%;
+
+-webkit-animation: rainbow $rainbow-time ease infinite;
+-z-animation: rainbow $rainbow-time ease infinite;
+-o-animation: rainbow $rainbow-time ease infinite;
+  animation: rainbow $rainbow-time ease infinite;}
+
+@-webkit-keyframes rainbow {
+    0%{background-position:0% 82%}
+    50%{background-position:100% 19%}
+    100%{background-position:0% 82%}
+}
+@-moz-keyframes rainbow {
+    0%{background-position:0% 82%}
+    50%{background-position:100% 19%}
+    100%{background-position:0% 82%}
+}
+@-o-keyframes rainbow {
+    0%{background-position:0% 82%}
+    50%{background-position:100% 19%}
+    100%{background-position:0% 82%}
+}
+@keyframes rainbow {
+    0%{background-position:0% 82%}
+    50%{background-position:100% 19%}
+    100%{background-position:0% 82%}
+}
+
+.forum_rolename{
+  width: 20%;
+  border-style: solid;
+  border-color: $font-clr;
+  border-width: 0px 0px 1px 0px;
+}
+
+.forum_user_list{
+  width: 25%;
+}
+
+.forum_rolename:hover{
+  background-color: $hover-clr;
+}
+
+.back_btn{
+  border: 1px solid $outline-clr;
+  background-color: transparent;
+  position: absolute;
+  right: 18.85%;
+  top: 4.15%;
+  color: $font-clr;
+  width: fit-content;
+  padding: 0.5%;
+  font-size: 0.9em;
+}
+
+.follow_com{
+
+    border: 1px solid $outline-clr;
+    background-color: transparent;
+    position: absolute;
+    left: 26.5%;
+    top: 4.15%;
+    color: $font-clr;
+    font-size: 0.95em;
+}
+
+.forum_new_role{
+    border: 1px solid $outline-clr;
+    background-color: transparent;
+    color: $font-clr;
+    font-size: 0.95em;
+    margin: 2.5% 0% 2.5% 2.5%;
+}
+
+.forum_role_user{
+  border: 1px solid $outline-clr;
+  background-color: transparent;
+  color: $font-clr;
+  font-size: 0.95em;
+  margin: 2.5% 2.5% 2.5% 0%;
+  float: right;
+}
+
+.no_border{
+  border:none
+}

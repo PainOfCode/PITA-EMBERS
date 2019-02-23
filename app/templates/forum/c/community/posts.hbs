@@ -1,1 +1,20 @@
-{{outlet}}
+{{#each auth.chosencom.posts as |post|}}
+  {{#link-to "forum.c.community.post" post.id}}
+    <article>
+      {{post.title}}
+          <span>
+            {{#if post.creator.username}}
+                Posted by u/{{post.creator.username}}
+              {{else}}
+                Posted by Anon
+            {{/if}}
+          </span>
+      <br>
+        {{#if post.body}}
+          <article>
+            {{excerpt post.body}}
+          </article>
+        {{/if}}
+    </article>
+  {{/link-to}}
+{{/each}}

@@ -55,7 +55,7 @@ ul {
 }
 
 body {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Trebuchet MS", sans-serif, monospace;
   background-color: #293238;
 }
 
@@ -210,13 +210,13 @@ body {
 
 #pita {
   text-align: center;
-  font-weight: 600;
+  font-weight: 650;
   background-color: #EC1A62;
   padding: 0% 0% 0% -1%;
   color: #F0F2F3;
   margin-top: 7.5%;
-  font-size: 1.1em;
-  letter-spacing: 10px;
+  font-size: 1.2em;
+  letter-spacing: 3px;
 }
 
 .row {
@@ -322,16 +322,22 @@ body {
   border-radius: 5px;
   background-color: transparent;
 }
-.row .role {
-  margin-top: 11.7%;
+.row .user {
+  width: 16%;
+  position: fixed;
+  margin: 22.5% 0% 0% 67%;
+  background-color: #38444C;
+  color: #F0F2F3;
+  min-height: 42.5%;
+  max-height: 45%;
+  border-radius: 0px 0px 5px 5px;
 }
-.row .role::after {
-  content: "";
-  clear: both;
-  display: table;
-}
-.row .role .user {
-  margin-top: 10%;
+.row .user button {
+  width: 100%;
+  color: #F0F2F3;
+  border-style: solid;
+  border-color: #394854;
+  border-width: 1px 0px 1px 0px;
 }
 .row .col-7 {
   min-height: 25%;
@@ -541,173 +547,479 @@ body {
 .row .register button:hover {
   background-color: #400016;
 }
-.row .friend_nav {
-  margin: 0;
+.row .forum {
   height: 100%;
-  color: #F0F2F3;
 }
-.row .friend_nav a {
-  color: #F0F2F3;
+.row .forum::after {
+  content: "";
+  clear: both;
+  display: table;
 }
-.row .friend_nav div {
-  margin: 0;
-}
-.row .friend_nav div button {
-  margin: 0;
-  padding: 2.5% 0% 2.5% 2.5%;
+.row .forum .forum_nav {
+  background-color: #38444C;
   height: 100%;
-  width: 100%;
-  color: #F0F2F3;
-  background-color: transparent;
+  margin: 0;
+}
+.row .forum .forum_nav .forum_new {
   border-style: solid;
-  border-color: #394854;
-  border-width: 1px 0px 1px 0px;
-  text-align: left;
-}
-.row .friend_nav div .button:hover {
-  background-color: #400016;
-}
-.row .add_friend {
-  margin: 9.75% 0% 0% 8.25%;
+  border-color: #400016;
+  border-width: 0px 0px 1px 0px;
   color: #F0F2F3;
-  padding: 2.5%;
-}
-.row .add_friend button {
-  float: right;
-  background-color: transparent;
-  color: #F0F2F3;
-  border: 1px solid #394854;
-}
-.row .add_friend .add_ul {
-  padding: 0.5%;
-  margin: 2% 0% 0% -1%;
-}
-.row .friends_reqs {
-  margin: 6% 0% 0% 8.25%;
-  color: #F0F2F3;
-  min-height: 20%;
-  max-height: 75%;
-  border: solid 1px #394854;
-  padding: 2%;
-}
-.row .friends_reqs .fq_user {
-  margin: 2%;
-  padding: 2.5%;
-}
-.row .friends_reqs .fq_user button {
-  width: 20%;
-  font-size: 0.85em;
   text-align: center;
+}
+.row .forum .forum_nav .searchfield {
+  height: 96.25%;
+}
+.row .forum .forum_nav .searchfield input {
+  height: 6%;
+  width: 100%;
+  margin: 0;
+  padding: 0% 0% 0% 2%;
   background-color: transparent;
+  border: none;
+  border-style: solid;
+  border-color: #400016;
+  border-width: 0px 0px 1px 0px;
   color: #F0F2F3;
-  float: right;
-  border: solid 1px #394854;
+}
+.row .forum .forum_nav .searchfield .forum_list {
+  border-style: solid;
+  border-color: #400016;
+  border-width: 0px 0px 1px 0px;
+  color: #F0F2F3;
+  height: 94%;
+  padding: 0% 0% 0% 5%;
+}
+.row .forum .forum_nav .searchfield .forum_list .forum_com {
+  padding: 2.5% 0% 2.5% 5%;
+  border-style: solid;
+  border-color: #400016;
+  border-width: 0px 0px 1px 0px;
+  color: #F0F2F3;
+}
+.row .forum .new_community {
+  height: 100%;
+  color: #F0F2F3;
+}
+.row .forum .new_community form {
+  height: fit-content;
+  width: 25%;
+  background-color: transparent;
+  padding: 2.5%;
+  margin: 11.25% 0% 0% 5%;
   border-radius: 5px;
 }
-.row .chat_base {
-  margin: 3.5% 0% 0% 4.125%;
-  height: 85%;
+.row .forum .new_community form ::placeholder {
+  color: #F0F2F3;
+  font-size: 1em;
 }
-.row .chat_base .row2 {
-  height: 100%;
-}
-.row .chat_base .row2 .last_chats {
-  margin: 0;
-  min-height: 100%;
-  max-height: 100%;
-  background-color: #394854;
-}
-.row .chat_base .row2 .last_chats div {
+.row .forum .new_community form span {
+  font-size: 0.65em;
+  margin-bottom: 5%;
   margin: 0;
 }
-.row .chat_base .row2 .last_chats div button {
+.row .forum .new_community form label {
+  font-size: 0.85em;
   margin: 0;
-  padding: 2.5% 0% 2.5% 2.5%;
-  height: 100%;
-  width: 100%;
-  color: #EC1A62;
+}
+.row .forum .new_community form textarea, .row .forum .new_community form input {
   background-color: transparent;
-  border-style: solid;
-  border-color: #37424D;
-  border-width: 1px 0px 1px 0px;
+  border: 1px solid #394854;
+  color: #F0F2F3;
+  padding-left: 2.5%;
+  width: 95%;
+  border-radius: 5px;
+  resize: none;
+  margin-top: 5%;
+  margin-bottom: 10%;
 }
-.row .chat_base .row2 .last_chats .last_conv {
-  color: #EC1A62;
-  text-align: center;
-  padding: 1%;
+.row .forum .new_community form textarea {
+  min-height: 200%;
 }
-.row .chat_base .row2 .last_chats .last_conv:hover {
+.row .forum .new_community form button {
+  color: #F0F2F3;
+  border-radius: 5px;
+  background-color: transparent;
+  border: 1px solid #394854;
+}
+.row .forum .new_community form button:hover {
   background-color: #400016;
 }
-.row .chat_base .row2 .rest_chat {
-  margin-left: 16.66%;
-  width: 83.34%;
-  height: 100%;
-  background-color: #5C6E7F;
-}
-.row .chat_base .row2 .rest_chat .row2 {
-  height: 10%;
-  width: 100%;
-  color: #F0F2F3;
-  background-color: #37424D;
-}
-.row .chat_base .row2 .rest_chat .row2 .heading {
-  margin-left: 5%;
-}
-.row .chat_base .row2 .rest_chat .row3 {
-  padding-bottom: 2.5%;
-  color: #F0F2F3;
-  height: 70%;
-  width: 100%;
-  background-color: #293238;
-}
-.row .chat_base .row2 .rest_chat .row3 .me, .row .chat_base .row2 .rest_chat .row3 .op {
-  border-radius: 10px;
-  border: 1px solid #394854;
-  background-color: #37424D;
-  padding: 1.25%;
-}
-.row .chat_base .row2 .rest_chat .row3 .bbl_right {
+.row .forum .new_community .com_role_selec form {
   margin: 0;
-  float: right;
-  min-width: 55%;
-  max-width: 75%;
-  margin-right: 1%;
 }
-.row .chat_base .row2 .rest_chat .row3 .bbl_right p {
-  margin: 2.5% 0% 1% 3.5%;
+.row .forum .new_community .com_role_selec .com_role_dropdown {
+  z-index: 2;
+  position: absolute;
+  margin: -30.75% 0% 0% 29%;
+  width: 12%;
+  min-height: 10%;
+  max-height: 80%;
 }
-.row .chat_base .row2 .rest_chat .row3 .bbl_left {
-  margin: 0;
-  float: left;
-  min-width: 55%;
-  max-width: 75%;
-  margin-left: 1%;
-}
-.row .chat_base .row2 .rest_chat .row3 .bbl_left p {
-  margin: 2.5% 0% 1% 2.5%;
-}
-.row .chat_base .row2 .rest_chat .row4 {
-  height: 20%;
+.row .forum .new_community .com_role_selec .com_role_dropdown .com_role_dropbtn {
   width: 100%;
+  z-index: 1;
+  font-size: 1em;
+}
+.row .forum .new_community .com_role_selec .com_role_dropdown .com_role_content {
+  display: none;
   background-color: #37424D;
 }
-.row .chat_base .row2 .rest_chat .row4 textarea {
-  resize: none;
-  width: 70%;
-  height: 70%;
-  border-radius: 10px;
-  background-color: #293238;
-  padding: 0.75%;
-  margin: 2% 0% 0% 15%;
-  color: #F0F2F3;
+.row .forum .new_community .com_role_selec .com_role_dropdown:hover .com_role_content {
+  display: block;
 }
-.row .chat_base .row2 .rest_chat .row4 button {
+.row .forum .new_community .com_role_perm {
+  position: absolute;
+  margin: -32.75% 0% 0% 52%;
+  width: 20%;
   background-color: transparent;
-  border-radius: 15px;
+  border: solid 1px #394854;
+}
+.row .forum .new_community .com_role_perm form {
+  margin: 0;
+  width: 100%;
+  padding: 10%;
+}
+.row .forum .new_community .com_role_perm form input {
+  margin: 0;
+  margin-top: 2%;
+  z-index: 1;
+  height: 12.5px;
+  width: fit-content;
   float: right;
+}
+.row .forum .new_community .com_role_perm form label {
+  margin: 0;
+  margin-top: 2.5%;
+}
+.row .forum .new_community .com_role_perm form input.com_role {
+  padding: 5%;
+  float: left;
+  margin-bottom: 5%;
+}
+.row .forum .new_community .com_role_users {
+  position: absolute;
+  margin: -30.75% 0% 0% 33%;
+  width: 12%;
+}
+.row .forum .new_community .com_role_users form {
+  margin: 0;
+}
+.row .forum .row2 {
+  background-color: transparent;
+  width: 75%;
+  height: 100%;
+  margin-left: 25%;
+}
+.row .forum .row2 .new_post {
+  float: right;
+  margin: 2.5% 5% 0% 0%;
+  background-color: transparent;
   color: #F0F2F3;
-  margin: 5.25% 4.5% 0% 0%;
+}
+.row .forum .row2 .manage {
+  background-color: transparent;
+  position: fixed;
+  float: right;
+  bottom: 0;
+  right: 0;
+  margin: 0% 1.25% 1.25% 0%;
+}
+.row .forum .row2 .posts {
+  min-height: 100%;
+  max-height: 100%;
+  height: 100%;
+  margin: 0% 0% 0% 10%;
+}
+.row .forum .row2 .posts .forum_user_s {
+  border-color: #394854;
+  border-width: 1px 0px 0px 0px;
+  border-style: solid;
+}
+.row .forum .row2 .posts .forum_user_s label {
+  margin: 0% 0% 0% 0%;
+  color: #F0F2F3;
+}
+.row .forum .row2 .posts .forum_user_s form {
+  margin: 2.5% 0% 5% 2%;
+  padding: 0;
+  position: relative;
+}
+.row .forum .row2 .posts .forum_user_s form button {
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+.row .forum .row2 .posts .forum_user_s form .forum_user_select {
+  max-height: 45%;
+}
+.row .forum .row2 .posts .forum_role_form {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+.row .forum .row2 .posts .forum_role_form .forum_role_edit {
+  margin: 5% 0% 0% 20%;
+  padding: 0;
+  width: 60%;
+  height: fit-content;
+}
+.row .forum .row2 .posts .forum_role_form .forum_role_edit form {
+  margin: 0;
+  padding: 0;
+}
+.row .forum .row2 .posts .forum_role_form .forum_role_edit form button {
+  height: 5%;
+  width: 12.5%;
+  margin: 5%;
+}
+.row .forum .row2 .posts .forum_role_form .forum_role_edit form .role {
+  height: 6%;
+  border-radius: 0px;
+  margin: 0% 0% 0% 0%;
+  width: 20%;
+}
+.row .forum .row2 .posts .forum_role_form .forum_role_edit form div {
+  padding: 0;
+  width: 100%;
+  margin: 0% 0% 2.5% 0%;
+  border-color: #394854;
+  border-style: solid;
+  border-width: 1px 0px 1px 0px;
+}
+.row .forum .row2 .posts .forum_role_form .forum_role_edit form div input {
+  width: fit-content;
+  float: right;
+}
+.row .forum .row2 .posts .delForum {
+  margin: 1.5% 1.5% 0% 0%;
+  background-color: transparent;
+  float: right;
+}
+.row .forum .row2 .posts article.sgl_post {
+  border-radius: 0px;
+  background-color: #2B343B;
+  border: none;
+  color: #F0F2F3;
+  margin: 0% 0% 0% 0%;
+  padding: 0;
+  height: fit-content;
+  width: 100%;
+  font-size: 0.95em;
+}
+.row .forum .row2 .posts article.sgl_post form {
+  border-style: solid;
+  border-color: #394854;
+  border-width: 0px 0px 1.25px 0px;
+}
+.row .forum .row2 .posts article.sgl_post .content {
+  padding: 2.5% 0% 5% 1%;
+}
+.row .forum .row2 .posts article.sgl_post .content .content {
+  margin: 1.25%;
+  font-size: 0.9em;
+}
+.row .forum .row2 .posts article.sgl_post .content .title {
+  color: #F0F2F3;
+  font-size: 1em;
+}
+.row .forum .row2 .posts article.sgl_post .add_comment {
+  padding: 2%;
+}
+.row .forum .row2 .posts article.sgl_post .add_comment textarea {
+  resize: none;
+  position: relative;
+  width: 85%;
+  margin: 0% 0% 0% 4%;
+  background-color: transparent;
+  border: 1px solid #394854;
+  color: #F0F2F3;
+  border-radius: 5px;
+}
+.row .forum .row2 .posts article.sgl_post .add_comment button {
+  position: relative;
+  width: fit-content;
+  float: right;
+  margin: 5.5% 2% 0% 0%;
+}
+.row .forum .row2 .posts article.sgl_post .comments {
+  padding: 1.25% 2% 1.25% 2%;
+}
+.row .forum .row2 .posts article.sgl_post .comments .comment {
+  padding: 0% 0% 0% 0%;
+  margin: 0.5% 0% 1% 0%;
+  border: none;
+  background-color: transparent;
+  position: relative;
+  font-size: 1em;
+}
+.row .forum .row2 .posts article.sgl_post .comments .user {
+  position: relative;
+  margin: 0% 0% 0% 1.5%;
+  padding: 0;
+  font-size: 0.9em;
+  color: #F0F2F3;
+  background-color: transparent;
+}
+.row .forum .row2 .posts article.sgl_post .comments .body {
+  position: relative;
+  margin: 0% 0% 0% 2.5%;
+  padding: 0% 0% 0% 0%;
+  font-size: 0.8em;
+}
+.row .forum .row2 .posts article {
+  border-radius: 0px;
+  border-style: solid;
+  border-color: #394854;
+  border-width: 1.25px 0px 1.25px 0px;
+  background-color: #2B343B;
+  color: #F0F2F3;
+  margin: 2% 0% 2% 0%;
+  padding: 1% 2% 1% 2%;
+  height: fit-content;
+  width: 100%;
+  font-size: 0.95em;
+}
+.row .forum .row2 .posts article span {
+  font-size: 0.65em;
+  color: #BEBFC0;
+}
+.row .forum .row2 .posts article article {
+  margin: 0.25% 0% 0% 2%;
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  border-radius: 0px;
+  font-size: 0.9em;
+}
+.row .forum .row2 .posts form {
+  width: 100%;
+  min-height: 100%;
+  height: 100%;
+  background-color: transparent;
+}
+.row .forum .row2 .posts form button {
+  border: 1px solid #394854;
+  border-radius: 5px;
+  background-color: transparent;
+  color: #F0F2F3;
+  margin: 3% 0% 0% -14%;
+  position: fixed;
+  width: 13.66667%;
+}
+.row .forum .row2 .posts form div {
+  background-color: transparent;
+  float: left;
+  margin: 13% 0% 0% 12.5%;
+  padding: 2.5% 0% 2.5% 3.25%;
+  width: 75%;
+  height: 75%;
+  border: 1px solid #394854;
+}
+.row .forum .row2 .posts form div label {
+  color: #F0F2F3;
+  margin-bottom: 1.25%;
+}
+.row .forum .row2 .posts form div button, .row .forum .row2 .posts form div input, .row .forum .row2 .posts form div textarea {
+  position: relative;
+  height: fit-content;
+  border: 1px solid #394854;
+  background-color: transparent;
+  color: #F0F2F3;
+  border-radius: 5px;
+  resize: none;
+  width: 95%;
+  margin-bottom: 2.5%;
+}
+.row .forum .row2 .posts form div input {
+  min-height: 6%;
+  max-height: 6%;
+}
+.row .forum .row2 .posts form div textarea {
+  min-height: 75%;
+  max-height: 75%;
+}
+.row .forum .row2 .posts form div button {
+  margin: 0;
+  padding: 0;
+  width: 47%;
+  min-height: 5%;
+  max-height: 5%;
+  font-size: 0.8em;
+}
+.row .friends {
+  width: 91.67%;
+  margin-left: 8.33%;
+  height: 100%;
+}
+.row .friends .nav {
+  margin: 0;
+  width: 15%;
+  height: 100%;
+  background-color: #38444C;
+}
+.row .friends .nav div, .row .friends .nav span {
+  color: #F0F2F3;
+  border-style: solid;
+  border-color: #400016;
+  border-width: 0px 0px 1px 0px;
+}
+.row .friends .nav .friend {
+  margin-left: 5%;
+  padding: 2.5% 0% 1.25% 2.5%;
+}
+.row .friends .nav .friend:hover {
+  background-color: #400016;
+}
+.row .friends .nav .head {
+  width: 100%;
+  margin: 0;
+}
+.row .friends .nav .ovw {
+  margin: 0% 0% 0% 0%;
+}
+.row .friends .nav .no_border {
+  border: none;
+  margin-top: 3.5%;
+  margin-bottom: 7.5%;
+}
+.row .friends .rest {
+  height: 100%;
+  width: 65%;
+}
+.row .grp_chat {
+  color: #F0F2F3;
+  width: 75%;
+  margin: 11.25% 0% 0% 35%;
+}
+.row .grp_chat input {
+  background-color: transparent;
+  border: 1px solid #394854;
+  margin-bottom: 2.5%;
+}
+.row .grp_chat button {
+  color: #F0F2F3;
+  border-color: #394854;
+  border-style: solid;
+  border-width: 1px;
+  background-color: transparent;
+  margin-top: 3.5%;
+}
+.row .grp_chat .grp_select {
+  background-color: #38444C;
+  max-height: 50%;
+  width: fit-content;
+  padding: 0.31075% 0% 0.31075% 0%;
+  margin: 0% 0% 0% 0%;
+}
+.row .grp_chat .grp_select button {
+  padding: 7.5% 8.5% 7.5% 7.5%;
+  width: 100%;
+  margin: 0;
+  font-size: 0.85em;
+}
+.row .grp_chat .grp_select button:hover {
+  background-color: #400016;
 }
 
 .moveable_user {
@@ -720,10 +1032,141 @@ body {
 
 .acc, .acc a {
   color: #EC1A62;
+  font-style: italic;
 }
 
 .no_acc, .no_acc a {
   color: #00B210;
+  font-style: italic;
+}
+
+.acc_route {
+  background-image: linear-gradient(90deg, #cc6f27 20%, rgba(200, 57, 23, 0.5) 100%);
+  color: #F0F2F3;
+}
+.acc_route button, .acc_route div, .acc_route a, .acc_route textarea, .acc_route article, .acc_route input, .acc_route span, .acc_route label, .acc_route h1, .acc_route h2, .acc_route h3, .acc_route h4, .acc_route h5, .acc_route p {
+  color: #F0F2F3;
+}
+
+.premade {
+  margin: 0;
+}
+
+.wrapper {
+  height: 100%;
+  width: 100%;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: linear-gradient(124deg, #ff2400, #e81d1d, #e8b71d, #e3e81d, #1de840, #1ddde8, #2b1de8, #dd00f3, #dd00f3);
+  background-size: 1800% 1800%;
+  -webkit-animation: rainbow 10s ease infinite;
+  -z-animation: rainbow 10s ease infinite;
+  -o-animation: rainbow 10s ease infinite;
+  animation: rainbow 10s ease infinite;
+}
+
+@-webkit-keyframes rainbow {
+  0% {
+    background-position: 0% 82%;
+  }
+  50% {
+    background-position: 100% 19%;
+  }
+  100% {
+    background-position: 0% 82%;
+  }
+}
+@-moz-keyframes rainbow {
+  0% {
+    background-position: 0% 82%;
+  }
+  50% {
+    background-position: 100% 19%;
+  }
+  100% {
+    background-position: 0% 82%;
+  }
+}
+@-o-keyframes rainbow {
+  0% {
+    background-position: 0% 82%;
+  }
+  50% {
+    background-position: 100% 19%;
+  }
+  100% {
+    background-position: 0% 82%;
+  }
+}
+@keyframes rainbow {
+  0% {
+    background-position: 0% 82%;
+  }
+  50% {
+    background-position: 100% 19%;
+  }
+  100% {
+    background-position: 0% 82%;
+  }
+}
+.forum_rolename {
+  width: 20%;
+  border-style: solid;
+  border-color: #F0F2F3;
+  border-width: 0px 0px 1px 0px;
+}
+
+.forum_user_list {
+  width: 25%;
+}
+
+.forum_rolename:hover {
+  background-color: #400016;
+}
+
+.back_btn {
+  border: 1px solid #394854;
+  background-color: transparent;
+  position: absolute;
+  right: 18.85%;
+  top: 4.15%;
+  color: #F0F2F3;
+  width: fit-content;
+  padding: 0.5%;
+  font-size: 0.9em;
+}
+
+.follow_com {
+  border: 1px solid #394854;
+  background-color: transparent;
+  position: absolute;
+  left: 26.5%;
+  top: 4.15%;
+  color: #F0F2F3;
+  font-size: 0.95em;
+}
+
+.forum_new_role {
+  border: 1px solid #394854;
+  background-color: transparent;
+  color: #F0F2F3;
+  font-size: 0.95em;
+  margin: 2.5% 0% 2.5% 2.5%;
+}
+
+.forum_role_user {
+  border: 1px solid #394854;
+  background-color: transparent;
+  color: #F0F2F3;
+  font-size: 0.95em;
+  margin: 2.5% 2.5% 2.5% 0%;
+  float: right;
+}
+
+.no_border {
+  border: none;
 }
 
 /*# sourceMappingURL=app.css.map */

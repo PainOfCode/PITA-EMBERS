@@ -1,7 +1,52 @@
+<div class="friends">
+  <div class="nav scrollable">
+    {{#link-to 'friends.add'}}
+      <div class="friend bg_nav_div head">
+        Add a new friend
+      </div>
+    {{/link-to}}
+    {{#link-to 'friends.groupchat.new'}}
+      <div class="friend bg_nav_div head">
+        Create a groupchat
+      </div>
+    {{/link-to}}
+
+    <span class="ovw" style="text-align:left;font-size:1.1em;margin-top: 5%;">Private chats:</span>
+    <div class="no_border">
+      {{#each auth.user.friend as |friend|}}
+        {{#link-to 'friends.chat.user' friend.username}}
+          <div class="friend {{if (eq friend.username auth.chat.username) 'acc_route'}}">
+            {{friend.username}}<br>
+            Status: <a href='#' class=" {{if friend.online 'no_acc' 'acc'}}">{{if friend.online 'online' 'Offline'}}</a>
+          </div>
+        {{/link-to}}
+      {{/each}}
+    </div>
+
+    <span class="ovw" style="text-align:left;font-size:1.1em;margin-top: 5%;">Groupchats:</span>
+    <div class="no_border">
+    {{#each auth.user.groupchats as |grp|}}
+      {{#link-to 'friends.chat.user' grp.name}}
+        <div class="friend {{if (eq grp.name auth.chat.name) 'acc_route'}}">
+          {{grp.name}}
+        </div>
+      {{/link-to}}
+    {{/each}}
+  </div>
+</div>
+
+  <div class="rest">
+    {{outlet}}
+  </div>
+
+</div>
+
+
 <!--
 
-Plan for the whole section:
+  FIRST: REWORK THE "BACKEND"
 
+Plan for the whole section:
   -Online status of 'friends'
   -List possible friends [know a friend of a friend]
   -Add user as friend after accept of friend-request after search with name
@@ -15,51 +60,4 @@ Plan for the whole section:
   -Voice-Chat [?]
   -Watch2gether-feature-like clone
   -Commands and custom emotes
-
--->
-
-<!-- Linksseitige overview, aufklappbar nach grp sortiert [Online und offline only]-->
-  <div class="col-2 outline_r friend_nav">
-
-    {{#link-to "friends.add"}}
-      <div class="acc bg_nav_div" style="text-align: center;">
-        Add new friend
-      </div>
-    {{/link-to}}
-
-    {{#each auth.user.friend as |friend|}}
-    <div>
-      <button {{action "chatWith" friend}}>{{friend.username}}<br>
-        Status: <span class="{{if friend.online 'no_acc' 'acc'}}">{{if friend.online "Online" "Offline"}}</span></button>
-    </div>
-    {{else}}
-
-    <div>
-      No friends online
-    </div>
-    {{/each}}
-    {{#if (or auth.user.sendfq auth.user.recfq)}}
-    {{#link-to "friends.reqs"}}
-    <div>
-      {{#if auth.user.sendfq}}
-        <span class="acc" style="padding-left: 5%;">You send {{auth.user.sendfq.length}} friend requests.</span>
-      {{/if}}
-      {{#if auth.user.recfq}}
-        <span class="acc" style="padding-left: 5%;">You have {{auth.user.recfq.length}} friend requests.</span>
-      {{/if}}
-    </div>
-    {{/link-to}}
-    {{/if}}
-
-  </div>
-
-{{outlet}}
-
-<!--
-{{#link-to "friends.chat.user" friend.username}}
-<div class="outline_t_b_s friendlist">
-  {{friend.username}}<br>
-  Status: <span class="{{if friend.online 'no_acc' 'acc'}}">{{if friend.online "Online" "Offline"}}</span>
-</div>
-{{/link-to}}
 -->

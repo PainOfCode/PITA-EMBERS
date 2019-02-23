@@ -1,0 +1,17 @@
+{{#if (or auth.chosencomrole.createpost (eq auth.user.id auth.chosencom.creator.id))}}
+  <form>
+    <div>
+      <label>Title</label><br>
+      {{input type="text" value=title placeholder="Title... (max 64)"}}<br>
+
+      <label>Description</label><br>
+      {{textarea rows="10" value=body placeholder="Description... (max 1024)"}}<br>
+
+
+      <button {{action 'submit'}}>Submit</button>
+      <button>Upload a picture/video</button>
+    </div>
+    <button {{action 'cancel'}}>Cancel</button>
+
+  </form>
+{{/if}}

@@ -34,7 +34,8 @@ export default Controller.extend({
           rq.then((req)=>{
             req.destroyRecord();
             req.save().then(()=>{
-              window.location.reload(true);
+              this.transitionToRoute('friends')
+              this.transitionToRoute('friends.reqs')
             });
           });
       },

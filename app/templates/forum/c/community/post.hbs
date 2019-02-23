@@ -1,0 +1,28 @@
+
+<button class="back_btn" {{action 'back'}}>Back</button>
+<article class="sgl_post">
+    <form class="content">
+        <span class="title">{{model.title}}</span><br>
+        <span class="content">{{model.body}}</span>
+    </form>
+    <!--Bewertung-->
+
+  {{#if (and session.isAuthenticated auth.chosencomrole.comment)}}
+    <form class="add_comment">
+      {{textarea rows="5" value=comment}}
+      <button {{action 'send'}}>Send</button>
+    </form>
+  {{/if}}
+
+  {{#if model.forumcomment}}
+    <div class="comments outline_b_s">
+      {{#each model.forumcomment as |comment|}}
+      <div class="comment">
+        <span class="user">{{comment.user.username}}</span><br>
+        <span class="body">{{comment.body}}</span><br>
+        <!--Replay feature + button-->
+      </div>
+      {{/each}}
+    </div>
+  {{/if}}
+</article>

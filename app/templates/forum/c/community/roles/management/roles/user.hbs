@@ -1,0 +1,19 @@
+{{#if (eq auth.user.id auth.chosencom.creator.id)}}
+  <div class="forum_user_s">
+    <form class="forum_role_select">
+      <label>Roles</label><br>
+      {{#each auth.chosencom.roles as |role|}}
+        <button class="{{if (eq selectedRole.id role.id) 'acc_route'}}" {{action "setRole" role}}>{{role.name}}</button>
+      {{/each}}
+    </form>
+    <form class="forum_user_select scrollable">
+      <label>User</label><br>
+      {{#each auth.chosencom.follower as |user|}}
+        <button {{action "select" user}}>
+          {{user.username}}
+        </button>
+      {{/each}}
+    </form>
+
+  </div>
+{{/if}}
